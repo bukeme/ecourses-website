@@ -1,0 +1,62 @@
+{% load fontawesome_5 %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow align-items-center fixed-top">
+    <a class="navbar-brand text_primary" href="#">
+        <h3 class="mb-0">Learning Hub</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbar-content">
+      <ul class="navbar-nav mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text_primary fw-5" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text_dark fw-5" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Web Design</a>
+              <a class="dropdown-item" href="#">Development</a>
+              <a class="dropdown-item" href="#">Game Design</a>
+              <a class="dropdown-item" href="#">App Development</a>
+              <a class="dropdown-item" href="#">Content Creation</a>
+              <a class="dropdown-item" href="#">Writing</a>
+            </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 mx-lg-2 flex-lg-grow-1">
+        <input class="form-control mr-sm-2 rounded-pill w-100" type="search" placeholder="Search Courses">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+      {% if request.user.is_authenticated %}
+      <ul class="navbar-nav mt-2 mt-lg-0 align-items-center">
+        <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
+          <a href="#" class="nav-item text_dark fw-5">Create Course</a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
+          <a href="#" class="nav-item text_dark fw-5">My learning</a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
+          <a href="#" class="nav-item text_dark fw-5 position-relative mr-2">
+            {% fa5_icon 'shopping-cart' %}
+            <span class="position-absolute rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="top: -10px; right: -10px; width: 20px; height: 20px;">3</span>
+          </a>
+        </li>
+        <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
+          <div class="nav-item">
+            <div class="rounded-circle c-pointer" style="width: 40px; height: 40px;">
+              <img src="{{ request.user.userprofile.image.url }}">
+            </div>
+          </div>
+        </li>
+      </ul>
+      {% else %}
+      <div class="d-flex flex-column flex-lg-row align-items-start">
+        <a href="#" class="btn btn_primary mx-0 mx-lg-1 my-1 my-lg-0">Join Now</a>
+        <a href="#" class="btn btn_outline_primary mx-0 mx-lg-1 my-1 my-lg-0">Sign In</a>
+      </div>
+      {% endif %}
+    </div>
+</nav>
