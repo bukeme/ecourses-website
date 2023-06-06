@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Sign In{% endblock title %}
+
+{% block content %}
+
+	<div class="d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 80px);">
+		<div class="card p-4 m-3" style="width: 500px;">
+			<h1 class="text_dark text-center">Sign In</h1>
+			<span class="text-center">Don't have an account? <a href="{% url 'account_signup' %}">Sign up here</a>.</span>
+			<div class="mt-3">
+				<form method="post">
+					{% csrf_token %}
+					{{ form | crispy }}
+					<button type="submit" class="btn btn_primary w-100 fw-6">Sign In</button>
+					<span>Forgotten Password? <a href="{% url 'account_reset_password' %}">Reset Here</a>.</span>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
