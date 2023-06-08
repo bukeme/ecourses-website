@@ -24,9 +24,11 @@ from users.views import user_signup_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/signup/', user_signup_view, name='account_signup'),
-    path('', include('courses.urls')),
+    path('courses/', include('courses.urls')),
+    path('user/', include('users.urls')),
     path('accounts/', include('allauth.account.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
