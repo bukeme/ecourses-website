@@ -148,6 +148,16 @@ img,
 .asteriskField {
     display: none;
 }
+
+.bg-hover:hover {
+    background: none;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+
 @media screen and (max-width: 991px) {
     .hero-content {
         width: 100%;
