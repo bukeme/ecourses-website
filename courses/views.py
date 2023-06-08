@@ -3,8 +3,11 @@ from django.views.generic import TemplateView, CreateView, ListView, View
 from django.views.generic.detail import SingleObjectMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
+from django.http import JsonResponse
 from courses.models import Course, Module
 from courses.forms import ModuleForm
+from courses.decorators import AjaxRequiredOnlyMixin
+import json
 
 # Create your views here.
 
@@ -58,4 +61,43 @@ class ModuleCreateView(UserPassesTestMixin, LoginRequiredMixin, View):
 		return self.request.user == Course.objects.get(pk=self.kwargs['course_pk']).owner
 
 module_create_view = ModuleCreateView.as_view()
+
+class ModuleUpdateView(UserPassesTestMixin, LoginRequiredMixin, View):
+	def post(self, request, *args, **kwargs):
+		module = Module.objects.get(pk=kwargs['module_pk'])
+		form = ModuleForm(request.POST, instance=module)
+		if form.is_valid():
+			form.save()
+		return redirect(request.META['HTTP_REFERER'])
+
+	def test_func(self):
+		return self.request.user == Module.objects.get(pk=self.kwargs['module_pk']).course.owner
+
+module_update_view = ModuleUpdateView.as_view()
+
+class ModuleDeleteView(UserPassesTestMixin, LoginRequiredMixin, View):
+	def post(self, request, *args, **kwargs):
+		Module.objects.get(pk=kwargs['module_pk']).delete()
+		return redirect(request.META['HTTP_REFERER'])
+
+	def test_func(self):
+		return self.request.user == Module.objects.get(pk=self.kwargs['module_pk']).course.owner
+
+module_delete_view = ModuleDeleteView.as_view()
+
+class ModuleOrderUpdateView(AjaxRequiredOnlyMixin, View):
+	def post(self, request, *args, **kwargs):
+		if not request.user.is_authenticated:
+			return JsonResponse({'status': 'not logged in'})
+		if self.request.user != Course.objects.get(pk=kwargs['course_pk']).owner:
+			return JsonResponse({'status': 'forbidden'})
+		data = json.loads(request.body)
+		for module_dict in data:
+			module_obj = Module.objects.get(pk=int(module_dict['pk']))
+			module_obj.order = module_dict['order']
+			module_obj.save()
+		print(data)
+		return JsonResponse({'status': 'success'})
+
+module_order_update_view = ModuleOrderUpdateView.as_view()
 

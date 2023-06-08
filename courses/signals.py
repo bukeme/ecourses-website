@@ -4,8 +4,7 @@ from courses.models import Module
 
 
 @receiver(post_delete, sender=Module)
-def reoder_module(sender, *args, **kwargs):
-	for index, obj in enumerate(Module.objects.all(), start=1):
-		print(index)
+def reoder_module(sender, instance, *args, **kwargs):
+	for index, obj in enumerate(Module.objects.filter(course=instance.course), start=1):
 		obj.order = index
 		obj.save()
