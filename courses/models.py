@@ -55,7 +55,11 @@ class Module(models.Model):
 		return self.name
 
 	def save(self, *args, **kwargs):
-		self.order = Module.objects.all().count() + 1
+		if not self.pk:
+			self.order = Module.objects.filter(course=self.course).count() + 1
 		self.course.updated = timezone.now()
 		self.course.save()
 		return super(Module, self).save(*args, **kwargs)
+
+	class Meta:
+		ordering = ['order',]
