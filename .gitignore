@@ -1,7 +1,6 @@
 venv
 db.sqlite3
-media/profile_image/*
-media/courses_thumbnail
+media/*
 staticfiles
 static/ckeditor
 !media/profile_image/placeholder.jpg

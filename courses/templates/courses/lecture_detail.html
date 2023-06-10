@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load fontawesome_5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ course.name }}{% endblock title %}
+
+{% block content %}
+{% with course=object.module.course module=lecture.module lectures=object.module.lecture_set.all %}
+
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col d-flex align-items-center mb-2 font-weight-bold small">
+				<a href="{% url 'module_list' course.pk %}" class="text_dark mr-2">Module List</a>
+				<span class="mr-2">>></span>
+				<a href="{% url 'lecture_list' module.pk %}" class="text_dark">{{ module.name | truncatechars:20 }}</a>
+				<span class="mr-2">>></span>
+				<a href="{% url 'lecture_detail' lecture.pk %}">{{ lecture.topic | truncatechars:20 }}</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 pr-2">
+				<div class="p-3 card">
+					<small class="mb-1 {% if lectures.count < 2 %}d-none{% endif %}">You can drag and drop lectures to reorder them.</small>
+					<div class="d-flex flex-column sortable-lecture">
+						{% for lec in lectures %}
+							<a href="{% url 'lecture_detail' lec.pk %}" class="btn {% if lec == lecture %}btn-info{% else %}btn-light text-info{% endif %} border mb-2 sortable-lecture-item" data-lecture_pk="{{ lec.pk }}">{{ lec.topic }}</a>
+						{% endfor %}
+					</div>
+
+					<a href="{% url 'lecture_create' module.pk %}" class="btn btn-light border text-muted fw-6 mt-2">
+						<span class=" mr-1">
+							{% fa5_icon 'plus-circle' %}
+						</span>
+						<span>Add Lecture</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-7 pl-0">
+				<div class="card p-3">
+					<div class="d-flex align-items-center">
+					    <div style="flex-basis: 60px; min-width: 50px;" class="flex-shrink-0">
+					        <img class="" src="{{ course.thumbnail.url }}" alt="">
+					    </div>
+					    <div class="ml-2 d-flex flex-column">
+					        <h6 class="text_dark fw-5">{{ course.name }}</h6>
+					    </div>
+					</div>
+					<h5 class="mt-3 text_dark text-center">{{ lecture.topic }}</h5>
+					<div>{{ lecture.content | safe }}</div>
+					<div>
+						<h6 class="text_dark">Additional Files:</h6>
+						<div class="d-flex flex-wrap">
+							{% for file in lecture.additionalfile_set.all %}
+								<a href="{{ file.file.url }}" class="btn btn-info m-1" download>{{ file.file.name | slice:"28:" | truncatechars:"30" }}</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endwith %}
+{% endblock content %}
+
+{% block js %}
+
+	<script src="{% static 'jquery-ui/jquery-ui.js' %}"></script>
+	<script>
+		$('.sortable-lecture').sortable({
+			appendTo: $('.sortable-lecture'),
+			cursor: 'move',
+			opacity: 0.7,
+			update: function(event, ui) {
+				var $data = [];
+				$('.sortable-lecture .sortable-lecture-item').each(function(index, item) {
+					$data.push({order: index + 1, pk: item.dataset.lecture_pk});
+				});
+				fetch(
+					'/courses/lecture/{{ object.module.course.pk }}/order/update/',
+					{
+						method: 'POST',
+						headers: {
+							'Accept': 'application/json',
+							'Content-Type': 'application/json',
+					        "X-Requested-With": "XMLHttpRequest",
+					        "HTTP_X_REQUESTED_WITH": "XMLHttpRequest",
+							'X-CSRFToken': '{{csrf_token}}',
+						},
+						body: JSON.stringify($data),
+					}
+				)
+				.then(response => response.json())
+				.then(response => console.log(response));
+			}
+		})
+	</script>
+
+
+{% endblock js %}
