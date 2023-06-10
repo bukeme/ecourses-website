@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Create Course{% endblock title %}
+
+{% block content %}
+
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="card p-3 shadow">
+					<h3 class="text_dark text-center">Create Lecture</h3>
+					<div>
+						<form method="post" enctype="multipart/form-data">
+							{% csrf_token %}
+							{{ form | crispy }}
+							<div class="form-group">
+								<label>Upload Additional Files</label>
+								<input type="file" name="additional_file" multiple="multiple" class="form-control">
+							</div>
+							<button type="submit" class="btn btn_primary w-100 fw-6">Create</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

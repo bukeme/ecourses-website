@@ -11,9 +11,12 @@
 
 {% block content %}
 
-	<div class="container mt-3">
+	<div class="container mt-4">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
+				<div class="d-flex mb-2 font-weight-bold small">
+					<a href="{% url 'module_list' course.pk %}">Module List</a>
+				</div>
 				<div class="card p-3">
 					<div class="d-flex align-items-start">
 					    <div style="flex-basis: 200px; min-width: 100px;" class="flex-md-shrink-0">
@@ -28,12 +31,12 @@
 						<div class="row">
 							<div class="col-md-8 offset-md-2">
 								<div class="d-flex flex-column">
-									<small class="mb-1">You can drag and drop module to reorder them.</small>
+									<small class="mb-1 {% if not object_list %}d-none{% endif %}">You can drag and drop module to reorder them.</small>
 									<div class="sortable">
 									{% for module in object_list %}
 
 										<div class="border py-2 px-3 d-flex justify-content-between align-items-center mb-2 sortable-item" data-module_pk="{{ module.pk }}">
-											<span class="font-weight-bold text-muted">{{ module.name | capfirst }}</span>
+											<a href="{% url 'lecture_list' module.pk %}" class="font-weight-bold text-muted">{{ module.name | capfirst }}</a>
 											<div class="dropdown">
 												<button class="dropdown-toggle btn btn-sm btn-light" data-toggle="dropdown">
 													{% fa5_icon 'ellipsis-h' %}
@@ -86,7 +89,17 @@
 											      		    {% csrf_token %}
 												            <div class="modal-body">
 												            	<p>Are you sure you want to delete "{{ module.name }}" module?</p>
-												            	<small>Note: All course content in this module will be deleted as well.</small>
+												            	<small>Note: All lectures in this module will be deleted as well.</small>
+												            	{% if module.lecture_set.all %}
+												            	<div>
+												            		<small>Course Lectures:</small>
+												            		<ul>
+												            			{% for lecture in module.lecture_set.all %}
+												            				<li class="small">{{ lecture.topic }}</li>
+												            			{% endfor %}
+												            		</ul>
+												            	</div>
+												            	{% endif %}
 												            </div>
 												            <div class="modal-footer">
 												                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

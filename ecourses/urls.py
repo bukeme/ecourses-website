@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import allauth.account
+# import ckeditor_uploader
 from users.views import user_signup_view
 
 urlpatterns = [
@@ -27,6 +28,7 @@ urlpatterns = [
     path('courses/', include('courses.urls')),
     path('user/', include('users.urls')),
     path('accounts/', include('allauth.account.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:

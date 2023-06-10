@@ -10,4 +10,8 @@ urlpatterns = [
 	path('module/<int:module_pk>/update/', views.module_update_view, name='module_update'),
 	path('module/<int:module_pk>/delete/', views.module_delete_view, name='module_delete'),
 	path('module/<int:course_pk>/order/update/', views.module_order_update_view, name='module_order_update'),
+	path('lecture/<int:module_pk>/list/', views.lecture_list_view, name='lecture_list'),
+	path('lecture/<int:module_pk>/create/', views.lecture_create_view, name='lecture_create'),
+	path('lecture/<int:course_pk>/order/update/', views.lecture_order_update_view, name='lecture_order_update'),
+	path('lecture/<int:pk>/detail/', views.lecture_detail_view, name='lecture_detail'),
 ]

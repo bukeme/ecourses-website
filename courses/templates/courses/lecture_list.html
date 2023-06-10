@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load fontawesome_5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ course.name }}{% endblock title %}
+
+{% block content %}
+
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col d-flex align-items-center mb-2 font-weight-bold small">
+				<a href="{% url 'module_list' course.pk %}" class="text_dark mr-2">Module List</a>
+				<span class="mr-2">>></span>
+				<a href="{% url 'lecture_list' module.pk %}">{{ module.name | truncatechars:20 }}</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 pr-2">
+				<div class="p-3 card">
+					<small class="mb-1">You can drag and drop modules to reorder them.</small>
+					<div class="d-flex flex-column sortable">
+						{% for mod in course_module_list %}
+							<a href="{% url 'lecture_list' mod.pk %}" class="btn {% if mod == module %}btn-info{% else %}btn-light text-info{% endif %} border mb-2 sortable-item" data-module_pk="{{ mod.pk }}">{{ mod.name }}</a>
+						{% endfor %}
+					</div>
+
+					<button class="btn btn-light border text-muted fw-6 mt-2" data-toggle="modal" data-target="#add-module">
+						<span class=" mr-1">
+							{% fa5_icon 'plus-circle' %}
+						</span>
+						<span>Add Module</span>
+					</button>
+
+					<!-- Add Module Modal -->
+
+					<div class="modal fade" id="add-module" tabindex="-1" role="dialog" aria-labelledby="add-module-title" aria-hidden="true">
+					    <div class="modal-dialog modal-dialog-centered" role="document">
+					        <div class="modal-content">
+						        <div class="modal-header">
+						            <h5 class="modal-title" id="add-module-title">Add Module</h5>
+						            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						            	<span aria-hidden="true">&times;</span>
+						            </button>
+						        </div>
+					            <form method="post" action="{% url 'module_create' course.pk %}">
+					      		    {% csrf_token %}
+						            <div class="modal-body">
+						            	{{ form | crispy }}
+						            </div>
+						            <div class="modal-footer">
+						                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						                <button type="submit" class="btn btn-info">Create</button>
+						            </div>
+					            </form>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7 pl-0">
+				<div class="card p-3">
+					<div class="d-flex align-items-start">
+					    <div style="flex-basis: 200px; min-width: 100px;" class="flex-md-shrink-0">
+					        <img class="" src="{{ course.thumbnail.url }}" alt="">
+					    </div>
+					    <div class="ml-3 ml-lg-4 d-flex flex-column">
+					        <h6 class="text_dark fw-5">{{ course.name }}</h6>
+					        <span class="small">{{ course.headline | truncatewords:15 }}</span>
+					    </div>
+					</div>
+					<h5 class="mt-4 text_dark">Course Module: "{{ module }}"</h5>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 offset-md-2">
+								<div class="d-flex flex-column">
+									{% with object_list=module.lecture_set.all %}
+										<small class="mb-1 {% if not object_list %}d-none{% endif %}">You can drag and drop lectures to reorder them.</small>
+										<div class="sortable-lecture">
+											{% for lecture in object_list %}
+
+												<div class="border py-2 px-3 d-flex justify-content-between align-items-center mb-2 sortable-lecture-item" data-lecture_pk="{{ lecture.pk }}">
+													<a href="{% url 'lecture_detail' lecture.pk %}" class="font-weight-bold text-muted">{{ lecture.topic | capfirst }}</a>
+													<div class="dropdown">
+														<button class="dropdown-toggle btn btn-sm btn-light" data-toggle="dropdown">
+															{% fa5_icon 'ellipsis-h' %}
+														</button>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a href="javascript:void()" class="dropdown-item">Edit</a>
+															<a href="javascript:void()" class="dropdown-item" data-toggle="modal" data-target="#delete-lecture-{{ lecture.pk }}">Delete</a>
+														</div>
+													</div>
+												</div>
+											{% endfor %}
+										</div>
+									{% endwith %}
+									<a href="{% url 'lecture_create' module.pk %}" class="btn btn-light border text-muted fw-6 mt-2">
+										<span class=" mr-1">
+											{% fa5_icon 'plus-circle' %}
+										</span>
+										<span>Add Lecture</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex justify-content-end mt-3">
+						<button class="btn btn-sm btn-info mx-1" data-toggle="modal" data-target="#edit-module-{{ module.pk }}">Edit Module</button>
+						<button class="btn btn-sm btn-danger mx-1" data-toggle="modal" data-target="#delete-module-{{ module.pk }}">Delete Module</button>
+					</div>
+
+					<!-- Edit Module Modal -->
+
+					<div class="modal fade" id="edit-module-{{ module.pk }}" tabindex="-1" role="dialog" aria-labelledby="edit-module-{{ module.pk }}-title" aria-hidden="true">
+					    <div class="modal-dialog modal-dialog-centered" role="document">
+					        <div class="modal-content">
+						        <div class="modal-header">
+						            <h5 class="modal-title" id="edit-module-{{ module.pk }}-title">Edit Module</h5>
+						            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						            	<span aria-hidden="true">&times;</span>
+						            </button>
+						        </div>
+					            <form method="post" action="{% url 'module_update' module.pk %}">
+					      		    {% csrf_token %}
+						            <div class="modal-body">
+						            	<div class="form-group">
+						            		<input type="text" name="name" class="form-control" value="{{ module.name }}">
+						            	</div>
+						            </div>
+						            <div class="modal-footer">
+						                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						                <button type="submit" class="btn btn-info">Edit</button>
+						            </div>
+					            </form>
+					        </div>
+					    </div>
+					</div>
+
+					<!-- Delete Module Modal -->
+
+					<div class="modal fade" id="delete-module-{{ module.pk }}" tabindex="-1" role="dialog" aria-labelledby="delete-module-{{ module.pk }}-title" aria-hidden="true">
+					    <div class="modal-dialog modal-dialog-centered" role="document">
+					        <div class="modal-content">
+						        <div class="modal-header">
+						            <h5 class="modal-title" id="delete-module-{{ module.pk }}-title">Delete Module</h5>
+						            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						            	<span aria-hidden="true">&times;</span>
+						            </button>
+						        </div>
+					            <form method="post" action="{% url 'module_delete' module.pk %}">
+					      		    {% csrf_token %}
+						            <div class="modal-body">
+						            	<p>Are you sure you want to delete "{{ module.name }}" module?</p>
+						            	<small>Note: All lectures in this module will be deleted as well.</small>
+						            	{% if module.lecture_set.all %}
+						            	<div>
+						            		<small>Course Lectures:</small>
+						            		<ul>
+						            			{% for lecture in module.lecture_set.all %}
+						            				<li class="small">{{ lecture.topic }}</li>
+						            			{% endfor %}
+						            		</ul>
+						            	</div>
+						            	{% endif %}
+						            </div>
+						            <div class="modal-footer">
+						                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+						            </div>
+					            </form>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+
+{% block js %}
+
+	<script src="{% static 'jquery-ui/jquery-ui.js' %}"></script>
+	<script>
+		$('.sortable').sortable({
+			appendTo: $('.sortable'),
+			cursor: 'move',
+			opacity: 0.7,
+			update: function(event, ui) {
+				var $data = [];
+				$('.sortable .sortable-item').each(function(index, item) {
+					$data.push({order: index + 1, pk: item.dataset.module_pk});
+				});
+				fetch(
+					'/courses/module/{{ course.pk }}/order/update/',
+					{
+						method: 'POST',
+						headers: {
+							'Accept': 'application/json',
+							'Content-Type': 'application/json',
+					        "X-Requested-With": "XMLHttpRequest",
+					        "HTTP_X_REQUESTED_WITH": "XMLHttpRequest",
+							'X-CSRFToken': '{{csrf_token}}',
+						},
+						body: JSON.stringify($data),
+					}
+				)
+				.then(response => response.json())
+				.then(response => console.log(response));
+			}
+		});
+
+		$('.sortable-lecture').sortable({
+			appendTo: $('.sortable-lecture'),
+			cursor: 'move',
+			opacity: 0.7,
+			update: function(event, ui) {
+				var $data = [];
+				$('.sortable-lecture .sortable-lecture-item').each(function(index, item) {
+					$data.push({order: index + 1, pk: item.dataset.lecture_pk});
+				});
+				fetch(
+					'/courses/lecture/{{ course.pk }}/order/update/',
+					{
+						method: 'POST',
+						headers: {
+							'Accept': 'application/json',
+							'Content-Type': 'application/json',
+					        "X-Requested-With": "XMLHttpRequest",
+					        "HTTP_X_REQUESTED_WITH": "XMLHttpRequest",
+							'X-CSRFToken': '{{csrf_token}}',
+						},
+						body: JSON.stringify($data),
+					}
+				)
+				.then(response => response.json())
+				.then(response => console.log(response));
+			}
+		})
+	</script>
+
+
+{% endblock js %}

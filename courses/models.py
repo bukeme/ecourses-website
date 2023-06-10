@@ -63,3 +63,27 @@ class Module(models.Model):
 
 	class Meta:
 		ordering = ['order',]
+
+class Lecture(models.Model):
+	module = models.ForeignKey(Module, on_delete=models.CASCADE)
+	topic = models.CharField(max_length=500)
+	content = RichTextUploadingField()
+	order = models.IntegerField(blank=True)
+
+	def __str__(self):
+		return self.topic
+
+	def save(self, *args, **kwargs):
+		if not self.pk:
+			self.order = Lecture.objects.filter(module=self.module).count() + 1
+		self.module.course.updated = timezone.now()
+		self.module.course.save()
+		return super(Lecture, self).save(*args, **kwargs)
+
+	class Meta:
+		ordering = ['order',]
+
+class AdditionalFile(models.Model):
+	lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)
+	file = models.FileField(upload_to='additional_files/%Y-%m-%d')
+	
