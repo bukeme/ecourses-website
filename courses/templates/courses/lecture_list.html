@@ -86,9 +86,34 @@
 															{% fa5_icon 'ellipsis-h' %}
 														</button>
 														<div class="dropdown-menu dropdown-menu-right">
-															<a href="javascript:void()" class="dropdown-item">Edit</a>
+															<a href="{% url 'lecture_update' lecture.pk %}" class="dropdown-item">Edit</a>
 															<a href="javascript:void()" class="dropdown-item" data-toggle="modal" data-target="#delete-lecture-{{ lecture.pk }}">Delete</a>
 														</div>
+													</div>
+
+													<!-- Delete Lecture Modal -->
+
+													<div class="modal fade" id="delete-lecture-{{ lecture.pk }}" tabindex="-1" role="dialog" aria-labelledby="delete-lecture-{{ lecture.pk }}-title" aria-hidden="true">
+													    <div class="modal-dialog modal-dialog-centered" role="document">
+													        <div class="modal-content">
+														        <div class="modal-header">
+														            <h5 class="modal-title" id="delete-lecture-{{ lecture.pk }}-title">Delete Lecture</h5>
+														            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														            	<span aria-hidden="true">&times;</span>
+														            </button>
+														        </div>
+													            <form method="post" action="{% url 'lecture_delete' lecture.pk %}">
+													      		    {% csrf_token %}
+														            <div class="modal-body">
+														            	<p>Are you sure you want to delete "{{ lecture.topic }}" lecture?</p>
+														            </div>
+														            <div class="modal-footer">
+														                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+														                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+														            </div>
+													            </form>
+													        </div>
+													    </div>
 													</div>
 												</div>
 											{% endfor %}
