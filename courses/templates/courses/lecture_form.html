@@ -1,24 +1,69 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Create Course{% endblock title %}
+{% block title %}
+{% if object %}
+	Update
+{% else %}
+	Create
+{% endif %}
+Lecture{% endblock title %}
 
 {% block content %}
 
-	<div class="container mt-3">
+	<div class="container mt-4">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<div class="card p-3 shadow">
-					<h3 class="text_dark text-center">Create Lecture</h3>
+				<div class="d-flex align-items-center mb-2 font-weight-bold small">
+					{% if object %}
+						<a href="{% url 'module_list' object.module.course.pk %}" class="text_dark mr-2">Module List</a>
+						<span class="mr-2">>></span>
+						<a href="{% url 'lecture_list' object.module.pk %}" class="text_dark">{{ object.module.name | truncatechars:20 }}</a>
+						<span class="mr-2">>></span>
+						<a href="{% url 'lecture_detail' object.pk %}">{{ object.topic | truncatechars:20 }}</a>
+					{% else %}
+						<a href="{% url 'module_list' module.course.pk %}" class="text_dark mr-2">Module List</a>
+						<span class="mr-2">>></span>
+						<a href="{% url 'lecture_list' module.pk %}">{{ module.name | truncatechars:20 }}</a>
+					{% endif %}
+				</div>
+				<div class="card p-3">
+					<h3 class="text_dark text-center">
+						{% if object %}
+							Update
+						{% else %}
+							Create
+						{% endif %}
+						Lecture
+					</h3>
 					<div>
 						<form method="post" enctype="multipart/form-data">
 							{% csrf_token %}
 							{{ form | crispy }}
+							{% if object.additionalfile_set.all %}
+								<div class="small">
+									<span>Initial Additional Files:</span>
+									<ul>
+										{% for file in object.additionalfile_set.all %}
+											<li>{{ file.file.name | slice:"28:" }} ({{ file.file.size | filesizeformat }})</li>
+										{% endfor %}
+									</ul>
+								</div>
+							{% endif %}
 							<div class="form-group">
-								<label>Upload Additional Files</label>
+								<label>Upload {% if object %}New{% endif %} Additional Files</label>
 								<input type="file" name="additional_file" multiple="multiple" class="form-control">
 							</div>
-							<button type="submit" class="btn btn_primary w-100 fw-6">Create</button>
+							<div class="d-flex justify-content-end">
+								<a href="javascript:history.back()" class="btn btn-warning fw-6 mx-1">Go back</a>
+								<button type="submit" class="btn btn_primary fw-6 mx-1">
+									{% if object %}
+										Update
+									{% else %}
+										Create
+									{% endif %}
+								</button>
+							</div>
 						</form>
 					</div>
 				</div>

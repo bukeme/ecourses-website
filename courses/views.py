@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import TemplateView, CreateView, ListView, View
+from django.views.generic import TemplateView, CreateView, ListView, View, UpdateView
 from django.views.generic.detail import SingleObjectMixin, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy, reverse
@@ -128,6 +128,11 @@ class LectureCreateView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
 		self.module = Module.objects.get(pk=kwargs['module_pk'])
 		return super().dispatch(request, *args, **kwargs)
 
+	def get_context_data(self, *args, **kwargs):
+		context = super().get_context_data(*args, **kwargs)
+		context['module'] = self.module
+		return context
+
 	def form_valid(self, form):
 		form.instance.module = self.module
 		files = self.request.FILES.getlist('additional_file')
@@ -170,4 +175,36 @@ class LectureDetailView(UserPassesTestMixin, LoginRequiredMixin, DetailView):
 		return self.request.user == self.get_object().module.course.owner
 
 lecture_detail_view = LectureDetailView.as_view()
+
+class LectureUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
+	model = Lecture
+	fields = ['topic', 'content',]
+
+	def form_valid(self, form):
+		files = self.request.FILES.getlist('additional_file')
+		if files:
+			self.object.additionalfile_set.all().delete()
+			for file in files:
+				AdditionalFile.objects.create(lecture=self.object, file=file)
+		return super().form_valid(form)
+
+	def get_success_url(self):
+		return reverse('lecture_detail', kwargs={'pk': self.object.pk})
+
+	def test_func(self):
+		return self.request.user == self.get_object().module.course.owner
+
+lecture_update_view = LectureUpdateView.as_view()
+
+class LectureDeleteView(UserPassesTestMixin, LoginRequiredMixin, View):
+	def post(self, request, *args, **kwargs):
+		lecture = Lecture.objects.get(pk=kwargs['lecture_pk'])
+		module = lecture.module
+		lecture.delete()
+		return redirect('lecture_list', module_pk=module.pk)
+
+	def test_func(self):
+		return self.request.user == Lecture.objects.get(pk=self.kwargs['lecture_pk']).module.course.owner
+
+lecture_delete_view = LectureDeleteView.as_view()
 
