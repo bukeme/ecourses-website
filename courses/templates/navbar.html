@@ -1,6 +1,6 @@
 {% load fontawesome_5 %}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow align-items-center fixed-top">
-    <a class="navbar-brand text_primary" href="#">
+    <a class="navbar-brand text-info" href="{% url 'home' %}">
         <h3 class="mb-0">Learning Hub</h3>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbar-content">
       <ul class="navbar-nav mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link text_primary fw-5" href="#">Home</a>
+          <a class="nav-link text-info fw-5" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text_dark fw-5" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,7 +31,7 @@
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
       {% if request.user.is_authenticated %}
-      <ul class="navbar-nav mt-2 mt-lg-0 align-items-center">
+      <ul class="navbar-nav mt-2 mt-lg-0 align-items-lg-center">
         <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
           <a href="{% url 'course_create' %}" class="nav-item text_dark fw-5">Create Course</a>
         </li>
@@ -65,7 +65,8 @@
                 <span>My Cart</span>
                 <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">3</span>
               </a>
-              <a href="#" class="dropdown-item">Create Course</a>
+              <a href="{% url 'course_create' %}" class="dropdown-item">Create Course</a>
+              <a href="{% url 'user_courses' %}" class="dropdown-item">Your Courses</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
                 <span>Notifications</span>
@@ -88,8 +89,8 @@
       </ul>
       {% else %}
       <div class="d-flex flex-column flex-lg-row align-items-start">
-        <a href="#" class="btn btn_primary mx-0 mx-lg-1 my-1 my-lg-0">Join Now</a>
-        <a href="#" class="btn btn_outline_primary mx-0 mx-lg-1 my-1 my-lg-0">Sign In</a>
+        <a href="{% url 'account_signup' %}" class="btn btn-info mx-0 mx-lg-1 my-1 my-lg-0">Join Now</a>
+        <a href="{% url 'account_login' %}" class="btn btn-outline-info mx-0 mx-lg-1 my-1 my-lg-0">Sign In</a>
       </div>
       {% endif %}
     </div>

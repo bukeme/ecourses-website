@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Courses{% endblock title %}
+
+{% block content %}
+
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="card p-3">
+					<h4 class="text_dark font-weight-bold mb-3">Your Courses</h4>
+					<div>
+						{% for course in object_list %}
+
+							<!-- <div class="d-flex align-items-start mt-3">
+							    <div style="flex-basis: 200px; min-width: 100px;" class="flex-md-shrink-0">
+							        <img class="" src="{{ course.thumbnail.url }}" alt="">
+							    </div>
+							    <div class="ml-3 ml-lg-4 d-flex flex-column">
+							        <h6 class="text_dark fw-5">{{ course.name }}</h6>
+							        <span class="small">{{ course.headline | truncatewords:15 }}</span>
+							    </div>
+							</div> -->
+
+							<div class="d-flex align-items-start position-relative enlarge-container">
+							    <div style="flex-basis: 250px;" class="flex-lg-shrink-0 enlarge">
+							        <img class="enlarge-item" src="{{ course.thumbnail.url }}" alt="">
+							    </div>
+							    <div class="ml-3 ml-lg-4 d-flex flex-column">
+							        <h6 class="text_dark fw-5">{{ course.name }}</h6>
+							        <span class="small d-none d-lg-block">{{ course.headline | truncatewords:15 }}</span>
+							        <div class="fs-12 mt-1 mt-lg-2 text-muted">
+							        	{% if course.rating_set.all %}
+								            <div class="my-1">
+								                <i class="fa fa-star text-info mr-1"></i>
+								                <span>4.5(181,340)</span>
+								            </div>
+							            {% endif %}
+							            <div>
+							                <span>500 lectures</span>
+							            </div>
+							        </div>
+							    </div>
+							    <a href="{% url 'course_detail' course.pk %}" class="stretched-link"></a>
+							</div>
+							{% if not forloop.last %}<hr>{% endif %}
+
+						{% empty %}
+
+							<h5 class="text-center my-3">You've not created any course yet</h5>
+
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

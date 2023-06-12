@@ -34,7 +34,7 @@ class Course(models.Model):
 
 	def save(self, *args, **kwargs):
 		if self.discount:
-			self.actual_price = (self.price * self.discount) / 100
+			self.actual_price = (self.price) * (100 - self.discount) / 100
 		else:
 			self.actual_price = self.price
 		return super(Course, self).save(*args, **kwargs)

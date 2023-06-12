@@ -30,7 +30,7 @@ class UserSignupForm(SignupForm):
 				Div('password2', css_class='col'),
 				css_class='form-row'
 			),
-			Submit('submit', 'Sign Up', css_class='btn btn_primary w-100')
+			Submit('submit', 'Sign Up', css_class='btn btn-info w-100')
 		)
 
 # class UserProfileForm(forms.Form):

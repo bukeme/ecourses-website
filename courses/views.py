@@ -25,7 +25,7 @@ class CourseCreateView(LoginRequiredMixin, CreateView):
 		return super().form_valid(form)
 
 	def get_success_url(self):
-		return reverse_lazy('course_module_list', kwargs={'pk': self.object.pk})
+		return reverse_lazy('module_list', kwargs={'pk': self.object.pk})
 
 course_create_view = CourseCreateView.as_view()
 
@@ -207,4 +207,28 @@ class LectureDeleteView(UserPassesTestMixin, LoginRequiredMixin, View):
 		return self.request.user == Lecture.objects.get(pk=self.kwargs['lecture_pk']).module.course.owner
 
 lecture_delete_view = LectureDeleteView.as_view()
+
+class UserCourseListView(LoginRequiredMixin, ListView):
+	template_name = 'courses/user_courses.html'
+	def get_queryset(self):
+		return Course.objects.filter(owner=self.request.user)
+
+user_course_list_view = UserCourseListView.as_view()
+
+class CourseDetailView(LoginRequiredMixin, DetailView):
+	model = Course
+
+course_detail_view = CourseDetailView.as_view()
+
+class CourseUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
+	model = Course
+	fields = ['name', 'headline', 'description', 'category', 'thumbnail', 'price', 'discount',]
+
+	def get_success_url(self):
+		return reverse_lazy('module_list', kwargs={'pk': self.object.pk})
+
+	def test_func(self):
+		return self.request.user == self.get_object().owner
+
+course_update_view = CourseUpdateView.as_view()
 
