@@ -1,9 +1,194 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+	
+	{% if not request.user.is_authenticated %}
+	<div class="hero-section d-flex flex-column justify-content-center align-items-start p-3 text-white mb-2" style="background-image: url('{% static 'images/course-3.jpg' %}');">
+	    <div class="hero-content">
+	        <h1 class="display-4 fw-6 text-white">Online Learning Platform</h1>
+	        <p class="fs-20">Build skills with courses and certificates online from world class tutors</p>
+	        <a href="#" class="btn btn-info px-5 py-2 fs-20">Join now</a>
+	    </div>
+	</div>
+	{% endif %}
 
-	<h1>Home Page</h1>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-12">
+	            <div class="mt-3">
+	                <div class="text-center">
+	                    <h3 class="text-info">Courses</h3>
+	                    <h2 class="text_dark">Latest Courses</h2>
+	                </div>
+	                <div class="grid-container my-3" style="grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));">
+	                	{% for course in courses %}
+
+	                    <div class="bg_light enlarge-container position-relative">
+	                        <div style="height: 250px;" class="rounded enlarge">
+	                            <img class="enlarge-item" src="{{ course.thumbnail.url }}" alt="">
+	                        </div>
+	                        <div class="p-3 rounded">
+	                        	{% if course.students.all %}
+	                                <div class="small">
+	                                    <i class="fa fa-users text-info mr-2"></i>
+	                                    <span>{{ course.students.all.count }} Students</span>
+	                                </div>
+                                {% endif %}
+	                            <div class="mt-3">
+                                    <h4 class="text_dark">{{ course.name }}</h4>
+	                            </div>
+	                            <hr>
+	                            <div class="d-flex justify-content-between align-items-center">
+	                            	{% if course.rating_set.all %}
+		                                <div>
+		                                    <i class="fa fa-star text-info mr-2"></i>
+		                                    <span>4.5(250)</span>
+		                                </div>
+	                                {% endif %}
+	                                <div>
+	                                    <span class="text_dark fs-20 fw-6">${{ course.actual_price }}</span>
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <a href="{% url 'course_detail' course.pk %}" class="stretched-link"></a>
+	                    </div>
+
+	                    {% endfor %}
+	                </div>
+	            </div>
+	            <div class="mt-5">
+	                <div class="text-center">
+	                    <h3 class="text-info">Categories</h3>
+	                    <h2 class="text_dark">Explore Top Categories</h2>
+	                </div>
+	                <div class="grid-container my-3" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-1.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Web Design</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-2.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute p-2 text-white d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Development</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-3.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Game Design</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-4.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>App Development</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-5.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Marketing</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-6.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Research</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-7.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>Content Writing</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div style="height: 150px;" class="enlarge-container position-relative">
+	                        <div class="rounded enlarge" style="height: inherit;">
+	                            <div
+	                            class="img category-img enlarge-item"
+	                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cat-8.jpg');">
+	                            </div>
+	                        </div>
+	                        <div
+	                        class="position-absolute text-white p-2 d-flex flex-column justify-content-center align-items-center w-100 h-100"
+	                        style="top: 0; left: 0;">
+	                            <h4>SEO</h4>
+	                            <p>100 Courses</p>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 
 {% endblock content %}

@@ -13,6 +13,10 @@ class Category(models.Model):
 	def __str__(self):
 		return self.category
 
+class Published(models.Manager):
+	def get_queryset(self):
+		return super().get_queryset().filter(publish=True)
+
 
 class Course(models.Model):
 	owner = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -29,8 +33,13 @@ class Course(models.Model):
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
 
+	published = Published()
+
 	def __str__(self):
 		return self.name
+
+	def lecture_count(self):
+		return sum([module.lecture_set.all().count() for module in self.module_set.all()])
 
 	def save(self, *args, **kwargs):
 		if self.discount:

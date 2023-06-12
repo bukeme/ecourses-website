@@ -1,0 +1,916 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$4ZlCedfBBQXTVvs9aN4ZJo$hy1Nr+mifnpYJroP4LrdNmjaW307eq5KTy4m5aUTjpI=",
+    "last_login": "2023-06-12T18:27:49.419Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "User",
+    "email": "admin@company.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-06-12T18:21:28.713Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5ggofu37b0isvolh7e82wtas8lit7r5r",
+  "fields": {
+    "session_data": ".eJxljMEOgyAQBf-FsyGCIuKxd7-BrOxSaSkkKr00_ffWxjRpep2Z9x4MnMslbfZOS_CB0NINQmRDKjFWX1tWWtjABKuYhbLNH2AD_rMJ3JXSLvAC6Zy5y2lbwsT3hB925WNGiqej_TmYYZ3fazCdQG8UNAQowGmJBoA86rbtjADdmK7WPfUSpZLKTxpQ1Y33QrTGS8OeL48ISaE:1q8mAV:gTTykpUuhH2VzxYMy36CSKQkHeFsmNwljmHGREqarkU",
+    "expire_date": "2023-06-26T18:21:31.851Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tgyxxruxpqq65fpf2op4q5p6d0ceydtk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBCC3S6dO8ZyNAZLGrAlDbRGO-uTbrQ7X_vv5fwuC6TXyvPPpEYhBKH3y3geOW8AbpgPhc5lrzMKchNkTut8lSIb8fd_QtMWKfvG8EqimCwZSSFo9MEiBzJdZ0Fha4F27iee03aaBODQzJNG6NSHUQNW7Ryralkz497mp9iaN4fp9o_Tg:1q8mGb:B4SY1-rg3ee9GdwbVgohimxbN-l0stvEBzkJ_WlHKq4",
+    "expire_date": "2023-06-26T18:27:49.678Z"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 1,
+  "fields": {
+    "category": "Web Development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 2,
+  "fields": {
+    "category": "Data Science"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 3,
+  "fields": {
+    "category": "Mobile Development"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 4,
+  "fields": {
+    "category": "Programming Languages"
+  }
+},
+{
+  "model": "courses.category",
+  "pk": 5,
+  "fields": {
+    "category": "Game Development"
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 1,
+  "fields": {
+    "owner": [
+      "admin"
+    ],
+    "name": "Modern React with Redux",
+    "headline": "Master React and Redux Toolkit. Includes RTK Query, tons of custom hooks, and more! Course 100% Updated November 2022",
+    "description": "<h4>What you&#39;ll learn</h4>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Create dynamic web apps using the latest in web technology</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Acquire the programming skills needed to obtain a software engineering job</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Practice your skills with many large projects, exercises, and quizzes</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Master the fundamentals concepts behind React and Redux</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Become fluent in the toolchain supporting React, including NPM, Webpack, Babel, and ES6/ES2015 Javascript syntax</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Be the engineer who explains how Redux works to everyone else, because you know the fundamentals so well</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Realize the power of building reusable components</p>\r\n\t</li>\r\n</ul>\r\n\r\n<h4>Description</h4>\r\n\r\n<p>Congratulations!&nbsp; You&#39;ve found the&nbsp;<em>most&nbsp;</em><strong><em>popular</em></strong>,&nbsp;<em>most&nbsp;</em><strong><em>complete</em></strong>, and&nbsp;<em>most&nbsp;</em><strong><em>up-to-date</em></strong>&nbsp;resource online for learning React and Redux!</p>\r\n\r\n<p>Thousands of other engineers have learned React and Redux, and you can too.&nbsp; This course uses a&nbsp;<strong>time-tested, battle-proven</strong>&nbsp;method to make sure you understand exactly how React and Redux work, and will get you a new job working as a software engineer or help you build that app you&#39;ve always been dreaming about.</p>\r\n\r\n<p><strong>The difference between this course and all the others: you will understand the design patterns used by top companies to build massively popular web apps.</strong></p>\r\n\r\n<p>React is the most popular Javascript library of the last five years, and the job market is still hotter than ever.&nbsp; Companies large and small can&#39;t hire engineers who understand React and Redux fast enough, and salaries for engineers are at an all time high.&nbsp; It&#39;s a great time to learn React!</p>",
+    "thumbnail": "courses_thumbnail/2023-06-12/react.jpeg",
+    "category": 1,
+    "price": "15.00",
+    "discount": "10.00",
+    "actual_price": "13.50",
+    "publish": true,
+    "created": "2023-06-12T19:41:34.548Z",
+    "updated": "2023-06-12T21:32:06.003Z",
+    "students": []
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 2,
+  "fields": {
+    "owner": [
+      "admin"
+    ],
+    "name": "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus",
+    "headline": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.",
+    "description": "<h4>What you&#39;ll learn</h4>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Master Machine Learning on Python &amp; R</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Have a great intuition of many Machine Learning models</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Make accurate predictions</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Make powerful analysis</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Make robust Machine Learning models</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Create strong added value to your business</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Use Machine Learning for personal purpose</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Handle specific topics like Reinforcement Learning, NLP and Deep Learning</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Handle advanced techniques like Dimensionality Reduction</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Know which Machine Learning model to choose for each type of problem</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Build an army of powerful Machine Learning models and know how to combine them to solve any problem</p>\r\n\t</li>\r\n</ul>\r\n\r\n<h4>Description</h4>\r\n\r\n<p>Interested in the field of Machine Learning?&nbsp;Then this course is for you!</p>\r\n\r\n<p>This course has been designed by a&nbsp;<strong>Data Scientist and a Machine Learning expert</strong>&nbsp;so that we can share our knowledge and help you learn complex theory,&nbsp;algorithms, and coding libraries in a simple way.</p>\r\n\r\n<p><strong>Over 900,000 students</strong>&nbsp;world-wide trust this course.</p>\r\n\r\n<p>We will walk you step-by-step into the World of Machine Learning. With every tutorial, you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.</p>\r\n\r\n<p>This course can be completed by either doing either the&nbsp;<strong>Python tutorials, or R tutorials,</strong>&nbsp;or both -&nbsp;Python &amp;&nbsp;R. Pick the programming language that you need for your career.</p>",
+    "thumbnail": "courses_thumbnail/2023-06-12/ml.jpeg",
+    "category": 2,
+    "price": "20.00",
+    "discount": "8.00",
+    "actual_price": "18.40",
+    "publish": true,
+    "created": "2023-06-12T19:57:49.907Z",
+    "updated": "2023-06-12T21:33:01.840Z",
+    "students": []
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 3,
+  "fields": {
+    "owner": [
+      "admin"
+    ],
+    "name": "The Complete Android 12 & Kotlin Development Masterclass",
+    "headline": "Learn Android 12 App Development From Beginner to Advanced Developer. Build Apps like Trello, 7Min Workout, Weather App",
+    "description": "<h4>What you&#39;ll learn</h4>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>You can build any Android app you can think of. No matter if it is an idea that you or your friends have, or if it is a contract job that you need to develop.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>You will build Apps for your portfolio to apply for jr. Android developer Jobs.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>You&#39;ll be able to work as an Android freelancer and work from anywere in the world.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Publish your apps on Google Play and generate revenue with Google Pay and Google Ads</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>You&#39;ll be able to develop cloud apps using Google Firebase</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>You will be very confident using Kotlin and programming in general</p>\r\n\t</li>\r\n</ul>\r\n\r\n<h4>Description</h4>\r\n\r\n<p><strong>So you want to become an Android developer</strong>&nbsp;and work from anywhere in the world, or maybe even the same place you&#39;re currently at, but with much more interesting and well-paying jobs? Learning Android App development is the way to go.</p>\r\n\r\n<p>You have a great idea for an app and you just need to learn how to make it happen? Or your friends know that you are tech-savvy and they constantly come to you with their great ideas and want you to build them?</p>\r\n\r\n<p>Do you have<strong>&nbsp;no programming experience</strong>&nbsp;whatsoever?&nbsp;Or maybe you have worked with another programming language in the past?</p>",
+    "thumbnail": "courses_thumbnail/2023-06-12/andriod.jpeg",
+    "category": 3,
+    "price": "15.00",
+    "discount": "10.00",
+    "actual_price": "13.50",
+    "publish": true,
+    "created": "2023-06-12T20:38:45.771Z",
+    "updated": "2023-06-12T21:33:20.844Z",
+    "students": []
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 4,
+  "fields": {
+    "owner": [
+      "admin"
+    ],
+    "name": "Java Programming Masterclass updated to Java 17",
+    "headline": "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+    "description": "<h4>What you&#39;ll learn</h4>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Learn the core Java skills needed to apply for Java developer positions in just 14 hours.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Be able to sit for and pass the Oracle Java Certificate exam if you choose.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Be able to demonstrate your understanding of Java to future employers.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Learn industry &quot;best practices&quot; in Java software development from a professional Java developer who has worked in the language for 18 years.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Acquire essential java basics for transitioning to the Spring Framework, Java EE, Android development and more.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Obtain proficiency in Java 8 and Java 11.</p>\r\n\t</li>\r\n</ul>\r\n\r\n<h4>Description</h4>\r\n\r\n<p><strong>December 24, 2022 UPDATE - SECOND&nbsp;PART&nbsp;OF&nbsp;THE&nbsp;MASSIVE&nbsp;NEW&nbsp;UPDATE&nbsp;FOR&nbsp;JAVA 17 IS&nbsp;LIVE TODAY.&nbsp; Read below to find out why you want to be learning Java 17 and not another version.</strong></p>\r\n\r\n<p>This course has been constantly updated since it originally came out in 2016.&nbsp; All updates are included free.&nbsp; Buy the course once and get all future updates free.</p>\r\n\r\n<p>You&rsquo;ve just stumbled upon the most complete, in-depth&nbsp;<strong>Java programming course online</strong>. With over 742,000 students enrolled and over one hundred and seventy four thousand reviews (<strong>with</strong>&nbsp;<strong>tens of thousands of those 5-star)</strong>&nbsp;to date, these comprehensive java tutorials cover everything you&rsquo;ll ever need.</p>",
+    "thumbnail": "courses_thumbnail/2023-06-12/java.jpeg",
+    "category": 4,
+    "price": "20.00",
+    "discount": "20.00",
+    "actual_price": "16.00",
+    "publish": true,
+    "created": "2023-06-12T20:54:48.852Z",
+    "updated": "2023-06-12T21:33:36.180Z",
+    "students": []
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 1,
+  "fields": {
+    "course": 1,
+    "name": "Let's Dive In",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 2,
+  "fields": {
+    "course": 1,
+    "name": "Creating Content With JSX",
+    "order": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "name": "Building With Reusable Components",
+    "order": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 4,
+  "fields": {
+    "course": 1,
+    "name": "State: How To Change Your App",
+    "order": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 5,
+  "fields": {
+    "course": 2,
+    "name": "Data Preprocessing In Python",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 6,
+  "fields": {
+    "course": 2,
+    "name": "Data Preprocessing In R",
+    "order": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 7,
+  "fields": {
+    "course": 2,
+    "name": "Simple Linear Regression",
+    "order": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 8,
+  "fields": {
+    "course": 2,
+    "name": "Multiple Linear Regression",
+    "order": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 9,
+  "fields": {
+    "course": 3,
+    "name": "Getting Started With Android Studio",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 10,
+  "fields": {
+    "course": 3,
+    "name": "Kotlin Fundamentals",
+    "order": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 11,
+  "fields": {
+    "course": 3,
+    "name": "Object Oriented Programming Basics In Kotlin",
+    "order": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 12,
+  "fields": {
+    "course": 3,
+    "name": "More Fundamentals Of Kotlin",
+    "order": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 13,
+  "fields": {
+    "course": 4,
+    "name": "Programming Tools Setup",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 14,
+  "fields": {
+    "course": 4,
+    "name": "First Steps",
+    "order": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 15,
+  "fields": {
+    "course": 4,
+    "name": "IntelliJ Basics",
+    "order": 3
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 16,
+  "fields": {
+    "course": 4,
+    "name": "Expressions, Statements and More",
+    "order": 4
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 1,
+  "fields": {
+    "module": 1,
+    "topic": "How To Get Help",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 2,
+  "fields": {
+    "module": 1,
+    "topic": "Let's Build An App",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 3,
+  "fields": {
+    "module": 1,
+    "topic": "Creating A React Project",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 4,
+  "fields": {
+    "module": 2,
+    "topic": "Showing Basic Context",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 5,
+  "fields": {
+    "module": 2,
+    "topic": "What Is JSX",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 6,
+  "fields": {
+    "module": 2,
+    "topic": "Printing JavaScript Variable in JSX",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 7,
+  "fields": {
+    "module": 3,
+    "topic": "Creating Core Components",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 8,
+  "fields": {
+    "module": 3,
+    "topic": "Introducing The Props System",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 9,
+  "fields": {
+    "module": 3,
+    "topic": "Picturing the Movement of Data",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 10,
+  "fields": {
+    "module": 4,
+    "topic": "App Overview",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 11,
+  "fields": {
+    "module": 4,
+    "topic": "Initial App Setup",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 12,
+  "fields": {
+    "module": 4,
+    "topic": "Introducing The Event System",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 13,
+  "fields": {
+    "module": 5,
+    "topic": "Importing Libraries",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"height:auto; max-width:100%\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 14,
+  "fields": {
+    "module": 5,
+    "topic": "Importing The Dataset",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 15,
+  "fields": {
+    "module": 5,
+    "topic": "Taking Care Of Missing Data",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 16,
+  "fields": {
+    "module": 6,
+    "topic": "Getting Started",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 17,
+  "fields": {
+    "module": 6,
+    "topic": "Dataset Description",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 18,
+  "fields": {
+    "module": 6,
+    "topic": "Taking Care Of Missing Data",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 19,
+  "fields": {
+    "module": 7,
+    "topic": "Simple Linear Regression Intuition",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 20,
+  "fields": {
+    "module": 7,
+    "topic": "Ordinary Least Squares",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 21,
+  "fields": {
+    "module": 7,
+    "topic": "Simple Linear Regression In Python",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 22,
+  "fields": {
+    "module": 8,
+    "topic": "Dataset + Business Problem Description",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 23,
+  "fields": {
+    "module": 8,
+    "topic": "Multiple Linear Regression Intuition",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 24,
+  "fields": {
+    "module": 8,
+    "topic": "Understanding the P-Value",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 25,
+  "fields": {
+    "module": 9,
+    "topic": "Installing Android Studio",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 26,
+  "fields": {
+    "module": 9,
+    "topic": "Setting up the Emulator",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 27,
+  "fields": {
+    "module": 9,
+    "topic": "Hello World",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 28,
+  "fields": {
+    "module": 10,
+    "topic": "Variables and difference between val and var",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 29,
+  "fields": {
+    "module": 10,
+    "topic": "Datatypes of numbers",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 30,
+  "fields": {
+    "module": 10,
+    "topic": "Datatypes bool, char and string",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 31,
+  "fields": {
+    "module": 11,
+    "topic": "Introduction to OOP",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 32,
+  "fields": {
+    "module": 11,
+    "topic": "Classes and Objects",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 33,
+  "fields": {
+    "module": 11,
+    "topic": "Classes And Initializers",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 34,
+  "fields": {
+    "module": 12,
+    "topic": "Overview Collections",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 35,
+  "fields": {
+    "module": 12,
+    "topic": "Arrays",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 36,
+  "fields": {
+    "module": 12,
+    "topic": "Lists",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 37,
+  "fields": {
+    "module": 13,
+    "topic": "Install JDK 17 for Windows",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 38,
+  "fields": {
+    "module": 13,
+    "topic": "Install JDK 11 for Mac",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 39,
+  "fields": {
+    "module": 13,
+    "topic": "Install JDK 11 for Linux",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 40,
+  "fields": {
+    "module": 14,
+    "topic": "Hello World",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 41,
+  "fields": {
+    "module": 14,
+    "topic": "Variables",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 42,
+  "fields": {
+    "module": 14,
+    "topic": "Starting out with Expressions",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 43,
+  "fields": {
+    "module": 15,
+    "topic": "From JShell to an IDE",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 44,
+  "fields": {
+    "module": 15,
+    "topic": "Installing IntelliJ IDEA for Windows",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 45,
+  "fields": {
+    "module": 15,
+    "topic": "Installing IntelliJ IDEA for Mac",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 46,
+  "fields": {
+    "module": 16,
+    "topic": "Keywords and Expressions",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 47,
+  "fields": {
+    "module": 16,
+    "topic": "Statements, Whitespace and Indentation (Code Organization)",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 48,
+  "fields": {
+    "module": 16,
+    "topic": "Code Blocks And The If Then Else Control Statement",
+    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.additionalfile",
+  "pk": 1,
+  "fields": {
+    "lecture": 1,
+    "file": "additional_files/2023-06-12/Static_Libraries__Argc_Argv.pdf"
+  }
+},
+{
+  "model": "courses.additionalfile",
+  "pk": 2,
+  "fields": {
+    "lecture": 13,
+    "file": "additional_files/2023-06-12/Curriculum_Foundations_overview___Lagos_Intranet.pdf"
+  }
+},
+{
+  "model": "courses.additionalfile",
+  "pk": 3,
+  "fields": {
+    "lecture": 25,
+    "file": "additional_files/2023-06-12/Curriculum_Short_Specializations_overview___Lagos_Intranet.pdf"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "image": "profile_image/placeholder.jpg",
+    "headline": null,
+    "overview": null
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "email": "admin@company.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-06-12T19:38:33.372Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Web Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-06-12T19:38:44.875Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Data Science",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-06-12T19:38:59.914Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Mobile Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-06-12T19:39:20.085Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Programming Languages",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-06-12T19:39:32.722Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Game Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

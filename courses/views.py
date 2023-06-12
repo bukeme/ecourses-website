@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.views.generic import TemplateView, CreateView, ListView, View, UpdateView
 from django.views.generic.detail import SingleObjectMixin, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -13,6 +14,12 @@ import json
 
 class HomePageView(TemplateView):
 	template_name = 'courses/home.html'
+
+	def get_context_data(self, *args, **kwargs):
+		context = super().get_context_data(*args, **kwargs)
+		courses = Course.published.all()
+		context.update(courses=courses)
+		return context
 
 home_page_view = HomePageView.as_view()
 
@@ -231,4 +238,24 @@ class CourseUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
 		return self.request.user == self.get_object().owner
 
 course_update_view = CourseUpdateView.as_view()
+
+class CoursePublishView(UserPassesTestMixin, LoginRequiredMixin, View):
+	def post(self, request, *args, **kwargs):
+		course = Course.objects.get(pk=kwargs['course_pk'])
+		modules = course.module_set.all()
+		if modules.count() < 3:
+			messages.error(request, 'Your Course Must Have At Least 3 Modules Before It Can Be Published')
+			return redirect(request.META.get(HTTP_REFERER))
+		for module in modules:
+			if module.lecture_set.all().count() < 3:
+				messages.error(request, 'All Modules Must Have At Least 3 Lectures Before It Can Be Published')
+				return redirect(request.META.get(HTTP_REFERER))
+		course.publish = True
+		course.save()
+		return redirect('course_detail', pk=course.pk)
+
+	def test_func(self):
+		return self.request.user == Course.objects.get(pk=self.kwargs['course_pk']).owner
+
+course_publish_view = CoursePublishView.as_view()
 

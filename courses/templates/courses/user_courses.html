@@ -26,7 +26,7 @@
 							    <div style="flex-basis: 250px;" class="flex-lg-shrink-0 enlarge">
 							        <img class="enlarge-item" src="{{ course.thumbnail.url }}" alt="">
 							    </div>
-							    <div class="ml-3 ml-lg-4 d-flex flex-column">
+							    <div class="ml-3 ml-lg-4 d-flex flex-column align-items-start">
 							        <h6 class="text_dark fw-5">{{ course.name }}</h6>
 							        <span class="small d-none d-lg-block">{{ course.headline | truncatewords:15 }}</span>
 							        <div class="fs-12 mt-1 mt-lg-2 text-muted">
@@ -37,8 +37,16 @@
 								            </div>
 							            {% endif %}
 							            <div>
-							                <span>500 lectures</span>
+							                <span>{{ course.lecture_count }} lectures</span>
 							            </div>
+							        </div>
+							        <div class="bg-primary text-white px-2 py-1 mt-1 small">
+							        	{% if course.publish %}
+							        		<i class="fa fa-certificate mr-1"></i>
+							        		<span>Published</span>
+							        	{% else %}
+							        		<span>Not Published</span>
+							        	{% endif %}
 							        </div>
 							    </div>
 							    <a href="{% url 'course_detail' course.pk %}" class="stretched-link"></a>
