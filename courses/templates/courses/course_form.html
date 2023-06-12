@@ -1,20 +1,39 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-{% block title %}Create Course{% endblock title %}
+{% block title %}
+{% if object %}
+	Edit
+{% else %}
+	Create
+{% endif %}
+Course{% endblock title %}
 
 {% block content %}
 
 	<div class="container mt-3">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<div class="card p-3 shadow">
-					<h3 class="text_dark text-center">Create Course</h3>
+				<div class="border p-3 shadow-lg">
+					<h3 class="text_dark text-center">
+						{% if object %}
+							Edit
+						{% else %}
+							Create
+						{% endif %}
+						Course
+					</h3>
 					<div>
 						<form method="post" enctype="multipart/form-data">
 							{% csrf_token %}
 							{{ form | crispy }}
-							<button type="submit" class="btn btn_primary w-100 fw-6">Create</button>
+							<button type="submit" class="btn btn-info w-100 fw-6">
+								{% if object %}
+									Edit
+								{% else %}
+									Create
+								{% endif %}
+							</button>
 						</form>
 					</div>
 				</div>

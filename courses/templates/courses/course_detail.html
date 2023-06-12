@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ course.name }}{% endblock title %}
+
+{% block content %}
+
+	<div class="bg_dark">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-12">
+	                <div class="d-flex flex-column flex-lg-row align-items-lg-start my-4">
+	                    <div class="flex-lg-shrink-0 mb-4 mb-lg-0" style="flex-basis: 350px;">
+	                        <img src="{{ course.thumbnail.url }}" alt="">
+	                    </div>
+	                    <div class="d-flex flex-column text-white ml-lg-5">
+	                        <h2 class="text-white">{{ course.name }}</h2>
+	                        <span class="fs-18 mb-2">{{ course.headline }}</span>
+	                        <div class="small">
+	                        	{% if course.rating_set.all %}
+		                            <i class="fa fa-star text_success mr-1"></i>
+		                            <span class="text_success">4.6</span>
+		                            <span class="text-info">(183,234 ratings)</span>
+	                            {% endif %}
+	                            {% if course.students.all %}
+		                            <span>777,347 students</span>
+	                            {% endif %}
+	                        </div>
+	                        <div class="small d-flex justify-content-between my-1">
+	                            <span>Created by <a href="#">{{ course.owner.userprofile.full_name }}</a></span>
+	                            {% if request.user == course.owner %}
+		                            <a href="{% url 'module_list' course.pk %}" class="btn btn-sm btn-light ml-auto">Edit Course</a>
+	                            {% endif %}
+	                        </div>
+	                        <div class="d-flex flex-column flex-lg-row small">
+	                            <!-- <div>
+	                                <i class="far fa-clock mr-1"></i>
+	                                <span>12.8 hrs on demand</span>
+	                            </div> -->
+	                            <div class="">
+	                                <i class="fa fa-certificate mr-1"></i>
+	                                <span>Last updated {{ course.updated | date:'m/Y' }}</span>
+	                            </div>
+	                        </div>
+	                        <div class="d-flex align-items-center mt-4">
+	                            <h1 class="mb-n1 text-white">${{ course.actual_price }}</h1>
+	                            {% if course.discount %}
+		                            <del class="mx-1 text-muted">${{ course.price }}</del>
+		                            <span>{{ course.discount }}% off</span>
+	                            {% endif %}
+	                        </div>
+	                        <div class="d-flex flex-column flex-lg-row mt-2">
+	                            <button type="button"class="btn btn-info flex-fill mr-lg-2 fw-5">
+	                                <i class="fa fa-shopping-cart mr-1" aria-hidden="true"></i>
+	                                Add To Cart
+	                            </button>
+	                            <a class="btn btn-light flex-fill fw-5 mt-2 mt-lg-0" href="#" role="button">
+	                                <i class="fa fa-check-circle mr-1" aria-hidden="true"></i>
+	                                Buy Now
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class="container mt-4">
+	    <div class="row">
+	        <div class="col-lg-12">
+	            <h3 class="text_dark">Course Content</h3>
+	            <div>
+	                <div id="accordianId" role="tablist" aria-multiselectable="true">
+	                	{% for module in course.module_set.all %}
+
+		                    <div class="card {% if forloop.counter > 2 %}d-none{% endif %} section-card">
+		                        <div class="card-header" role="tab" id="section1HeaderId">
+		                            <h6 class="mb-0">
+		                                <a data-toggle="collapse" href="#section{{ module.pk }}ContentId" aria-expanded="true" aria-controls="section{{ module.pk }}ContentId" class="text_dark">{{ module.name }}</a>
+		                            </h6>
+		                        </div>
+		                        <div id="section{{ module.pk }}ContentId" class="collapse {% if forloop.first %}show{% endif %}" role="tabpanel" aria-labelledby="section1HeaderId">
+		                            <div class="card-body">
+		                                <ul class="list-style-none pl-0">
+		                                	{% for lecture in module.lecture_set.all %}
+
+			                                    <li class="d-flex align-items-center mb-2">
+			                                        <div class="rounded-circle d-flex justify-content-center align-items-center bg_dark" style="width: 16px; height: 16px;">
+			                                            <i class="fa fa-play text-white" aria-hidden="true" style="font-size: 8px;"></i>
+			                                        </div>
+			                                        <span class="ml-2">{{ lecture.topic }}</span>
+			                                    </li>
+
+		                                    {% endfor %}
+		                                </ul>
+		                            </div>
+		                        </div>
+		                    </div>
+
+	                    {% endfor %}
+	                </div>
+	                {% if course.module_set.all.count > 2 %}
+	                <button class="btn btn-light border-dark fw-5 w-100 mt-3 more-section-btn">
+	                	<span class="more">{{ course.module_set.all.count | add:'-2' }} more</span>
+	                	<span class="less d-none">Less</span>
+	                	sections
+	                </button>
+	                {% endif %}
+	            </div>
+
+	            <div class="mt-4">
+	            	<div>
+	            		{{ course.description | safe }}
+	            	</div>
+	            </div>
+
+	            {% if course.rating_set.all %}
+
+		            <div class="mt-4">
+		                <div class="d-flex flex-wrap align-items-center fs-22 reduce text_dark mb-3">
+		                    <i class="fa fa-star text_success mr-1" aria-hidden="true"></i>
+		                    <span class="font-weight-bolder">4.6 course rating</span>
+		                    <span class="bg-secondary rounded-circle p-1 mx-2"></span>
+		                    <span class="font-weight-bolder">181K ratings</span>
+		                </div>
+		                <div class="grid-container" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/team-1.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/team-2.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/team-3.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/team-4.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/testimonial-1.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                    <div class="border-top py-4">
+		                        <div class="d-flex align-items-center">
+		                            <div class="rounded-circle mr-3" style="width: 40px; height: 40px;">
+		                                <img src="../images/testimonial-2.jpg" alt="">
+		                            </div>
+		                            <div class="d-flex flex-column">
+		                                <span class="text_dark fw-6">Andrii O.</span>
+		                                <div class="mt-n2">
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <i class="fa fa-star text_success fs-10" aria-hidden="true"></i>
+		                                    <span class="text-muted fs-12 font-weight-bolder ml-1">2 weeks ago</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="mt-3 small text_dark">
+		                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae voluptas sunt incidunt voluptatum magni consectetur ab aperiam porro reprehenderit corporis fugit dolor aliquid provident deleniti aliquam, praesentium eveniet. Deleniti.</span>
+		                        </div>
+		                    </div>
+		                </div>
+		                <button class="btn btn-light border-dark text_dark fs-14 font-weight-bold">Show all reviews</button>
+		            </div>
+
+	            {% endif %}
+	        </div>
+	    </div>
+	</div>
+
+{% endblock content %}
+
+{% block js %}
+
+	<script>
+		const moreSectionBtn = document.querySelector('.more-section-btn');
+		const hiddenSectionCards = document.querySelectorAll('.section-card.d-none');
+
+		moreSectionBtn.addEventListener('click', function() {
+			hiddenSectionCards.forEach(function(item) {
+				item.classList.toggle('d-none');
+			});
+			this.querySelector('.more').classList.toggle('d-none');
+			this.querySelector('.less').classList.toggle('d-none');
+		});
+	</script>
+
+{% endblock js %}
