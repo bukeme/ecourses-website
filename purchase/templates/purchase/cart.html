@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Cart{% endblock title %}
+
+{% block content %}
+
+	<div class="container">
+	    <div class="row">
+	        <div class="col-12">
+	            <h1 class="fs-35 font-weight-bolder text_dark my-4 my-lg-5">Cart</h1>
+	            <div class="d-flex flex-column flex-md-row">
+	                <div style="flex-shrink: 2; width: 80%;" class="order-1 mt-4 mt-md-0 cart-left">
+	                    <h5 class="text_dark">{{ cart_len }} courses in cart</h5>
+	                    <div>
+	                    	{% for course in cart %}
+
+		                        <div>
+		                        	<hr>
+		                            <div class="d-flex align-items-start">
+		                                <div style="flex-basis: 200px;" class="flex-shrink-0 resize-img mr-2">
+		                                    <img src="{{ course.thumbnail.url }}">
+		                                </div>
+		                                <div class="d-flex flex-column flex-lg-row flex-lg-grow-1">
+		                                    <div class="d-flex flex-column flex-lg-grow-1 align-items-start">
+		                                        <a href="{% url 'course_detail' course.pk %}">
+		                                            <span class="font-weight-bold text_dark">{{ course.name }}</span>
+		                                        </a>
+		                                        <span class="small">By {{ course.owner.userprofile.full_name }}</span>
+		                                        {% if course.rating_set.all %}
+			                                        <div class="small mt-1">
+			                                            <i class="fa fa-star text_success mr-1"></i>
+			                                            <span class="text_success">4.6</span>
+			                                            <span class="text-muted">(183,234 ratings)</span>
+			                                            <!-- <span>777,347 students</span> -->
+			                                        </div>
+		                                        {% endif %}
+		                                        <div class="d-flex align-items-center small">
+		                                            <!-- <span>44.5 total hours</span>
+		                                            <i class="fa fa-circle mx-1" style="font-size: 5px;"></i> -->
+		                                            <span>{{ course.lecture_count }} lectures</span>
+		                                        </div>
+		                                    </div>
+		                                    <div class="ml-0 ml-lg-4">
+		                                    	<form method="post" action="{% url 'cart_remove' course.pk %}">
+		                                    		{% csrf_token %}
+		                                    		<!-- <button type="submit" class="p-0 border-0 text-primary" style="background: none;">Remove</button> -->
+		                                    		<a href="javascript:void()" onclick="this.parentElement.submit()">Remove</a>
+		                                    	</form>
+		                                        
+		                                    </div>
+		                                </div>
+		                                <div class="d-flex flex-column ml-2 ml-lg-4">
+		                                    <span class="font-weight-bold text-info fs-18">${{ course.actual_price }}</span>
+		                                    {% if course.discount %}
+			                                    <del>${{ course.price }}</del>
+		                                    {% endif %}
+		                                </div>
+		                            </div>
+		                        </div>
+
+		                    {% empty %}
+
+		                    	<h4 class="text-center text-muted">No Item In Cart</h4>
+
+	                        {% endfor %}
+	                    </div>
+	                </div>
+	                <div class="d-flex flex-column flex-lg-shrink-0 ml-0 ml-md-5 order-0 order-md-2">
+	                    <span class="text-muted font-weight-bold">Total:</span>
+	                    <h1 class="text_dark font-weight-bolder mt-2 mb-n1">${{ actual_total_price }}</h1>
+	                    {% if total_price != actual_total_price %}
+		                    <del class="fs-18">${{ total_price }}</del>
+	                    {% endif %}
+	                    <!-- <span class="text_dark">85% off</span> -->
+	                    <a href="#" class="btn btn-info rounded-0 mt-1" style="padding: 12px;">Checkout</a>
+	                    <hr class="w-100">
+	                    <span class="text_dark font-weight-bold mt-n1">Promotions</span>
+	                    <div class="d-flex">
+	                        <a href="#" class="mx-1">
+	                            <i class="fa fa-times fs-18 text-muted"></i>
+	                        </a>
+	                        <span class="ml-2 text-muted small"><b>LOYALLEARNERA</b> is apllied</span>
+	                    </div>
+	                    <form class="mt-1">
+	                        <div class="input-group">
+	                            <input type="text" name="coupon" placeholder="Enter Coupon" class="form-control rounded-0">
+	                            <div class="input-group-append">
+	                                <button type="submit" class="btn btn-info rounded-0">Apply</button>
+	                            </div>
+	                        </div>
+	                    </form>
+	                </div>
+	            </div>
+	            <!-- <div class="mt-4">
+	                <h4 class="text_dark">You might also like</h4>
+	                <div class="grid-container" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+	                    <div class="enlarge-container position-relative">
+	                        <div style="height: 150px;" class="enlarge">
+	                            <img src="../images/course-4.jpg" class="enlarge-item">
+	                        </div>
+	                        <div class="d-flex flex-column">
+	                            <span class="text_dark font-weight-bold">Advanced JavaScript Programming Masterclass</span>
+	                            <span class="fs-12">Maxwell Academy</span>
+	                            <div class="small mt-1">
+	                                <i class="fa fa-star text_success mr-1"></i>
+	                                <span class="text_success">4.6</span>
+	                                <span class="text-muted">(183,234 ratings)</span>
+	                            </div>
+	                            <span class="d-flex align-items-center">
+	                                <b class="fs-18 font-weight-bolder text-info mr-2">$120</b>
+	                                <del class="small">$200</del>
+	                            </span>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div class="enlarge-container position-relative">
+	                        <div style="height: 150px;" class="enlarge">
+	                            <img src="../images/course-5.jpg" class="enlarge-item">
+	                        </div>
+	                        <div class="d-flex flex-column">
+	                            <span class="text_dark font-weight-bold">Advanced JavaScript Programming Masterclass</span>
+	                            <span class="fs-12">Maxwell Academy</span>
+	                            <div class="small mt-1">
+	                                <i class="fa fa-star text_success mr-1"></i>
+	                                <span class="text_success">4.6</span>
+	                                <span class="text-muted">(183,234 ratings)</span>
+	                            </div>
+	                            <span class="d-flex align-items-center">
+	                                <b class="fs-18 font-weight-bolder text-info mr-2">$120</b>
+	                                <del class="small">$200</del>
+	                            </span>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div class="enlarge-container position-relative">
+	                        <div style="height: 150px;" class="enlarge">
+	                            <img src="../images/course-6.jpg" class="enlarge-item">
+	                        </div>
+	                        <div class="d-flex flex-column">
+	                            <span class="text_dark font-weight-bold">Advanced JavaScript Programming Masterclass</span>
+	                            <span class="fs-12">Maxwell Academy</span>
+	                            <div class="small mt-1">
+	                                <i class="fa fa-star text_success mr-1"></i>
+	                                <span class="text_success">4.6</span>
+	                                <span class="text-muted">(183,234 ratings)</span>
+	                            </div>
+	                            <span class="d-flex align-items-center">
+	                                <b class="fs-18 font-weight-bolder text-info mr-2">$120</b>
+	                                <del class="small">$200</del>
+	                            </span>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                    <div class="enlarge-container position-relative">
+	                        <div style="height: 150px;" class="enlarge">
+	                            <img src="../images/cat-1.jpg" class="enlarge-item">
+	                        </div>
+	                        <div class="d-flex flex-column">
+	                            <span class="text_dark font-weight-bold">Advanced JavaScript Programming Masterclass</span>
+	                            <span class="fs-12">Maxwell Academy</span>
+	                            <div class="small mt-1">
+	                                <i class="fa fa-star text_success mr-1"></i>
+	                                <span class="text_success">4.6</span>
+	                                <span class="text-muted">(183,234 ratings)</span>
+	                            </div>
+	                            <span class="d-flex align-items-center">
+	                                <b class="fs-18 font-weight-bolder text-info mr-2">$120</b>
+	                                <del class="small">$200</del>
+	                            </span>
+	                        </div>
+	                        <a href="#" class="stretched-link"></a>
+	                    </div>
+	                </div>
+	            </div> -->
+	        </div>
+	    </div>
+	</div>
+
+{% endblock content %}

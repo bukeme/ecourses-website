@@ -9,6 +9,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 class Category(models.Model):
 	category = models.CharField(max_length=200)
+	thumbnail = models.ImageField(upload_to='category_thumbnail/%Y-%m-%d', default='profile_image/placeholder.jpg')
 
 	def __str__(self):
 		return self.category
@@ -33,6 +34,7 @@ class Course(models.Model):
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now=True)
 
+	objects = models.Manager()
 	published = Published()
 
 	def __str__(self):

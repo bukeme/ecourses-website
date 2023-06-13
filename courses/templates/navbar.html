@@ -1,4 +1,6 @@
 {% load fontawesome_5 %}
+{% load courses_tags %}
+{% cart_count request as cart_l %}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow align-items-center fixed-top">
     <a class="navbar-brand text-info" href="{% url 'home' %}">
         <h3 class="mb-0">Learning Hub</h3>
@@ -30,8 +32,9 @@
         <input class="form-control mr-sm-2 rounded-pill w-100" type="search" placeholder="Search Courses">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
-      {% if request.user.is_authenticated %}
+      
       <ul class="navbar-nav mt-2 mt-lg-0 align-items-lg-center">
+        {% if request.user.is_authenticated %}
         <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
           <a href="{% url 'course_create' %}" class="nav-item text_dark fw-5">Create Course</a>
         </li>
@@ -39,9 +42,17 @@
           <a href="#" class="nav-item text_dark fw-5">My learning</a>
         </li>
         <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
-          <a href="#" class="nav-item text_dark fw-5 position-relative mr-2">
+          <a href="{% url 'cart' %}" class="nav-item text_dark fw-5 position-relative mr-2 d-none d-lg-inline-block">
             {% fa5_icon 'shopping-cart' %}
-            <span class="position-absolute rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="top: -10px; right: -10px; width: 20px; height: 20px;">3</span>
+            {% if cart_l %}
+              <span class="position-absolute rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="top: -10px; right: -10px; width: 20px; height: 20px;">{{ cart_l }}</span>
+            {% endif %}
+          </a>
+          <a href="{% url 'cart' %}" class="text_dark d-flex d-lg-none w-100 justify-content-between align-items-center">
+            <span>My Cart</span>
+            {% if cart_l %}
+              <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">{{ cart_l }}</span>
+            {% endif %}
           </a>
         </li>
         <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
@@ -49,9 +60,9 @@
             <div class="rounded-circle c-pointer dropdown-toggle" data-toggle="dropdown" style="width: 40px; height: 40px;">
               <img src="{{ request.user.userprofile.image.url }}">
             </div>
-            <div class="dropdown-menu dropdown-menu-right" style="width: 300px;">
+            <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu ml-lg-0" style="width: 300px;">
               <a href="{% url 'user_profile' %}" class="d-flex align-items-center dropdown-item bg-hover">
-                <div class="rounded-circle" style="width: 70px; height: 70px;">
+                <div class="rounded-circle flex-shrink-0 resize-p-image" style="width: 70px; height: 70px;">
                   <img src="{{ request.user.userprofile.image.url }}">
                 </div>
                 <div class="d-flex flex-column ml-2">
@@ -61,11 +72,11 @@
               </a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">My Learning</a>
-              <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
+              <!-- <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
                 <span>My Cart</span>
                 <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">3</span>
-              </a>
-              <a href="{% url 'course_create' %}" class="dropdown-item">Create Course</a>
+              </a> -->
+              <!-- <a href="{% url 'course_create' %}" class="dropdown-item">Create Course</a> -->
               <a href="{% url 'user_courses' %}" class="dropdown-item">Your Courses</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
@@ -86,12 +97,29 @@
             </div>
           </div>
         </li>
+        {% else %}
+          <li class="nav-item mx-0 mx-lg-2 my-1 my-lg-0">
+            <a href="{% url 'cart' %}" class="nav-item text_dark fw-5 position-relative mr-2 d-none d-lg-inline-block">
+              {% fa5_icon 'shopping-cart' %}
+              {% if cart_l %}
+                <span class="position-absolute rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="top: -10px; right: -10px; width: 20px; height: 20px;">{{ cart_l }}</span>
+              {% endif %}
+            </a>
+            <a href="{% url 'cart' %}" class="text_dark d-flex d-lg-none w-100 justify-content-between align-items-center">
+              <span>My Cart</span>
+              {% if cart_l %}
+                <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">{{ cart_l }}</span>
+              {% endif %}
+            </a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1 my-1 my-lg-0">
+            <a href="{% url 'account_signup' %}" class="btn btn-info">Join Now</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1 my-1 my-lg-0">
+            <a href="{% url 'account_login' %}" class="btn btn-outline-info">Sign In</a>
+          </li>
+        {% endif %}
       </ul>
-      {% else %}
-      <div class="d-flex flex-column flex-lg-row align-items-start">
-        <a href="{% url 'account_signup' %}" class="btn btn-info mx-0 mx-lg-1 my-1 my-lg-0">Join Now</a>
-        <a href="{% url 'account_login' %}" class="btn btn-outline-info mx-0 mx-lg-1 my-1 my-lg-0">Sign In</a>
-      </div>
-      {% endif %}
+      
     </div>
 </nav>
