@@ -233,8 +233,37 @@ img,
     opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+    .nav-dropdown-menu {
+        margin-left: 45px;
+        margin-top: -220px;
+    }
+
+    .resize-img {
+        flex-basis: 100px !important;
+    }
+
+    .cart-left {
+        width: initial !important;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .reduce {
         font-size: 16px;
+    }
+
+    
+}
+
+@media screen and (max-width: 350px) {
+    .nav-dropdown-menu {
+        width: 250px !important;
+        margin-top: -300px !important;
+    }
+
+    .resize-p-image {
+        width: 40px !important;
+        height: 40px !important;
     }
 }

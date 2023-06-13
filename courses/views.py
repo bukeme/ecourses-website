@@ -5,9 +5,10 @@ from django.views.generic.detail import SingleObjectMixin, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy, reverse
 from django.http import JsonResponse
-from courses.models import Course, Module, Lecture, AdditionalFile
+from courses.models import Course, Module, Lecture, AdditionalFile, Category
 from courses.forms import ModuleForm
 from courses.decorators import AjaxRequiredOnlyMixin
+from purchase.cart import Cart
 import json
 
 # Create your views here.
@@ -18,7 +19,8 @@ class HomePageView(TemplateView):
 	def get_context_data(self, *args, **kwargs):
 		context = super().get_context_data(*args, **kwargs)
 		courses = Course.published.all()
-		context.update(courses=courses)
+		categories = Category.objects.all()
+		context.update(courses=courses, categories=categories)
 		return context
 
 home_page_view = HomePageView.as_view()
@@ -218,12 +220,18 @@ lecture_delete_view = LectureDeleteView.as_view()
 class UserCourseListView(LoginRequiredMixin, ListView):
 	template_name = 'courses/user_courses.html'
 	def get_queryset(self):
+		print(Course)
 		return Course.objects.filter(owner=self.request.user)
 
 user_course_list_view = UserCourseListView.as_view()
 
-class CourseDetailView(LoginRequiredMixin, DetailView):
+class CourseDetailView(DetailView):
 	model = Course
+
+	def get_context_data(self, *args, **kwargs):
+		context = super().get_context_data(*args, **kwargs)
+		context['cart'] = Cart(self.request)
+		return context
 
 course_detail_view = CourseDetailView.as_view()
 

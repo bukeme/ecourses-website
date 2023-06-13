@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Apps
     'courses.apps.CoursesConfig',
     'users.apps.UsersConfig',
+    'purchase.apps.PurchaseConfig',
 
     # Installed Apps
     'allauth',

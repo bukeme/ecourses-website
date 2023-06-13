@@ -27,6 +27,7 @@ urlpatterns = [
     path('accounts/signup/', user_signup_view, name='account_signup'),
     path('courses/', include('courses.urls')),
     path('user/', include('users.urls')),
+    path('purchase/', include('purchase.urls')),
     path('accounts/', include('allauth.account.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
