@@ -9,7 +9,7 @@
 	        <div class="col-12">
 	            <h1 class="fs-35 font-weight-bolder text_dark my-4 my-lg-5">Cart</h1>
 	            <div class="d-flex flex-column flex-md-row">
-	                <div style="flex-shrink: 2; width: 80%;" class="order-1 mt-4 mt-md-0 cart-left">
+	                <div style="flex-shrink: 2; width: 80%;" class="order-1 mt-4 mt-md-0 cart-sub">
 	                    <h5 class="text_dark">{{ cart_len }} courses in cart</h5>
 	                    <div>
 	                    	{% for course in cart %}
@@ -65,7 +65,7 @@
 	                        {% endfor %}
 	                    </div>
 	                </div>
-	                <div class="d-flex flex-column flex-lg-shrink-0 ml-0 ml-md-5 order-0 order-md-2">
+	                <div class="d-flex flex-column flex-lg-shrink-0 ml-0 ml-md-5 order-0 order-md-2 cart-sub" style="width: 20%;">
 	                    <span class="text-muted font-weight-bold">Total:</span>
 	                    <h1 class="text_dark font-weight-bolder mt-2 mb-n1">${{ actual_total_price }}</h1>
 	                    {% if total_price != actual_total_price %}
@@ -74,14 +74,40 @@
 	                    <!-- <span class="text_dark">85% off</span> -->
 	                    <a href="#" class="btn btn-info rounded-0 mt-1" style="padding: 12px;">Checkout</a>
 	                    <hr class="w-100">
-	                    <span class="text_dark font-weight-bold mt-n1">Promotions</span>
-	                    <div class="d-flex">
-	                        <a href="#" class="mx-1">
-	                            <i class="fa fa-times fs-18 text-muted"></i>
-	                        </a>
-	                        <span class="ml-2 text-muted small"><b>LOYALLEARNERA</b> is apllied</span>
-	                    </div>
-	                    <form class="mt-1">
+	                    <a href="javascript:void()" class="small mt-n1" onclick="document.querySelector('.coupon-form').classList.toggle('d-none')">Apply Coupon</a>
+	                    {% if coupon %}
+		                    <div class="d-flex">
+		                        <a href="#" class="mx-1" data-toggle="modal" data-target="#remove-coupon-modal">
+		                            <i class="fa fa-times fs-18 text-muted"></i>
+		                        </a>
+		                        <span class="ml-2 text-muted small"><b>{{ coupon.code }}</b> is apllied</span>
+
+		                        <!-- Remove Coupon Modal -->
+
+		                        <div class="modal fade" id="remove-coupon-modal" tabindex="-1" role="dialog" aria-labelledby="remove-coupon-modal-title" aria-hidden="true">
+		                            <div class="modal-dialog modal-dialog-centered" role="document">
+		                                <div class="modal-content">
+		                        	        <div class="modal-header">
+		                        	            <h5 class="modal-title" id="remove-coupon-modal-title">Remove Coupon</h5>
+		                        	            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		                        	            	<span aria-hidden="true">&times;</span>
+		                        	            </button>
+		                        	        </div>
+	                        	            <div class="modal-body">
+	                        	            	<p>Are you sure you want to remove "{{ coupon.code }}" coupon?</p>
+	                        	            	<small>Note: The discount allocated to this coupon will not be applied to your cart</small>
+	                        	            </div>
+	                        	            <div class="modal-footer">
+	                        	                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+	                        	                <a href="{% url 'remove_coupon' %}" class="btn btn-danger">Yes, Remove</a>
+	                        	            </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+	                    {% endif %}
+	                    <form class="mt-1 d-none coupon-form" method="post" action="{% url 'apply_coupon' %}">
+	                    	{% csrf_token %}
 	                        <div class="input-group">
 	                            <input type="text" name="coupon" placeholder="Enter Coupon" class="form-control rounded-0">
 	                            <div class="input-group-append">
