@@ -1,6 +1,8 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils import timezone
 from django.db.models import Q
+from courses.models import Course
 
 # Create your models here.
 
@@ -27,5 +29,9 @@ class Coupon(models.Model):
 	def __str__(self):
 		return self.code
 
-	# def is_valid(self):
-	# 	return self.start_date <= timezone.now() and self.end_date >= timezone.now()
+class Payment(models.Model):
+    courses = models.ManyToManyField(Course)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    amount = models.DecimalField(max_digits=6, decimal_places=2)
+    time = models.DateTimeField(auto_now_add=True)
+

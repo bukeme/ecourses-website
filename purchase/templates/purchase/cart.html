@@ -72,7 +72,10 @@
 		                    <del class="fs-18">${{ total_price }}</del>
 	                    {% endif %}
 	                    <!-- <span class="text_dark">85% off</span> -->
-	                    <a href="#" class="btn btn-info rounded-0 mt-1" style="padding: 12px;">Checkout</a>
+                        <form method="post" action="{% url 'purchase' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-info rounded-0 mt-1 w-100" style="padding: 12px;">Purchase</button>
+                        </form>
 	                    <hr class="w-100">
 	                    <a href="javascript:void()" class="small mt-n1" onclick="document.querySelector('.coupon-form').classList.toggle('d-none')">Apply Coupon</a>
 	                    {% if coupon %}

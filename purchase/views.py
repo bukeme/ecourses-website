@@ -1,10 +1,17 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views.generic import View, TemplateView
 from django.views.generic.base import RedirectView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
+from django.conf import settings
 from django.db.models import Q
 from purchase.cart import Cart
-from purchase.models import Coupon
+from purchase.models import Coupon, Payment
+import stripe
+import math
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Create your views here.
 
@@ -59,3 +66,50 @@ class RemoveCoupon(RedirectView):
 		return self.request.META.get('HTTP_REFERER')
 
 remove_coupon = RemoveCoupon.as_view()
+
+class PurchaseView(LoginRequiredMixin, View):
+    def post(self, request, *args, **kwargs):
+        cart = Cart(request)
+        price = math.ceil(cart.total_price()['actual_total_price'])
+        checkout_session = stripe.checkout.Session.create(
+            line_items=[
+                {
+                    'price_data': {
+                        'currency': 'usd',
+                        'product_data': {
+                            'name': cart.getname(),
+                        },
+                        'unit_amount': price * 100,
+                    },
+                    'quantity': 1,
+                },
+            ],
+            mode='payment',
+            success_url = settings.BACKEND_HOST + reverse('purchase_success'),
+            cancel_url = settings.BACKEND_HOST + reverse('purchase_cancel'),
+        )
+        return redirect(checkout_session.url)
+
+purchase_view = PurchaseView.as_view()
+
+class PurchaseSuccessView(LoginRequiredMixin, TemplateView):
+    template_name = 'purchase/purchase_success.html'
+
+    def dispatch(self, request, *args, **kwargs):
+        cart = Cart(request)
+        price = math.ceil(cart.total_price()['actual_total_price'])
+        payment = Payment.objects.create(user=request.user, amount=price)
+        for course in cart:
+            payment.courses.add(course)
+            course.students.add(request.user)
+            payment.save()
+            course.save()
+        cart.clear()
+        return super().dispatch(request, *args, **kwargs)
+
+purchase_success_view = PurchaseSuccessView.as_view()
+
+class PurchaseCancelView(LoginRequiredMixin, TemplateView):
+    template_name = 'purchase/purchase_cancel.html'
+
+purchase_cancel_view = PurchaseCancelView.as_view()
