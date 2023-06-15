@@ -276,3 +276,23 @@ class StudentCourseListView(LoginRequiredMixin, ListView):
 
 student_course_list_view = StudentCourseListView.as_view()
 
+class StudentCourseDetailView(UserPassesTestMixin, LoginRequiredMixin, TemplateView):
+	template_name = 'courses/student_course_detail.html'
+
+	def get_context_data(self, *args, **kwargs):
+		context = super().get_context_data(*args, **kwargs)
+		course = Course.objects.get(pk=kwargs['pk'])
+		lecture_pk = kwargs.get('lecture_pk')
+		if lecture_pk:
+			lecture = Lecture.objects.get(pk=lecture_pk)
+		else:
+			lecture = course.module_set.all().first().lecture_set.all().first()
+		context.update(lecture=lecture, course=course)
+		return context
+
+	def test_func(self):
+		course = Course.objects.get(pk=self.kwargs['pk'])
+		return self.request.user in course.students.all() or self.request.user == course.owner
+
+student_course_detail_view = StudentCourseDetailView.as_view()
+

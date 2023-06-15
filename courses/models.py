@@ -49,14 +49,7 @@ class Course(models.Model):
 		else:
 			self.actual_price = self.price
 		return super(Course, self).save(*args, **kwargs)
-
-class Rating(models.Model):
-	course = models.ForeignKey(Course, on_delete=models.CASCADE)
-	student = models.ForeignKey(User, on_delete=models.CASCADE)
-	rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-	created = models.DateTimeField(auto_now_add=True)
-	updated = models.DateTimeField(auto_now=True)
-
+		
 class Module(models.Model):
 	course = models.ForeignKey(Course, on_delete=models.CASCADE)
 	name = models.CharField(max_length=500)
@@ -90,6 +83,34 @@ class Lecture(models.Model):
 		self.module.course.updated = timezone.now()
 		self.module.course.save()
 		return super(Lecture, self).save(*args, **kwargs)
+
+	def next(self):
+		module = self.module
+		try:
+			next_lecture = module.lecture_set.filter(order=self.order+1).first()
+		except:
+			next_lecture = None
+		if next_lecture:
+			return next_lecture
+		try:
+			next_lecture = module.course.module_set.filter(order=module.order+1).first().lecture_set.all().first()
+		except:
+			next_lecture = None
+		return next_lecture
+
+	def prev(self):
+		module = self.module
+		try:
+			prev_lecture = module.lecture_set.filter(order=self.order-1).first()
+		except:
+			prev_lecture = None
+		if prev_lecture:
+			return prev_lecture
+		try:
+			prev_lecture = module.course.module_set.filter(order=module.order-1).first().lecture_set.all().last()
+		except:
+			prev_lecture = None
+		return prev_lecture
 
 	class Meta:
 		ordering = ['order',]

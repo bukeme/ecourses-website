@@ -1,0 +1,29 @@
+<div id="accordianId" role="tablist" aria-multiselectable="true">
+	{% for module in course.module_set.all %}
+
+        <div class="course-accordion-item {% if module == lecture.module %}active{% endif %}">
+            <div class="card-header inner" role="tab" id="section{{ module.pk }}HeaderId{{ device }}">
+                <h6 class="mb-0">
+                    <a data-toggle="collapse" href="#section{{ module.pk }}ContentId{{ device }}" aria-expanded="true" aria-controls="section{{ module.pk }}ContentId{{ device }}" class="text_dark">{{ module.name }}</a>
+                </h6>
+            </div>
+            <div id="section{{ module.pk }}ContentId{{ device }}" class="collapse {% if module == lecture.module %}show{% endif %}" role="tabpanel" aria-labelledby="section1HeaderId">
+                <div class="card-body p-2">
+                    <ul class="pl-0" style="list-style: none;">
+                    	{% for lec in module.lecture_set.all %}
+
+                            <li {% if lec == lecture %}style="background: rgba(0, 0, 0, 0.1);"{% endif %} class="d-flex align-items-center p-1 rounded">
+                            	<div class="rounded-circle d-flex justify-content-center align-items-center bg_dark mr-2" style="width: 16px; height: 16px;">
+                            	    <i class="fa fa-play text-white" aria-hidden="true" style="font-size: 8px;"></i>
+                            	</div>
+                                <a href="{% url 'student_lecture_detail' course.pk lec.pk %}" class="text_dark">{{ lec.topic }}</a>
+                            </li>
+
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>

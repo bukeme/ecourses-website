@@ -160,6 +160,28 @@ img,
     content: none;
 }
 
+.course-accordion-item.active > .inner {
+    background-color: var(--dark) !important;
+}
+
+.course-accordion-item.active > .inner a {
+    color: white !important;
+}
+
+.content-right-mobile,
+.content-overlay-mobile {
+    transition: all 0.35s ease-in-out;
+}
+
+.content-right-mobile.active {
+    left: calc(100% - 280px) !important;
+}
+
+.content-overlay-mobile.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 
 @media screen and (max-width: 991px) {
     .hero-content {
