@@ -19,7 +19,7 @@ class CouponManager(models.Manager):
 			return None
 
 class Coupon(models.Model):
-	code = models.CharField(max_length=200)
+	code = models.CharField(max_length=200, unique=True)
 	discount = models.DecimalField(max_digits=4, decimal_places=2)
 	start_date = models.DateTimeField()
 	end_date = models.DateTimeField()
