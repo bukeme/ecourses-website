@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(ieu6rx4z5d3n2^q)nfopak6hc7d7k*u%hv_#@a)l&s*^ae-9q'
+# SECRET_KEY = 'django-insecure-(ieu6rx4z5d3n2^q)nfopak6hc7d7k*u%hv_#@a)l&s*^ae-9q'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -150,6 +154,10 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'account_login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# STRIPE_SECRET_KEY = 'sk_test_51LBLATK70Gp5d3uG78HauvA2b9kZS3e7L3FCJwzK9RpZcG3VEuZ7btBTpBcKk67X41eo0Q99gK0R5qtYxvorgu5J00TdxRk9Fx'
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+BACKEND_HOST = 'http://127.0.0.1:8000'
 
 CKEDITOR_UPLOAD_PATH = 'ckeditor-media/'
 CKEDITOR_RESTRICT_BY_USER = True

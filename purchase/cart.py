@@ -1,5 +1,7 @@
 from courses.models import Course
 from purchase.models import Coupon
+from django.conf import settings
+import os
 
 
 class Cart:
@@ -30,6 +32,12 @@ class Cart:
 			del self.session['coupon_code']
 		self.save()
 
+	def getname(self):
+		name = ''
+		for index, course in enumerate(self, start=1):
+			name += f'<{index}>{course.name}  '
+		return name
+
 	def total_price(self):
 		total_price, actual_total_price = 0, 0
 		for course_pk in self.cart.keys():
@@ -52,3 +60,4 @@ class Cart:
 
 		for item in cart.values():
 			yield item
+
