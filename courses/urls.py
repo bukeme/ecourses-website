@@ -20,4 +20,5 @@ urlpatterns = [
 	path('course/<int:pk>/', views.course_detail_view, name='course_detail'),
 	path('course/<int:pk>/update/', views.course_update_view, name='course_update'),
 	path('course/<int:course_pk>/publish/', views.course_publish_view, name='course_publish'),
+	path('mylearning', views.student_course_list_view, name='mylearning'),
 ]
