@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block title %}My Learning{% endblock title %}
+
+{% block content %}
+
+	<div style="height: 150px;" class="bg_dark d-flex align-items-center">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-8 offset-lg-2">
+	                <h1 class="text-white">My Learning</h1>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-8 offset-lg-2 mt-5">
+	            <div class="d-flex align-items-center">
+	                <h5 class="text_dark fw-6 d-none d-md-block">All Courses</h5>
+	                <div class="ml-auto">
+	                    <form>
+	                        <div class="input-group">
+	                            <input type="text" name="search_course" placeholder="Search your courses..." class="form-control">
+	                            <button type="submit" class="input-group-append btn btn-info">
+	                                <i class="fa fa-search"></i>
+	                            </button>
+	                        </div>
+	                    </form>
+	                </div>
+	            </div>
+	            <div
+	            class="grid-container mt-4"
+	            style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); grid-row-gap: 30px;">
+	            	{% for course in page_obj %}
+
+		                <div class="display-trigger position-relative">
+		                    <div style="height: 150px; position: relative;">
+		                        <img src="{{ course.thumbnail.url }}" alt="">
+		                        <div
+		                        class="d-flex justify-content-center align-items-center position-absolute w-100 h-100 display-item"
+		                        style="top: 0; left: 0; background: rgba(0, 0, 0, 0.5);">
+		                            <div class="rounded-circle bg-white d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
+		                                <i class="fa fa-play text_dark fs-25"></i>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="d-flex flex-column mt-2">
+		                        <h6 class="text_dark fw-6">{{ course.name }}</h6>
+		                        <span class="fs-12">{{ course.owner.userprofile.full_name }}</span>
+		                    </div>
+		                    <a href="#" class="stretched-link"></a>
+		                </div>
+
+	                {% endfor %}
+	            </div>
+
+	            <!-- Paginator -->
+	            {% if page_obj.has_previous or page_obj.has_next %}
+		            <div class="mt-4 d-flex justify-content-center">
+		                <ul class="d-flex align-items-center fw-5 text-info pl-0" style="list-style: none;">
+		                	{% if page_obj.has_previous %}
+		                	    <li class="pg-side mx-2">
+		                	    	<form>
+		                	    		<a href="javascript:void()" onclick="this.parentElement.submit()"><i class="fa fa-angle-left"></i></a>
+		                	    		<input type="hidden" name="page" value="{{ page_obj.previous_page_number }}">
+		                	    		{% if request.GET.search_course %}
+		                	    			<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                	    		{% endif %}
+		                	    	</form>
+		                	    </li>
+		                		<li class="mx-2 pg-item position-relative">
+		                			<form>
+		                				<a href="javascript:void()" onclick="this.parentElement.submit()">1</a>
+		                				<input type="hidden" name="page" value="1">
+		                				{% if request.GET.search_course %}
+		                					<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                				{% endif %}
+		                			</form>
+		                	    </li>
+		                	{% else %}
+			                    <li class="pg-side disabled mx-2">
+			                    	<form>
+			                    		<a href="javascript:void()"><i class="fa fa-angle-left"></i></a>
+			                    		<input type="hidden" name="page">
+			                    		{% if request.GET.search_course %}
+			                    			<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+			                    		{% endif %}
+			                    	</form>
+			                    </li>
+		                    {% endif %}
+		                    {% if page_obj.number|add:'-1' > 1 %}
+			                    <li class="mx-2 text_dark">
+			                        <i class="fa fa-ellipsis-h"></i>
+			                    </li>
+		                    {% endif %}
+		                    <li class="mx-2 pg-item position-relative active">
+		                    	<form>
+		                    		<a href="javascript:void()" onclick="this.parentElement.submit()">{{ page_obj.number }}</a>
+		                    		<input type="hidden" name="page" value="{{ page_obj.number }}">
+		                    		{% if request.GET.search_course %}
+		                    			<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                    		{% endif %}
+		                    	</form>
+		                    </li>
+		                    {% if page_obj.number|add:'1' < page_obj.paginator.num_pages %}
+			                    <li class="mx-2 text_dark">
+			                        <i class="fa fa-ellipsis-h"></i>
+			                    </li>
+		                    {% endif %}
+		                	{% if page_obj.has_next %}
+		                		<li class="mx-2 pg-item position-relative">
+		                			<form>
+		                				<a href="javascript:void()" onclick="this.parentElement.submit()">{{ page_obj.paginator.num_pages }}</a>
+		                				<input type="hidden" name="page" value="{{ page_obj.paginator.num_pages }}">
+		                				{% if request.GET.search_course %}
+		                					<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                				{% endif %}
+		                			</form>
+		                		</li>
+		                		<li class="pg-side mx-2">
+		                			<form>
+		                				<a href="javascript:void()" onclick="this.parentElement.submit()"><i class="fa fa-angle-right"></i></a>
+		                				<input type="hidden" name="page" value="{{ page_obj.next_page_number }}">
+		                				{% if request.GET.search_course %}
+		                					<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                				{% endif %}
+		                			</form>
+		                	    </li>
+		                	{% else %}
+		                	<li class="pg-side disabled mx-2">
+		                		<form>
+		                			<a href="javascript:void()"><i class="fa fa-angle-right"></i></a>
+		                			<input type="hidden" name="page">
+		                			{% if request.GET.search_course %}
+		                				<input type="hidden" name="search_course" value="{{ request.GET.search_course }}">
+		                			{% endif %}
+		                		</form>
+		                    </li>
+
+		                    {% endif %}
+		                </ul>
+		            </div>
+	            {% endif %}
+	        </div>
+	    </div>
+	</div>
+
+{% endblock content %}
