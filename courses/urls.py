@@ -23,5 +23,6 @@ urlpatterns = [
 	path('mylearning', views.student_course_list_view, name='mylearning'),
 	path('mylearning/<int:pk>/<int:lecture_pk>/', views.student_course_detail_view, name='student_lecture_detail'),
 	path('mylearning/<int:pk>/', views.student_course_detail_view, name='student_course_detail'),
-
+	path('course-list/', views.course_list_view, name='course_list'),
+	path('course-list/category/<str:category>/', views.course_list_view, name='course_list_category'),
 ]

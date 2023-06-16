@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-5 pr-2">
+			<div class="col-lg-5 pr-2 d-none d-lg-block">
 				<div class="p-3 card">
 					<small class="mb-1 {% if lectures.count < 2 %}d-none{% endif %}">You can drag and drop lectures to reorder them.</small>
 					<div class="d-flex flex-column sortable-lecture">
@@ -36,7 +36,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-md-7 pl-0">
+			<div class="col-lg-7 pl-lg-0">
 				<div class="card p-3">
 					<div class="d-flex align-items-center">
 					    <div style="flex-basis: 60px; min-width: 50px;" class="flex-shrink-0">
@@ -54,7 +54,7 @@
 							<div>
 								{% for file in lecture.additionalfile_set.all %}
 									<div class="d-flex flex-column align-items-start mb-2">
-										<span class="text-dark fw-6">{{ file.file.name | slice:"28:" }} ({{ file.file.size | filesizeformat }})</span>
+										<span class="text-dark text-break fw-6">{{ file.file.name | slice:"28:" }} ({{ file.file.size | filesizeformat }})</span>
 										<a href="{{ file.file.url }}" class="btn btn-sm btn-info m-1" download>Download</a>
 									</div>
 								{% endfor %}

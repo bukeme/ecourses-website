@@ -1,6 +1,7 @@
 {% load fontawesome_5 %}
 {% load courses_tags %}
 {% cart_count request as cart_l %}
+{% category_list as objects %}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow align-items-center fixed-top">
     <a class="navbar-brand text-info" href="{% url 'home' %}">
         <h3 class="mb-0">Learning Hub</h3>
@@ -12,24 +13,21 @@
     <div class="collapse navbar-collapse" id="navbar-content">
       <ul class="navbar-nav mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link text-info fw-5" href="{% url 'home' %}">Home</a>
+          <a class="nav-link text_dark fw-5" href="{% url 'home' %}">Home</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text_dark fw-5" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Web Design</a>
-              <a class="dropdown-item" href="#">Development</a>
-              <a class="dropdown-item" href="#">Game Design</a>
-              <a class="dropdown-item" href="#">App Development</a>
-              <a class="dropdown-item" href="#">Content Creation</a>
-              <a class="dropdown-item" href="#">Writing</a>
+              {% for category in objects %}
+              <a class="dropdown-item" href="{% url 'course_list_category' category.category %}">{{ category.category }}</a>
+              {% endfor %}
             </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0 mx-lg-2 flex-lg-grow-1">
-        <input class="form-control mr-sm-2 rounded-pill w-100" type="search" placeholder="Search Courses">
+      <form class="form-inline my-2 my-lg-0 mx-lg-2 flex-lg-grow-1" action="{% url 'course_list' %}">
+        <input class="form-control mr-sm-2 rounded-pill w-100" type="search" name="search_course" placeholder="Search Courses">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
       
