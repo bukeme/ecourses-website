@@ -269,7 +269,7 @@ course_publish_view = CoursePublishView.as_view()
 
 class StudentCourseListView(LoginRequiredMixin, ListView):
 	template_name = 'courses/mylearning.html'
-	paginate_by = 3
+	paginate_by = 6
 	def get_queryset(self):
 		query = self.request.GET.get('search_course', '')
 		return Course.objects.filter(students__in=[self.request.user]).filter(name__icontains=query)
@@ -295,4 +295,22 @@ class StudentCourseDetailView(UserPassesTestMixin, LoginRequiredMixin, TemplateV
 		return self.request.user in course.students.all() or self.request.user == course.owner
 
 student_course_detail_view = StudentCourseDetailView.as_view()
+
+class CourseListView(ListView):
+	paginate_by = 6
+	def dispatch(self, request, *args, **kwargs):
+		self.category = kwargs.get('category')
+		return super().dispatch(request, *args, **kwargs)
+	def get_context_data(self, *args, **kwargs):
+		context = super().get_context_data(*args, **kwargs)
+		context['category'] = self.category
+		return context
+	def get_queryset(self):
+		query = self.request.GET.get('search_course', '')
+		queryset = Course.objects.filter(name__icontains=query)
+		if self.category:
+			queryset = Course.objects.filter(category__category=self.category)
+		return queryset
+
+course_list_view = CourseListView.as_view()
 
