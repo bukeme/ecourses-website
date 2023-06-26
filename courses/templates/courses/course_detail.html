@@ -112,7 +112,7 @@
 	                    {% endfor %}
 	                </div>
 	                {% if course.module_set.all.count > 2 %}
-	                <button class="btn btn-light border-dark fw-5 w-100 mt-3 more-section-btn">
+	                <button type="button" class="btn btn-light border-dark fw-5 w-100 mt-3 more-section-btn">
 	                	<span class="more">{{ course.module_set.all.count | add:'-2' }} more</span>
 	                	<span class="less d-none">Less</span>
 	                	sections
