@@ -28,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
 
     # Apps
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     'fontawesome_5',
     'ckeditor',
     'ckeditor_uploader',
+    'cloudinary',
 
 ]
 
@@ -95,8 +97,14 @@ WSGI_APPLICATION = 'ecourses.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
@@ -155,9 +163,22 @@ LOGOUT_REDIRECT_URL = 'account_login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# STRIPE_SECRET_KEY = 'sk_test_51LBLATK70Gp5d3uG78HauvA2b9kZS3e7L3FCJwzK9RpZcG3VEuZ7btBTpBcKk67X41eo0Q99gK0R5qtYxvorgu5J00TdxRk9Fx'
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
-BACKEND_HOST = 'http://127.0.0.1:8000'
+if DEBUG:
+    BACKEND_HOST = 'http://127.0.0.1:8000'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+    'API_KEY': os.getenv('API_KEY'),
+    'API_SECRET': os.getenv('API_SECRET'),
+    'MEDIA_TAG': 'ec-media',
+    'STATIC_TAG': 'ec-static',
+    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'ec-manifest'),
+    'PREFIX': 'ecourses/media',
+}
 
 CKEDITOR_UPLOAD_PATH = 'ckeditor-media/'
 CKEDITOR_RESTRICT_BY_USER = True
