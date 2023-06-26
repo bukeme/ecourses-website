@@ -107,7 +107,6 @@ class ModuleOrderUpdateView(AjaxRequiredOnlyMixin, View):
 			module_obj = Module.objects.get(pk=int(module_dict['pk']))
 			module_obj.order = module_dict['order']
 			module_obj.save()
-		print(data)
 		return JsonResponse({'status': 'success'})
 
 module_order_update_view = ModuleOrderUpdateView.as_view()
@@ -172,7 +171,6 @@ class LectureOrderUpdateView(AjaxRequiredOnlyMixin, View):
 			lecture_obj = Lecture.objects.get(pk=int(lecture_dict['pk']))
 			lecture_obj.order = lecture_dict['order']
 			lecture_obj.save()
-		print(data)
 		return JsonResponse({'status': 'success'})
 
 lecture_order_update_view = LectureOrderUpdateView.as_view()
@@ -220,7 +218,6 @@ lecture_delete_view = LectureDeleteView.as_view()
 class UserCourseListView(LoginRequiredMixin, ListView):
 	template_name = 'courses/user_courses.html'
 	def get_queryset(self):
-		print(Course)
 		return Course.objects.filter(owner=self.request.user)
 
 user_course_list_view = UserCourseListView.as_view()
