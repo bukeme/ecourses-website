@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
 
     # Apps
@@ -57,12 +56,14 @@ INSTALLED_APPS = [
     'fontawesome_5',
     'ckeditor',
     'ckeditor_uploader',
+    'cloudinary_storage',
     'cloudinary',
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -168,15 +169,13 @@ if DEBUG:
     BACKEND_HOST = 'http://127.0.0.1:8000'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUD_NAME'),
     'API_KEY': os.getenv('API_KEY'),
     'API_SECRET': os.getenv('API_SECRET'),
     'MEDIA_TAG': 'ec-media',
-    'STATIC_TAG': 'ec-static',
-    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'ec-manifest'),
     'PREFIX': 'ecourses/media',
 }
 

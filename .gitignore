@@ -2,6 +2,5 @@ venv
 .env
 db.sqlite3
 media/*
-staticfiles
 static/ckeditor
 !media/profile_image/placeholder.jpg
