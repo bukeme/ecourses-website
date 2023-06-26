@@ -3,7 +3,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$4ZlCedfBBQXTVvs9aN4ZJo$hy1Nr+mifnpYJroP4LrdNmjaW307eq5KTy4m5aUTjpI=",
-    "last_login": "2023-06-12T18:27:49.419Z",
+    "last_login": "2023-06-26T10:06:02.641Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Admin",
@@ -17,6 +17,47 @@
   }
 },
 {
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$YlAKx2PR5Uraowc0cxndlY$b8Td+ha8oW/Z8KcE8LbrUnU+cqWustoJOkBi/0k+JAc=",
+    "last_login": "2023-06-26T09:34:09.188Z",
+    "is_superuser": false,
+    "username": "testuser",
+    "first_name": "Test",
+    "last_name": "User",
+    "email": "testuser@company.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-13T23:01:24.794Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1m0mkpne53dcmsav5grfnfhr2g29d3he",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlkbfzCbkp4zWP5siAHZyE4kUJS7Q6Q0ad_Mm4UFVyfWL-uJWTdPo50bVZsi65lgh8278KS8gfhw-V54KHmqyfNN4Ttt_FYiva67ewiMro3_N_iAwmsSqEAMatAQO7hoHOQZjJBOdQZF9AAdGSUQlHQBLtJEjSgJ5RZt1Foq2dLnneqX9bD-AMbrQNU:1q9VNl:di9LCjxMorgP2FUHKXJqrqQZjfRtFlP6pupEUTGXsps",
+    "expire_date": "2023-06-28T18:38:13.855Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2f83e66cv4p3yfj4paqrto5f68a5bsap",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1q9rzM:4FX7wKiHS3pJIqAb6TZQEiVKcUbDTHQO2R5PGzfOhNY",
+    "expire_date": "2023-06-29T18:46:32.836Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3q90w96vpmrgk88aamgqh3t351amvvjt",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf9lz4YIiojH3vsNZGWhUhsxoEkb479XEy9eZ-a9DSymBbptL8DgugxmzS6ZQNABhxvr0Y5uOgW9cXpFZuO0pNCzM2GXzewZyX0eV3s7GDAPxxp1w8lriZVD4miVII3oPKm6bjRHVemmVK1rBQkppO8Vkiwr7zmvtRf6PM0u5xAn475zSD_oygJsXOeDzCN0fP8D9zFHQw:1q9isu:7x3DNBPzffDIi0c8J9Tob8ytE5l1eiwKzuNrk7KHfkc",
+    "expire_date": "2023-06-29T09:03:16.679Z"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "5ggofu37b0isvolh7e82wtas8lit7r5r",
   "fields": {
@@ -26,45 +67,106 @@
 },
 {
   "model": "sessions.session",
-  "pk": "tgyxxruxpqq65fpf2op4q5p6d0ceydtk",
+  "pk": "bh3f3mbh7dp8dezinnhe6lq2tyh9ah1z",
   "fields": {
-    "session_data": ".eJxVjEEOwiAQRe_C2pBCC3S6dO8ZyNAZLGrAlDbRGO-uTbrQ7X_vv5fwuC6TXyvPPpEYhBKH3y3geOW8AbpgPhc5lrzMKchNkTut8lSIb8fd_QtMWKfvG8EqimCwZSSFo9MEiBzJdZ0Fha4F27iee03aaBODQzJNG6NSHUQNW7Ryralkz497mp9iaN4fp9o_Tg:1q8mGb:B4SY1-rg3ee9GdwbVgohimxbN-l0stvEBzkJ_WlHKq4",
-    "expire_date": "2023-06-26T18:27:49.678Z"
+    "session_data": "eyJjYXJ0Ijp7fX0:1qDeiO:RykdeuhDrVyYyzVleYqcrlmOwNRHEpb2ukjdl8Jk0WI",
+    "expire_date": "2023-07-10T05:24:40.446Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ecla4fpwqtb4h15us65rkk6s7ab6s50p",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1qDWpo:mLX4jrdl1hTFufLxJKyrUVTrTURIXY2N0qrrECgeptA",
+    "expire_date": "2023-07-09T20:59:48.012Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ff079gdpmb98tvxye4vyl1p4jnum554w",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1qAq6S:kjTsMcig8SaD-eLTSQs3KcRq_SaS8dEGMjTOvC3Dby4",
+    "expire_date": "2023-07-02T10:57:52.344Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jubso10p4dqqj3pzjhnk43jqbtc2fu8z",
+  "fields": {
+    "session_data": ".eJxVjEEOgyAUBe_CuiGCIH6X3fcM5smHattAorgy3r2auGi3b-bNJnqsZezXJcz9xKITStx-twH-HdIJ-IX0zNLnVOZpkKciL7rIR-bwuV_uX2DEMh5vUKM4kkUdwAreaSYgRHbGNKTgamoq14ZWs7baxsGBbVXHqJShqOmIesxFdNu-fwE7sztd:1qDesP:X1Ycq6WhbFTuaOg4nAPyKQrp0lZdnhOhXvhbYVOr4OY",
+    "expire_date": "2023-07-10T05:35:01.827Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "llap8l4b925ulww2lfl94crk9ag6i2c5",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1q9stY:_bUlxCX76k5jJZ8Y9yq3nXDcw0vBsyz5FVuZKCF0EeY",
+    "expire_date": "2023-06-29T19:44:36.595Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lmkhpek72n5eg0h13l77mdx7t06mpbyr",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlkbfzCbkp4zWP5siAHZyE4kUJS7Q6Q0ad_Mm4UFVyfWL-uJWTdPo50bVZsi65lgh8278KS8gfhw-V54KHmqyfNN4Ttt_FYiva67ewiMro3_N_iAwmsSqEAMatAQO7hoHOQZjJBOdQZF9AAdGSUQlHQBLtJEjSgJ5RZt1Foq2dLnneqX9bD-AMbrQNU:1qDWt1:vS_sK3CAQNI9sKT2XWxAY97b5WAvXXsp2Omk6Na52XA",
+    "expire_date": "2023-07-09T21:03:07.769Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tfnu0nfqz01shvisuedwzfnsfkek6rtu",
+  "fields": {
+    "session_data": ".eJxVjDEOgzAQBP9ydWRhg22OMj1vQIvPDiQRSAYqxN8TJBranZndKSCv1OzHgzps69BtS8zdKNSQptvWI3zidAJ5Y3rNKszTmsdenYq66KLaWeL3ebm3gwHL8K_BTktiizJCNII3wkBM4qvKsYYv2RW-jrURY41NvYfYokxJ64qTYTp-Q4M7XQ:1qDelp:8sojY3RIH0_v7iIuaUziTG6WMqi8S9GilISGQrv-4SM",
+    "expire_date": "2023-07-10T05:28:13.420Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wc68ts2da0l47zlrcr8rghoops8dvsqh",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxP0tJzxmsjXeNA8iW4qRC3B0ipYD2zcx7iYjbWuLWeYkzibNQ4vS7TZgeXHdAd6y3JlOr6zJPclfkQbu8NuLn5XD_Dgr28q0RvKIMDg0jKUxBEyBypmCtB4XBgB_CyKMm7bTLU0Byg8lZKQtZg3h_APwwOBE:1qDj6g:tWsW6biaYO43MIUdIIDZnoMlspmkz476hoaZLrblBaU",
+    "expire_date": "2023-07-10T10:06:02.879Z"
   }
 },
 {
   "model": "courses.category",
   "pk": 1,
   "fields": {
-    "category": "Web Development"
+    "category": "Web Development",
+    "thumbnail": "category_thumbnail/2023-06-13/web.jpeg"
   }
 },
 {
   "model": "courses.category",
   "pk": 2,
   "fields": {
-    "category": "Data Science"
+    "category": "Data Science",
+    "thumbnail": "category_thumbnail/2023-06-13/datasci.jpeg"
   }
 },
 {
   "model": "courses.category",
   "pk": 3,
   "fields": {
-    "category": "Mobile Development"
+    "category": "Mobile Development",
+    "thumbnail": "category_thumbnail/2023-06-13/mobile.jpeg"
   }
 },
 {
   "model": "courses.category",
   "pk": 4,
   "fields": {
-    "category": "Programming Languages"
+    "category": "Programming Languages",
+    "thumbnail": "category_thumbnail/2023-06-13/pl.jpeg"
   }
 },
 {
   "model": "courses.category",
   "pk": 5,
   "fields": {
-    "category": "Game Development"
+    "category": "Game Development",
+    "thumbnail": "category_thumbnail/2023-06-13/gamedev.jpeg"
   }
 },
 {
@@ -72,7 +174,7 @@
   "pk": 1,
   "fields": {
     "owner": [
-      "admin"
+      "testuser"
     ],
     "name": "Modern React with Redux",
     "headline": "Master React and Redux Toolkit. Includes RTK Query, tons of custom hooks, and more! Course 100% Updated November 2022",
@@ -84,8 +186,12 @@
     "actual_price": "13.50",
     "publish": true,
     "created": "2023-06-12T19:41:34.548Z",
-    "updated": "2023-06-12T21:32:06.003Z",
-    "students": []
+    "updated": "2023-06-26T09:41:09.803Z",
+    "students": [
+      [
+        "admin"
+      ]
+    ]
   }
 },
 {
@@ -93,7 +199,7 @@
   "pk": 2,
   "fields": {
     "owner": [
-      "admin"
+      "testuser"
     ],
     "name": "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus",
     "headline": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.",
@@ -105,8 +211,12 @@
     "actual_price": "18.40",
     "publish": true,
     "created": "2023-06-12T19:57:49.907Z",
-    "updated": "2023-06-12T21:33:01.840Z",
-    "students": []
+    "updated": "2023-06-25T20:59:47.444Z",
+    "students": [
+      [
+        "admin"
+      ]
+    ]
   }
 },
 {
@@ -114,7 +224,7 @@
   "pk": 3,
   "fields": {
     "owner": [
-      "admin"
+      "testuser"
     ],
     "name": "The Complete Android 12 & Kotlin Development Masterclass",
     "headline": "Learn Android 12 App Development From Beginner to Advanced Developer. Build Apps like Trello, 7Min Workout, Weather App",
@@ -126,8 +236,12 @@
     "actual_price": "13.50",
     "publish": true,
     "created": "2023-06-12T20:38:45.771Z",
-    "updated": "2023-06-12T21:33:20.844Z",
-    "students": []
+    "updated": "2023-06-25T21:01:06.830Z",
+    "students": [
+      [
+        "admin"
+      ]
+    ]
   }
 },
 {
@@ -135,7 +249,7 @@
   "pk": 4,
   "fields": {
     "owner": [
-      "admin"
+      "testuser"
     ],
     "name": "Java Programming Masterclass updated to Java 17",
     "headline": "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
@@ -147,7 +261,7 @@
     "actual_price": "16.00",
     "publish": true,
     "created": "2023-06-12T20:54:48.852Z",
-    "updated": "2023-06-12T21:33:36.180Z",
+    "updated": "2023-06-25T20:56:16.683Z",
     "students": []
   }
 },
@@ -157,7 +271,7 @@
   "fields": {
     "course": 1,
     "name": "Let's Dive In",
-    "order": 1
+    "order": 3
   }
 },
 {
@@ -175,7 +289,7 @@
   "fields": {
     "course": 1,
     "name": "Building With Reusable Components",
-    "order": 3
+    "order": 4
   }
 },
 {
@@ -184,7 +298,7 @@
   "fields": {
     "course": 1,
     "name": "State: How To Change Your App",
-    "order": 4
+    "order": 1
   }
 },
 {
@@ -422,7 +536,7 @@
     "module": 5,
     "topic": "Importing Libraries",
     "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"height:auto; max-width:100%\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
-    "order": 1
+    "order": 3
   }
 },
 {
@@ -432,7 +546,7 @@
     "module": 5,
     "topic": "Importing The Dataset",
     "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
-    "order": 2
+    "order": 1
   }
 },
 {
@@ -442,7 +556,7 @@
     "module": 5,
     "topic": "Taking Care Of Missing Data",
     "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
-    "order": 3
+    "order": 2
   }
 },
 {
@@ -776,30 +890,6 @@
   }
 },
 {
-  "model": "courses.additionalfile",
-  "pk": 1,
-  "fields": {
-    "lecture": 1,
-    "file": "additional_files/2023-06-12/Static_Libraries__Argc_Argv.pdf"
-  }
-},
-{
-  "model": "courses.additionalfile",
-  "pk": 2,
-  "fields": {
-    "lecture": 13,
-    "file": "additional_files/2023-06-12/Curriculum_Foundations_overview___Lagos_Intranet.pdf"
-  }
-},
-{
-  "model": "courses.additionalfile",
-  "pk": 3,
-  "fields": {
-    "lecture": 25,
-    "file": "additional_files/2023-06-12/Curriculum_Short_Specializations_overview___Lagos_Intranet.pdf"
-  }
-},
-{
   "model": "users.userprofile",
   "pk": 1,
   "fields": {
@@ -812,6 +902,102 @@
   }
 },
 {
+  "model": "users.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "testuser"
+    ],
+    "image": "profile_image/placeholder.jpg",
+    "headline": null,
+    "overview": null
+  }
+},
+{
+  "model": "purchase.coupon",
+  "pk": 1,
+  "fields": {
+    "code": "VALID_COUPON_CODE",
+    "discount": "30.00",
+    "start_date": "2023-06-14T19:15:25Z",
+    "end_date": "2023-06-14T22:24:50Z"
+  }
+},
+{
+  "model": "purchase.payment",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "amount": "32.00",
+    "time": "2023-06-25T20:59:45.294Z",
+    "courses": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "purchase.payment",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "amount": "15.00",
+    "time": "2023-06-25T21:01:06.068Z",
+    "courses": [
+      3
+    ]
+  }
+},
+{
+  "model": "purchase.notification",
+  "pk": 1,
+  "fields": {
+    "actor": [
+      "admin"
+    ],
+    "course": 1,
+    "recipient": [
+      "testuser"
+    ],
+    "read": true,
+    "timestamp": "2023-06-25T20:59:46.492Z"
+  }
+},
+{
+  "model": "purchase.notification",
+  "pk": 2,
+  "fields": {
+    "actor": [
+      "admin"
+    ],
+    "course": 2,
+    "recipient": [
+      "testuser"
+    ],
+    "read": false,
+    "timestamp": "2023-06-25T20:59:47.702Z"
+  }
+},
+{
+  "model": "purchase.notification",
+  "pk": 3,
+  "fields": {
+    "actor": [
+      "admin"
+    ],
+    "course": 3,
+    "recipient": [
+      "testuser"
+    ],
+    "read": false,
+    "timestamp": "2023-06-25T21:01:07.061Z"
+  }
+},
+{
   "model": "account.emailaddress",
   "pk": 1,
   "fields": {
@@ -819,6 +1005,18 @@
       "admin"
     ],
     "email": "admin@company.com",
+    "verified": false,
+    "primary": true
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "testuser"
+    ],
+    "email": "testuser@company.com",
     "verified": false,
     "primary": true
   }
@@ -911,6 +1109,798 @@
     "object_repr": "Game Development",
     "action_flag": 1,
     "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-06-13T09:20:08.901Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Web Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-06-13T09:20:26.770Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Data Science",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-06-13T09:20:43.167Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Mobile Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-06-13T09:20:58.877Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Programming Languages",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-06-13T09:21:22.169Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "category"
+    ],
+    "object_id": "5",
+    "object_repr": "Game Development",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-06-14T19:15:57.896Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-06-14T19:18:08.347Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-06-14T20:18:19.952Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-06-14T20:19:34.566Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-06-14T20:23:27.506Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-06-14T20:25:46.478Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "coupon"
+    ],
+    "object_id": "1",
+    "object_repr": "VALID_COUPON_CODE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Discount\", \"End date\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-06-15T16:32:04.652Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "lecture"
+    ],
+    "object_id": "14",
+    "object_repr": "Importing The Dataset",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-06-15T16:32:57.794Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "lecture"
+    ],
+    "object_id": "14",
+    "object_repr": "Importing The Dataset",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-06-25T14:45:36.173Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "1",
+    "object_repr": "Modern React with Redux",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-06-25T14:49:27.460Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "1",
+    "object_repr": "Modern React with Redux",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-06-25T15:52:50.825Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-06-25T15:57:37.356Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-06-25T15:58:04.704Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "3",
+    "object_repr": "Payment object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-06-25T16:13:23.712Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-06-25T16:17:03.885Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-06-25T16:19:31.370Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-06-25T16:21:37.359Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-06-25T16:24:05.966Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-06-25T16:25:18.564Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-06-25T16:25:57.852Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-06-25T16:27:17.937Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-06-25T20:56:16.698Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "4",
+    "object_repr": "Java Programming Masterclass updated to Java 17",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-06-25T20:56:33.303Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "3",
+    "object_repr": "The Complete Android 12 & Kotlin Development Masterclass",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-06-25T20:56:55.772Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "2",
+    "object_repr": "Machine Learning A-Z™: AI, Python & R + ChatGPT Bonus",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\", \"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-06-25T20:57:06.063Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "1",
+    "object_repr": "Modern React with Redux",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-06-26T05:35:44.525Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "12",
+    "object_repr": "Payment object (12)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-06-26T05:35:44.773Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "11",
+    "object_repr": "Payment object (11)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-06-26T05:35:45.042Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "10",
+    "object_repr": "Payment object (10)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-06-26T05:35:45.295Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "9",
+    "object_repr": "Payment object (9)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-06-26T05:35:45.551Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "8",
+    "object_repr": "Payment object (8)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-06-26T05:35:45.807Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "7",
+    "object_repr": "Payment object (7)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-06-26T05:35:46.030Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "6",
+    "object_repr": "Payment object (6)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-06-26T05:35:46.296Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "5",
+    "object_repr": "Payment object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-06-26T05:35:46.552Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "4",
+    "object_repr": "Payment object (4)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-06-26T05:35:46.819Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "2",
+    "object_repr": "Payment object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-06-26T05:35:47.063Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "purchase",
+      "payment"
+    ],
+    "object_id": "1",
+    "object_repr": "Payment object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2023-06-26T10:07:44.713Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "additionalfile"
+    ],
+    "object_id": "3",
+    "object_repr": "AdditionalFile object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2023-06-26T10:07:45.020Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "additionalfile"
+    ],
+    "object_id": "2",
+    "object_repr": "AdditionalFile object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2023-06-26T10:07:45.332Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "additionalfile"
+    ],
+    "object_id": "1",
+    "object_repr": "AdditionalFile object (1)",
+    "action_flag": 3,
+    "change_message": ""
   }
 }
 ]
