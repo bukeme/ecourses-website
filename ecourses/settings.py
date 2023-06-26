@@ -169,7 +169,7 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 if DEBUG:
     BACKEND_HOST = 'http://127.0.0.1:8000'
 else:
-    BACKEND_HOST 'https://web-production-1893.up.railway.app'
+    BACKEND_HOST = 'https://web-production-1893.up.railway.app'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
