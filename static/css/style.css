@@ -144,7 +144,6 @@ td {
     height: calc(100vh - 59px);
     background-repeat: no-repeat;
     background-position: center;
-    /*background: url('../images/course-3.jpg') no-repeat center;*/
     background-size: cover;
 }
 

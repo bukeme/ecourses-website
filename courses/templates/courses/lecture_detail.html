@@ -5,6 +5,10 @@
 
 {% block title %}{{ object.module.course.name }}{% endblock title %}
 
+{% block style %}
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+{% endblock style %}
+
 {% block content %}
 {% with course=object.module.course module=lecture.module lectures=object.module.lecture_set.all %}
 
@@ -99,7 +103,7 @@
 
 {% block js %}
 
-	<script src="{% static 'jquery-ui/jquery-ui.js' %}"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$('.sortable-lecture').sortable({
 			appendTo: $('.sortable-lecture'),
