@@ -132,6 +132,10 @@ img,
     border-radius: inherit;
 }
 
+td {
+    vertical-align: middle !important;
+}
+
 .c-pointer {
     cursor: pointer;
 }

@@ -5,3 +5,4 @@ from . import models
 
 admin.site.register(models.Coupon)
 admin.site.register(models.Payment)
+admin.site.register(models.Notification)

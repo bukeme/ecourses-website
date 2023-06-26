@@ -4,6 +4,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 # Create your models here.
 
@@ -117,5 +118,5 @@ class Lecture(models.Model):
 
 class AdditionalFile(models.Model):
 	lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)
-	file = models.FileField(upload_to='additional_files/%Y-%m-%d')
+	file = models.FileField(upload_to='additional_files/%Y-%m-%d', storage=RawMediaCloudinaryStorage())
 	

@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 import allauth.account
 # import ckeditor_uploader
 from users.views import user_signup_view
+from courses.views import home_page_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/signup/', user_signup_view, name='account_signup'),
+    path('', home_page_view, name='home'),
     path('courses/', include('courses.urls')),
     path('user/', include('users.urls')),
     path('purchase/', include('purchase.urls')),

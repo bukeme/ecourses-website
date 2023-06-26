@@ -1,7 +1,9 @@
 {% load fontawesome_5 %}
 {% load courses_tags %}
+{% load purchase_tags %}
 {% cart_count request as cart_l %}
 {% category_list as objects %}
+{% notification_count request.user as n_count %}
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow align-items-center fixed-top">
     <a class="navbar-brand text-info" href="{% url 'home' %}">
         <h3 class="mb-0">Learning Hub</h3>
@@ -77,18 +79,20 @@
               <!-- <a href="{% url 'course_create' %}" class="dropdown-item">Create Course</a> -->
               <a href="{% url 'user_courses' %}" class="dropdown-item">Your Courses</a>
               <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
+              <a href="{% url 'notifications' 'all' %}" class="dropdown-item d-flex justify-content-between align-items-center">
                 <span>Notifications</span>
-                <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">3</span>
+                {% if n_count %}
+                  <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">{{ n_count }}</span>
+                {% endif %}
               </a>
-              <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
+              <!-- <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">
                 <span>Messages</span>
                 <span class="rounded-circle d-flex align-items-center justify-content-center bg_primary text-white small" style="width: 20px; height: 20px;">3</span>
-              </a>
+              </a> -->
               <div class="dropdown-divider"></div>
               <a href="{% url 'user_profile' %}" class="dropdown-item">Your Profile</a>
-              <a href="#" class="dropdown-item">Account Settings</a>
-              <a href="#" class="dropdown-item">Purchase History</a>
+              <!-- <a href="#" class="dropdown-item">Account Settings</a> -->
+              <a href="{% url 'purchase_history' %}" class="dropdown-item">Purchase History</a>
               <div class="dropdown-divider"></div>
               <a href="{% url 'account_change_password' %}" class="dropdown-item">Change Password</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>

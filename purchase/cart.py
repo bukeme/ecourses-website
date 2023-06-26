@@ -22,8 +22,12 @@ class Cart:
 		self.save()
 
 	def remove(self, course_pk):
-		del self.cart[course_pk]
-		self.save()
+		course_pk = str(course_pk)
+		try:
+			del self.cart[course_pk]
+			self.save()
+		except:
+			pass
 
 	def clear(self):
 		self.session['cart'].clear()
