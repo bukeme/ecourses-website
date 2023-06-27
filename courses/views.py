@@ -130,7 +130,7 @@ lecture_list_view = LectureListView.as_view()
 
 class LectureCreateView(UserPassesTestMixin, LoginRequiredMixin, CreateView):
 	model = Lecture
-	fields = ['topic', 'content',]
+	fields = ['topic', 'video', 'content',]
 
 	def dispatch(self, request, *args, **kwargs):
 		self.module = Module.objects.get(pk=kwargs['module_pk'])
@@ -185,7 +185,7 @@ lecture_detail_view = LectureDetailView.as_view()
 
 class LectureUpdateView(UserPassesTestMixin, LoginRequiredMixin, UpdateView):
 	model = Lecture
-	fields = ['topic', 'content',]
+	fields = ['topic', 'video', 'content',]
 
 	def form_valid(self, form):
 		files = self.request.FILES.getlist('additional_file')
@@ -250,11 +250,11 @@ class CoursePublishView(UserPassesTestMixin, LoginRequiredMixin, View):
 		modules = course.module_set.all()
 		if modules.count() < 3:
 			messages.error(request, 'Your Course Must Have At Least 3 Modules Before It Can Be Published')
-			return redirect(request.META.get(HTTP_REFERER))
+			return redirect(request.META.get('HTTP_REFERER'))
 		for module in modules:
 			if module.lecture_set.all().count() < 3:
 				messages.error(request, 'All Modules Must Have At Least 3 Lectures Before It Can Be Published')
-				return redirect(request.META.get(HTTP_REFERER))
+				return redirect(request.META.get('HTTP_REFERER'))
 		course.publish = True
 		course.save()
 		return redirect('course_detail', pk=course.pk)
