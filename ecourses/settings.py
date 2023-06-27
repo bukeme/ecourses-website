@@ -185,7 +185,7 @@ CLOUDINARY_STORAGE = {
 CKEDITOR_UPLOAD_PATH = 'ckeditor-media/'
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_BROWSE_SHOW_DIRS = True
-CKEDITOR_IMAGE_BACKEND = "ckeditor_uploader.backends.PillowBackend"
+# CKEDITOR_IMAGE_BACKEND = "ckeditor_uploader.backends.PillowBackend"
 CKEDITOR_THUMBNAIL_SIZE = (300, 300)
 # CKEDITOR_IMAGE_QUALITY = 40
 CKEDITOR_ALLOW_NONIMAGE_FILES = True
@@ -228,7 +228,7 @@ CUSTOM_TOOLBAR = [
             "Unlink",
             "-",
             "Image",
-            "Html5video",
+            # "Html5video",
             "CodeSnippet",
             "Table",
             "HorizontalRule",
@@ -306,7 +306,7 @@ CKEDITOR_CONFIGS = {
         "width": "100%",
         "filebrowserWindowWidth": 940,
         "filebrowserWindowHeight": 725,
-        "extraPlugins": ",".join(["codesnippet", "html5video",]),
+        "extraPlugins": ",".join(["codesnippet",]),
     },
     'desc': {
         "skin": "moono-lisa",

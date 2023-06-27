@@ -27,6 +27,13 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-9">
+				<div class="my-4">
+					<div class="section d-flex justify-content-center embed-responsive embed-responsive-16by9">
+						<video class="embed-responsive-item" controls>
+							<source src="{{ lecture.video.url }}#t=0.2">
+						</video>
+					</div>
+				</div>
 				<div>{{ lecture.content | safe }}</div>
 				{% if lecture.additionalfile_set.all %}
 					<div>

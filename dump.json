@@ -3,7 +3,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$4ZlCedfBBQXTVvs9aN4ZJo$hy1Nr+mifnpYJroP4LrdNmjaW307eq5KTy4m5aUTjpI=",
-    "last_login": "2023-06-26T10:06:02.641Z",
+    "last_login": "2023-06-27T20:57:04.054Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Admin",
@@ -20,7 +20,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$YlAKx2PR5Uraowc0cxndlY$b8Td+ha8oW/Z8KcE8LbrUnU+cqWustoJOkBi/0k+JAc=",
-    "last_login": "2023-06-26T09:34:09.188Z",
+    "last_login": "2023-06-27T20:34:00.417Z",
     "is_superuser": false,
     "username": "testuser",
     "first_name": "Test",
@@ -47,6 +47,14 @@
   "fields": {
     "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1q9rzM:4FX7wKiHS3pJIqAb6TZQEiVKcUbDTHQO2R5PGzfOhNY",
     "expire_date": "2023-06-29T18:46:32.836Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3kqht1kakmkvqa5jm6oban993o699or3",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxP0tJzxmsjXeNA8iW4qRC3B0ipYD2zcx7iYjbWuLWeYkzibNQ4vS7TZgeXHdAd6y3JlOr6zJPclfkQbu8NuLn5XD_Dgr28q0RvKIMDg0jKUxBEyBypmCtB4XBgB_CyKMm7bTLU0Byg8lZKQtZg3h_APwwOBE:1qEFkG:PrhZ7lZOJNaSfCjiRCcqwy5SshYNxHbv0xaw30bToXc",
+    "expire_date": "2023-07-11T20:57:04.311Z"
   }
 },
 {
@@ -111,6 +119,14 @@
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGlkbfzCbkp4zWP5siAHZyE4kUJS7Q6Q0ad_Mm4UFVyfWL-uJWTdPo50bVZsi65lgh8278KS8gfhw-V54KHmqyfNN4Ttt_FYiva67ewiMro3_N_iAwmsSqEAMatAQO7hoHOQZjJBOdQZF9AAdGSUQlHQBLtJEjSgJ5RZt1Foq2dLnneqX9bD-AMbrQNU:1qDWt1:vS_sK3CAQNI9sKT2XWxAY97b5WAvXXsp2Omk6Na52XA",
     "expire_date": "2023-07-09T21:03:07.769Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lurddbk4t8v6x0upjxozv54cplf7s2xw",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlkbfzCbkp4zWP5siAHZyE4kUJS7Q6Q0ad_Mm4UFVyfWL-uJWTdPo50bVZsi65lgh8278KS8gfhw-V54KHmqyfNN4Ttt_FYiva67ewiMro3_N_iAwmsSqEAMatAQO7hoHOQZjJBOdQZF9AAdGSUQlHQBLtJEjSgJ5RZt1Foq2dLnneqX9bD-AMbrQNU:1qEFNw:FEEu9vAkMyhjS2sJVCW1aMF3EEGaNknMa38-EspCi1s",
+    "expire_date": "2023-07-11T20:34:00.682Z"
   }
 },
 {
@@ -415,7 +431,8 @@
   "fields": {
     "module": 1,
     "topic": "How To Get Help",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -425,7 +442,8 @@
   "fields": {
     "module": 1,
     "topic": "Let's Build An App",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -435,7 +453,8 @@
   "fields": {
     "module": 1,
     "topic": "Creating A React Project",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -445,7 +464,8 @@
   "fields": {
     "module": 2,
     "topic": "Showing Basic Context",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -455,7 +475,8 @@
   "fields": {
     "module": 2,
     "topic": "What Is JSX",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -465,7 +486,8 @@
   "fields": {
     "module": 2,
     "topic": "Printing JavaScript Variable in JSX",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -475,7 +497,8 @@
   "fields": {
     "module": 3,
     "topic": "Creating Core Components",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -485,7 +508,8 @@
   "fields": {
     "module": 3,
     "topic": "Introducing The Props System",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -495,7 +519,8 @@
   "fields": {
     "module": 3,
     "topic": "Picturing the Movement of Data",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -505,7 +530,8 @@
   "fields": {
     "module": 4,
     "topic": "App Overview",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -515,7 +541,8 @@
   "fields": {
     "module": 4,
     "topic": "Initial App Setup",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -525,7 +552,8 @@
   "fields": {
     "module": 4,
     "topic": "Introducing The Event System",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -535,7 +563,8 @@
   "fields": {
     "module": 5,
     "topic": "Importing Libraries",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"height:auto; max-width:100%\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -545,7 +574,8 @@
   "fields": {
     "module": 5,
     "topic": "Importing The Dataset",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -555,7 +585,8 @@
   "fields": {
     "module": 5,
     "topic": "Taking Care Of Missing Data",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -565,7 +596,8 @@
   "fields": {
     "module": 6,
     "topic": "Getting Started",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -575,7 +607,8 @@
   "fields": {
     "module": 6,
     "topic": "Dataset Description",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -585,7 +618,8 @@
   "fields": {
     "module": 6,
     "topic": "Taking Care Of Missing Data",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -595,7 +629,8 @@
   "fields": {
     "module": 7,
     "topic": "Simple Linear Regression Intuition",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -605,7 +640,8 @@
   "fields": {
     "module": 7,
     "topic": "Ordinary Least Squares",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -615,7 +651,8 @@
   "fields": {
     "module": 7,
     "topic": "Simple Linear Regression In Python",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -625,7 +662,8 @@
   "fields": {
     "module": 8,
     "topic": "Dataset + Business Problem Description",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -635,7 +673,8 @@
   "fields": {
     "module": 8,
     "topic": "Multiple Linear Regression Intuition",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -645,7 +684,8 @@
   "fields": {
     "module": 8,
     "topic": "Understanding the P-Value",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -655,7 +695,8 @@
   "fields": {
     "module": 9,
     "topic": "Installing Android Studio",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -665,7 +706,8 @@
   "fields": {
     "module": 9,
     "topic": "Setting up the Emulator",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -675,7 +717,8 @@
   "fields": {
     "module": 9,
     "topic": "Hello World",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -685,7 +728,8 @@
   "fields": {
     "module": 10,
     "topic": "Variables and difference between val and var",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -695,7 +739,8 @@
   "fields": {
     "module": 10,
     "topic": "Datatypes of numbers",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -705,7 +750,8 @@
   "fields": {
     "module": 10,
     "topic": "Datatypes bool, char and string",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -715,7 +761,8 @@
   "fields": {
     "module": 11,
     "topic": "Introduction to OOP",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -725,7 +772,8 @@
   "fields": {
     "module": 11,
     "topic": "Classes and Objects",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -735,7 +783,8 @@
   "fields": {
     "module": 11,
     "topic": "Classes And Initializers",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -745,7 +794,8 @@
   "fields": {
     "module": 12,
     "topic": "Overview Collections",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -755,7 +805,8 @@
   "fields": {
     "module": 12,
     "topic": "Arrays",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -765,7 +816,8 @@
   "fields": {
     "module": 12,
     "topic": "Lists",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -775,7 +827,8 @@
   "fields": {
     "module": 13,
     "topic": "Install JDK 17 for Windows",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -785,7 +838,8 @@
   "fields": {
     "module": 13,
     "topic": "Install JDK 11 for Mac",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -795,7 +849,8 @@
   "fields": {
     "module": 13,
     "topic": "Install JDK 11 for Linux",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -805,7 +860,8 @@
   "fields": {
     "module": 14,
     "topic": "Hello World",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -815,7 +871,8 @@
   "fields": {
     "module": 14,
     "topic": "Variables",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -825,7 +882,8 @@
   "fields": {
     "module": 14,
     "topic": "Starting out with Expressions",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -835,7 +893,8 @@
   "fields": {
     "module": 15,
     "topic": "From JShell to an IDE",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -845,7 +904,8 @@
   "fields": {
     "module": 15,
     "topic": "Installing IntelliJ IDEA for Windows",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -855,7 +915,8 @@
   "fields": {
     "module": 15,
     "topic": "Installing IntelliJ IDEA for Mac",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -865,7 +926,8 @@
   "fields": {
     "module": 16,
     "topic": "Keywords and Expressions",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 1
   }
 },
@@ -875,7 +937,8 @@
   "fields": {
     "module": 16,
     "topic": "Statements, Whitespace and Indentation (Code Organization)",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 2
   }
 },
@@ -885,7 +948,8 @@
   "fields": {
     "module": 16,
     "topic": "Code Blocks And The If Then Else Control Statement",
-    "content": "<div class=\"ckeditor-html5-video\" data-responsive=\"true\" style=\"text-align:center\">\r\n<video controls=\"controls\" controlslist=\"nodownload\" src=\"/media/ckeditor-media/admin/2023/06/12/013-variable-modifiers-register.mp4\" style=\"max-width: 100%; height: auto;\">&nbsp;</video>\r\n</div>\r\n\r\n<p>&nbsp;</p>",
+    "video": "lecture_video/movie.mp4",
+    "content": "",
     "order": 3
   }
 },
@@ -1899,6 +1963,42 @@
     ],
     "object_id": "1",
     "object_repr": "AdditionalFile object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2023-06-27T19:56:40.269Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "additionalfile"
+    ],
+    "object_id": "4",
+    "object_repr": "AdditionalFile object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2023-06-27T20:57:21.092Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "additionalfile"
+    ],
+    "object_id": "4",
+    "object_repr": "AdditionalFile object (4)",
     "action_flag": 3,
     "change_message": ""
   }

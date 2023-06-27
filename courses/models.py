@@ -1,10 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, FileExtensionValidator
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 from cloudinary_storage.storage import RawMediaCloudinaryStorage
+from cloudinary_storage.storage import VideoMediaCloudinaryStorage
 
 # Create your models here.
 
@@ -72,7 +73,11 @@ class Module(models.Model):
 class Lecture(models.Model):
 	module = models.ForeignKey(Module, on_delete=models.CASCADE)
 	topic = models.CharField(max_length=500)
-	content = RichTextUploadingField()
+	video = models.FileField(
+		upload_to='lecture_video/%Y-%m-%d',
+		storage=VideoMediaCloudinaryStorage(),
+	)
+	content = RichTextUploadingField(null=True, blank=True)
 	order = models.IntegerField(blank=True)
 
 	def __str__(self):
