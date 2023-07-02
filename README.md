@@ -42,10 +42,10 @@ In building this project, I learnt:
 ![](/readme-imgs/learning1.png)
 
 ## 5. Notification System
-![](/readme-imgs/notification1.png)
+![](/readme-imgs/notification3.png)
 
 ## 6. Authentication System
 ![](/readme-imgs/signup1.png)
 
 ## 7. Update Profile
-![](/readme-imgs/profile1.png)
+![](/readme-imgs/profile2.png)
