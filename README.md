@@ -26,7 +26,7 @@ In building this project, I learnt:
 3. Purchasing courses.
 4. Learning Online.
 5. Notification System.
-6. Authentication System (Sign up, Sign in, Sign out, Change Password Reset Password).
+6. Authentication System (Sign up, Sign in, Sign out, Change Password and Reset Password).
 7. Update Profile.
 
 ## 1. Create Course, Update Course and Publish Course
