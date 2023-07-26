@@ -296,17 +296,17 @@ student_course_detail_view = StudentCourseDetailView.as_view()
 class CourseListView(ListView):
 	paginate_by = 6
 	def dispatch(self, request, *args, **kwargs):
-		self.category = kwargs.get('category')
+		self.category = Category.objects.get(pk=kwargs.get('category_pk'))
 		return super().dispatch(request, *args, **kwargs)
 	def get_context_data(self, *args, **kwargs):
 		context = super().get_context_data(*args, **kwargs)
-		context['category'] = self.category
+		context['category'] = self.category.category
 		return context
 	def get_queryset(self):
 		query = self.request.GET.get('search_course', '')
 		queryset = Course.objects.filter(name__icontains=query)
 		if self.category:
-			queryset = Course.objects.filter(category__category=self.category)
+			queryset = Course.objects.filter(category_id=self.category.pk)
 		return queryset
 
 course_list_view = CourseListView.as_view()
