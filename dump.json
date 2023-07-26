@@ -3,7 +3,7 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$4ZlCedfBBQXTVvs9aN4ZJo$hy1Nr+mifnpYJroP4LrdNmjaW307eq5KTy4m5aUTjpI=",
-    "last_login": "2023-06-27T20:57:04.054Z",
+    "last_login": "2023-07-02T08:24:27.457Z",
     "is_superuser": true,
     "username": "admin",
     "first_name": "Admin",
@@ -20,17 +20,73 @@
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$600000$YlAKx2PR5Uraowc0cxndlY$b8Td+ha8oW/Z8KcE8LbrUnU+cqWustoJOkBi/0k+JAc=",
-    "last_login": "2023-06-27T20:34:00.417Z",
+    "last_login": "2023-07-02T07:50:33.418Z",
     "is_superuser": false,
     "username": "testuser",
-    "first_name": "Test",
-    "last_name": "User",
-    "email": "testuser@company.com",
+    "first_name": "Maxwell",
+    "last_name": "Academy",
+    "email": "maxwellacademy@company.com",
     "is_staff": false,
     "is_active": true,
     "date_joined": "2023-06-13T23:01:24.794Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "00a638nftyeu0qkczrif483wrmyfmzfd",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJMct:MjEQIdiXHTMAPud9oeLulYtOU-0UIsbDzt0umpBCR78",
+    "expire_date": "2023-07-25T23:18:35.641Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "02k07qqg4p2m9c5ycqlkz67dwuefxw6k",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKpjG:mKZBLZBE3ddefY1IP4iLPIQRFBtPdSFOduB9ojZm1ho",
+    "expire_date": "2023-07-30T00:35:14.268Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "07u69z33o6xd4gcjsf8nibqsau3ugjcz",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qO0a2:sNPtc0rm05YXysi0SvuUJbtJKLcOsfOr_1091cWGdiQ",
+    "expire_date": "2023-08-07T18:46:50.520Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0i9k0hlikosfpgmtcmbeve6dd7rhufy8",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHHBK:IDFo1_x9D9Q3GzhHjtctHxLrpNk06ZBuCJV8NxkvgNU",
+    "expire_date": "2023-07-20T05:05:30.463Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0o9t9l8k26pnohtzz1zy2dkli20fnrqa",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg4n:_lyRKh3w9prkmnvpuU93__YeKrKx7WiA4leYE0lh138",
+    "expire_date": "2023-08-04T02:41:05.036Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "121bu1gkg3zbhjvwn9gjx46ix5o8r3wy",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg88:zoD_NR-QGt-_tBexMPN4vzM8w_3bHVo-jewFqFwG5C8",
+    "expire_date": "2023-08-04T02:44:32.448Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "133xregrep5tjjrqqclwm9n5paplpvfv",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXr2:1ZWtdKVIWFwplOZe-7rYHkaWx00BPmWRXICdWu6OD4M",
+    "expire_date": "2023-07-23T17:05:48.493Z"
   }
 },
 {
@@ -51,10 +107,50 @@
 },
 {
   "model": "sessions.session",
+  "pk": "2lbxuwx6w53gft59xqfdkc1e5f4xjl93",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOL0f:UlhGX9dcD9NAdu2eQ_bnmxqR1BlKTM5vSLm8ksKDZvI",
+    "expire_date": "2023-08-08T16:35:41.126Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2lmed311s3njeb0b3w7aou0e5gbambto",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNA78:cyHAdT-y56Gmhn2QEJ_DKWrHsqgP3Rqugmmx33pHulM",
+    "expire_date": "2023-08-05T10:45:30.670Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2mx9d1ltbwfk2l8ts48fmtq5dh3ug4ab",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgr6:dFDudzbSM5GIOUbZZIczzad2jCOKvsvwyf2A_11Ttoc",
+    "expire_date": "2023-08-04T03:31:00.019Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2nwhd0tpguph4h498bu5x26t6vh0a1ks",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKDvb:r4YpbZrL49w5YSDqiYNNMS3qlxE73b2kUq27Crh5UTU",
+    "expire_date": "2023-07-28T08:13:27.237Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2u0xc1kxjomftx2gf4nucp118jh4doig",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJM1R:L0h8HPQK-LTu5Dtc-JpA3YU8KD2Kxs3uB8nwvLJz6LI",
+    "expire_date": "2023-07-25T22:39:53.074Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "3kqht1kakmkvqa5jm6oban993o699or3",
   "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGlnxP0tJzxmsjXeNA8iW4qRC3B0ipYD2zcx7iYjbWuLWeYkzibNQ4vS7TZgeXHdAd6y3JlOr6zJPclfkQbu8NuLn5XD_Dgr28q0RvKIMDg0jKUxBEyBypmCtB4XBgB_CyKMm7bTLU0Byg8lZKQtZg3h_APwwOBE:1qEFkG:PrhZ7lZOJNaSfCjiRCcqwy5SshYNxHbv0xaw30bToXc",
-    "expire_date": "2023-07-11T20:57:04.311Z"
+    "session_data": ".eJxVjEEOgyAUBe_CuiGCIH6X3fcM5smHattAorgy3r2auGi3b-bNJnqsZezXJcz9xKITStx-twH-HdIJ-IX0zNLnVOZpkKciL7rIR-bwuV_uX2DEMh5vUKM4kkUdwAreaSYgRHbGNKTgamoq14ZWs7baxsGBbVXHqJShqOmIesxFdNu-fwE7sztd:1qEFoc:6z8eHrKsvekO_LFKqZKJ3J1pMISWK-_UMsZ9rKa1NIM",
+    "expire_date": "2023-07-11T21:01:34.528Z"
   }
 },
 {
@@ -67,10 +163,226 @@
 },
 {
   "model": "sessions.session",
+  "pk": "3y8mouwkza46kj4xf41ot6wyki0rxoke",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXr0:JKFMm93mUgklyHbnVV8vHnhE2vL3SQps6-hwn3OY9Qo",
+    "expire_date": "2023-07-23T17:05:46.706Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4uf4milc1k89mug89z3gu50gnm589jmm",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHuBc:8fefHyz7PGe-Or-4rVlYXwcWK8FNmzM8ZGK1RltOSrY",
+    "expire_date": "2023-07-21T22:44:24.770Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4yoejshqif0jwujkgy89ai2ef273gxtt",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg4n:_lyRKh3w9prkmnvpuU93__YeKrKx7WiA4leYE0lh138",
+    "expire_date": "2023-08-04T02:41:05.384Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "524g5zuye1t7qt1mcvf587cw2nakzi6f",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMdpV:1JLd2TTXciKfKtTrBLk49wC302ep4fwG_nDxsSnSat8",
+    "expire_date": "2023-08-04T00:17:09.403Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "5ggofu37b0isvolh7e82wtas8lit7r5r",
   "fields": {
     "session_data": ".eJxljMEOgyAQBf-FsyGCIuKxd7-BrOxSaSkkKr00_ffWxjRpep2Z9x4MnMslbfZOS_CB0NINQmRDKjFWX1tWWtjABKuYhbLNH2AD_rMJ3JXSLvAC6Zy5y2lbwsT3hB925WNGiqej_TmYYZ3fazCdQG8UNAQowGmJBoA86rbtjADdmK7WPfUSpZLKTxpQ1Y33QrTGS8OeL48ISaE:1q8mAV:gTTykpUuhH2VzxYMy36CSKQkHeFsmNwljmHGREqarkU",
     "expire_date": "2023-06-26T18:21:31.851Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5hyhjtssn1u91d2izdnle7t6ctcu5zzp",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgEu:iXVQYy3kam0QJg4J948Buk9w8DhmHvHCX9R_pzMPbwk",
+    "expire_date": "2023-08-04T02:51:32.623Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5iop1rg133ynmm1lkjevidcfoa45m5g8",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLRnr:00aGuBiCbSqvtwzEz4TGK4Tlw9rT4bwxw-9qrwfVM7E",
+    "expire_date": "2023-07-31T17:14:31.910Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5n8zafv01uhpr2nr9cp3xnxatabjn2qv",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qId5e:CKQNi3zPlFImztxItHT6-ZJyFPDndoXptLRwW1Y4gbc",
+    "expire_date": "2023-07-23T22:41:14.643Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5ntft11knm1i70s6yisjbbyqlylq0fdw",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOTd4:KmLuh6m24Dc3cZlmm145ENy4Wlg4F8re8UbabulS_cI",
+    "expire_date": "2023-08-09T01:47:54.981Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5zvmugpom2d2334xmzlbvx6r4f9ig8wj",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHsFE:8lhvC4HC7wFgmJ38f65gidohCvs4dI1wOysafNkjHv4",
+    "expire_date": "2023-07-21T20:40:00.003Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "605462p8zfwc7nsly5mmlmyb8r419rui",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qG3tH:WyH_z3nzBT9GX1nDv49pABFvOO14Co-LuDHYoMyYq1g",
+    "expire_date": "2023-07-16T20:41:51.476Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "654m1jjdy8aqr23tsrje1r04hnjv0hjw",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFvOi:GFf1Zo9Q7hxzJ9SxOp0DKeSHObb3ZH6IrAwwMpaNq-U",
+    "expire_date": "2023-07-16T11:37:44.570Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6inik88xttll5r7cd49211bun9svue6i",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFta6:ymi0M1V3De5bmxRZnTGyficJuFCIix_vLYLn0IZkHXk",
+    "expire_date": "2023-07-16T09:41:22.851Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "71ugjimh65v6ueoz6f400ffkwyblnsty",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qH2UF:WyEQDslmwHxFsLdNyzP4QZJDDTj0sfr7TzBJldkIsrw",
+    "expire_date": "2023-07-19T13:24:03.044Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7fbosdriyoce9z4k3uo93ubkjmbprwef",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHaxo:kuGsfxl6a4IJfFtRpuQLtf4BsySqxf9u3N3UyQxAGvw",
+    "expire_date": "2023-07-21T02:12:52.760Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7u9aea5p8j4ycdebl7deicuiiwp1txey",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFueD:cKa8uyKoOJQVTqPzQxfuRIT7YUk4ct_6ZbHXO8lCTWk",
+    "expire_date": "2023-07-16T10:49:41.611Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8klaytwdz2bu9akbc41myet5ndrakhlz",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFtbr:pxX2hnW_O6jhncg67e44LjTcKgiNF_2T3b9lG92EqvI",
+    "expire_date": "2023-07-16T09:43:11.130Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9xqsrzqehhir71408dko67gnn4i3m35r",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNfkh:Q-m6j7wdIkKpYM5raqbu99V2d_AGGcHTQ8WZpCQzjhA",
+    "expire_date": "2023-08-06T20:32:27.056Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a0vt6lo17ev869ec2g0e23wli0h0edyw",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFtbr:pxX2hnW_O6jhncg67e44LjTcKgiNF_2T3b9lG92EqvI",
+    "expire_date": "2023-07-16T09:43:11.078Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a11pgumvxta1lvtv3yo1mxx3y73hqdf7",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOL0f:UlhGX9dcD9NAdu2eQ_bnmxqR1BlKTM5vSLm8ksKDZvI",
+    "expire_date": "2023-08-08T16:35:41.297Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a9yo7duasit85zgld3qm86c63cv3slli",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKnzT:M_KaQggy6yW2CqUIOzF08WSSG6fIs8TyE9taJzPhWiw",
+    "expire_date": "2023-07-29T22:43:51.082Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "afagyop9cix7wb5f286fnj33nbhrm9lh",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgBQ:1J8rZokG0eJquU37zypcBeng8Mna0wupMIIX_WT8u94",
+    "expire_date": "2023-08-04T02:47:56.942Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ajmnhhwhx1j0dmz9h6q8yoj2bw1xh6tf",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNTTS:ev5lEUU58soQ3OcEk9SBMdwp6LdcWCEjkVbMWyGym40",
+    "expire_date": "2023-08-06T07:25:50.836Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ao7h7qi6nnrl2oxt5mhjxegd3l6xvt6q",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qO4JY:_5J_M399H-5gRKczor3MeljtP12Lmi5ui3qFZUc9DPs",
+    "expire_date": "2023-08-07T22:46:04.640Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b3mtqs06n749659jdz5biytrvbsnda27",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFueD:cKa8uyKoOJQVTqPzQxfuRIT7YUk4ct_6ZbHXO8lCTWk",
+    "expire_date": "2023-07-16T10:49:41.583Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "baoia06hzgigk3dvyzufth6h4m17jyrv",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1qEZwP:484rl7KWmyKcyNbPlykDaXrhZAebZQftJaglDpXKMS4",
+    "expire_date": "2023-07-12T18:30:57.778Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bewcx5p55id40lr0yuu0q17r04vwufwp",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfPp:YwGY5ZXDVjGHgDL2D-2g8fj4cl7k7ANtqPyK3oN1FXQ",
+    "expire_date": "2023-08-04T01:58:45.906Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bfgsv88tr6ldc45kpngbkg157sjfq17h",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKnzT:M_KaQggy6yW2CqUIOzF08WSSG6fIs8TyE9taJzPhWiw",
+    "expire_date": "2023-07-29T22:43:51.209Z"
   }
 },
 {
@@ -83,10 +395,130 @@
 },
 {
   "model": "sessions.session",
+  "pk": "c3ap4wgc25ixg82mnwq892z3opyanwej",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFueD:cKa8uyKoOJQVTqPzQxfuRIT7YUk4ct_6ZbHXO8lCTWk",
+    "expire_date": "2023-07-16T10:49:41.531Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cj79m2takuvt3xyw604cptbiyk556m7n",
+  "fields": {
+    "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1qEFem:Am1Jg4avj7AEtpVzuWopg0jew1-9hXPQuJjHpJ7qE_s",
+    "expire_date": "2023-07-11T20:51:24.059Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ctj0eqsxx9434m60hbync81h7j6i8asf",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGQgd:cO9XlSnBjzwBlcLZxK1vGwpRMVY5FliPHof_QZ_3aX8",
+    "expire_date": "2023-07-17T21:02:19.609Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cwr0qlxc4diolwvtshw93w2tuxtxq8w9",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg3a:uJmGce-yWuJnoUhBna7BADljinB23M3SP9D3qjN83Pw",
+    "expire_date": "2023-08-04T02:39:50.575Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d3qjqocxgl5ekrb7q0g59dk9hfd6w3i4",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOO3h:5BJW2KPSAiSx1OgEL6aWuBcNu0OMA9LOSPCoLoZAgEc",
+    "expire_date": "2023-08-08T19:51:01.227Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dfn3fyz2babrm8bbxv8yjii349b9pdsh",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHB9B:njqEfFrnVPIj_JJh6jC71iipeLG-A__YWff5H_6DFCA",
+    "expire_date": "2023-07-19T22:38:53.758Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "djezw8lf1965rmu7gimgk13cbe08qly3",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOTd4:KmLuh6m24Dc3cZlmm145ENy4Wlg4F8re8UbabulS_cI",
+    "expire_date": "2023-08-09T01:47:54.746Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dm0pur0g900oj05b4hhmglri3lq071xy",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFsdx:12-fhffv52qm9FEa_axv89Idp5qiJMVumoP8PK294jc",
+    "expire_date": "2023-07-16T08:41:17.998Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dw8wdf8m8dwqimtjmkve030cd0mzy8ru",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfNp:Tpd_mR8R3WIzidpQXnPVedhbD8QBXOfuYk6GWvRc4xI",
+    "expire_date": "2023-08-04T01:56:41.976Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e3rq9erbfcdq8y3pr93lrh0x7fvhetls",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKHLV:bqQ9Lo0M_u1r-Qht_vZI7YhGJmSFQgVk0eGEl3o7A4I",
+    "expire_date": "2023-07-28T11:52:25.995Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ealt2efcj63y6sv9ktv1jok0a6k22miy",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qN0rS:I0GBBo2hd5GDv19bJMvTZ6qSyURhhJo0wXN5ZmnyWGI",
+    "expire_date": "2023-08-05T00:52:42.398Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "ecla4fpwqtb4h15us65rkk6s7ab6s50p",
   "fields": {
     "session_data": ".eJxVjMEOgyAQBf-Fc0MEQcRj7_0GsrJLpW2gAU3aGP-9NfHi9c28WZmHMrNh3S7MwTJPbqlUXEQ2MMFO2wj-SWkH-IB0z9znNJc48l3hB638lpFe18M9BSao0_8NthMYrIaWAAV4I9ECUECjVGcFmNZ2jemplyi11GE0gLppQxBC2SDtHq1Ua8zJ0ecdy5cNzfYDMR1Cmg:1qDWpo:mLX4jrdl1hTFufLxJKyrUVTrTURIXY2N0qrrECgeptA",
     "expire_date": "2023-07-09T20:59:48.012Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "enp851oj4o12c3hrwdjwf4c0l5cxqxmr",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIV8b:n7V-5QlnWNOiWS7c-aGsyLNop7ZBUP8C-ZABxFcrMQE",
+    "expire_date": "2023-07-23T14:11:45.996Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ev9jilacfdzc0xanxbnloxe8k0rf6hem",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJJCW:-A95U-WCRAkQOYb5s3YN_WvJdZNgtajVj6MhVPFDVgk",
+    "expire_date": "2023-07-25T19:39:08.318Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f09eihmi0oq253qt34izx0q8lbsfx8yn",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLuqZ:IEys2ypgoAQQzlid_4r7QtCGsq-bwGnDm50Mj1xgmZo",
+    "expire_date": "2023-08-02T00:15:15.766Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f0th1ejf7h1dsb83nywcy7dn311dvbdn",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHsFE:8lhvC4HC7wFgmJ38f65gidohCvs4dI1wOysafNkjHv4",
+    "expire_date": "2023-07-21T20:40:00.178Z"
   }
 },
 {
@@ -99,10 +531,210 @@
 },
 {
   "model": "sessions.session",
+  "pk": "fgwbudppgddo3xrhv6lzw126guye9u64",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qITEe:-yuORmYZz3n8tctxDN90vw9z3I9oTXP5psVRieK65P8",
+    "expire_date": "2023-07-23T12:09:52.544Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fo96qkm83oej8hjw6v74t3y3w39juoev",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGQgd:cO9XlSnBjzwBlcLZxK1vGwpRMVY5FliPHof_QZ_3aX8",
+    "expire_date": "2023-07-17T21:02:19.840Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fs6oquzdbuub4hban6vj4rmt3axiqhil",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLDos:vk1PzYCBqmnA0_CLyzvZy45umBm5dnaPpTphLVHF-AU",
+    "expire_date": "2023-07-31T02:18:38.793Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ftvc14b76etgqzeknko7kooft1w9dqim",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg4K:Cpjk29M0MI92taj19zB0spDl6QSxJibVjqBlO7_t6B8",
+    "expire_date": "2023-08-04T02:40:36.077Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fwlcgph1z8i6ce7mv7rxhl8n0w9695i0",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qL33p:u5GFPTOR46wkTO1-qgMz2-M-GZlze5XJC3vBYToemDk",
+    "expire_date": "2023-07-30T14:49:21.418Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gb8c6iwzrwc5euqu9j8h3o5907kc5l30",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfjy:7FUf0cPZoq8JI0HnXrOQ7SiF4MVaJGimBwCDLgk3Utg",
+    "expire_date": "2023-08-04T02:19:34.409Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "grinootqdpft53pj66x5yliwapeekttu",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNHJ6:HL5Hym_wmcLsVUiSFNnyGnN32zMtFzgQJBgVGH0I--U",
+    "expire_date": "2023-08-05T18:26:20.670Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "guakg00gb3yo9wc0ekyutkqpq1oeoqfm",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJPeW:-hN7jXOIxmZ-Zwga9nQo1AjkIhXBM8sFCFTCmp7TQOo",
+    "expire_date": "2023-07-26T02:32:28.151Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gza37yrmnvadqxxw6vf6ww76lhqool50",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNWJu:B1rtOwhdn5TImCtgbgfhTt0fDXPrCrC9u3g1KAilL5M",
+    "expire_date": "2023-08-06T10:28:10.941Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h3yu6xrhbkbwzxrp162h9onoh5qqtvb6",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgBR:OszviwFErmy6PrnrafpD_LjbSwVbLVJMCqy3XDWyCfY",
+    "expire_date": "2023-08-04T02:47:57.561Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h8ll1zssbfl8ek36cwlre9tvqjdu1pte",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJMNa:GJ5e9uvYM0hZKQ50bbGMdVKycpthF7wlSZO8LC8U_y8",
+    "expire_date": "2023-07-25T23:02:46.136Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h9g6c5uoh5nuqr4x7dizom4dfjjnieg7",
+  "fields": {
+    "session_data": ".eJxVjMEKgzAQRP9lzxISY2302Hu_ISS7m2pbYkkUWsR_rwEvngbem5kV0KUZ-hUU9AAVXEpsFVi3zINdMic70s4UnJh3-OJYBD1dfEwCpzin0YtSEYfN4j4Rv29H93QwuDzsa8m1Z-MlkgtKaxNUJ7VyBpFJsydNhK3qyPsGqWtJtiyNkjo47K6hbspp5pzHKVr-fsb0g15ufyVVRaw:1qFsTR:bjCGRQ9KJhCW19gH871n7YfnpQAr4Bd7wdIATGObjE0",
+    "expire_date": "2023-07-16T08:30:25.721Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hft2h5plrlqlau7xmn14ylzvnkaw5msc",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLCEP:pILaA1juJBTR5fhTWBKCbvcWz5hoIs2R8Hw2cb6h4yw",
+    "expire_date": "2023-07-31T00:36:53.798Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hp71iggy8uy38gybjuorxhmhccgbqx2w",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKUuB:gadLUCUWiphZG5jaK4mt6Fz7diNVzf-0W3N26HmQol4",
+    "expire_date": "2023-07-29T02:21:07.018Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ib2vscbk89scmc70ifuh35lfpr94zu2w",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXqz:w_8uQ__c79zlIpwY7aGA4iWCqpTseDyUaQi3ji-Gldc",
+    "expire_date": "2023-07-23T17:05:45.600Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ivbmcrkthm3l7vjp92k47y4pwkuy9t5r",
+  "fields": {
+    "session_data": ".eJxVjEEOgyAUBe_CuiGCIH6X3fcM5smHattAorgy3r2auGi3b-bNJnqsZezXJcz9xKITStx-twH-HdIJ-IX0zNLnVOZpkKciL7rIR-bwuV_uX2DEMh5vUKM4kkUdwAreaSYgRHbGNKTgamoq14ZWs7baxsGBbVXHqJShqOmIesxFdNu-fwE7sztd:1qDtuf:JJfjnzeFc6L6vPmvy_06gD4-g7EzzP81df5SauAaatA",
+    "expire_date": "2023-07-10T21:38:21.555Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j5v8ebf7h0v66pwy359qxzaqgs9wdlov",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIeIG:6NQyOaU50aFM8XxF3XO2Z3wS1XUMisB1omdgAP3HTwA",
+    "expire_date": "2023-07-23T23:58:20.384Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "jubso10p4dqqj3pzjhnk43jqbtc2fu8z",
   "fields": {
     "session_data": ".eJxVjEEOgyAUBe_CuiGCIH6X3fcM5smHattAorgy3r2auGi3b-bNJnqsZezXJcz9xKITStx-twH-HdIJ-IX0zNLnVOZpkKciL7rIR-bwuV_uX2DEMh5vUKM4kkUdwAreaSYgRHbGNKTgamoq14ZWs7baxsGBbVXHqJShqOmIesxFdNu-fwE7sztd:1qDesP:X1Ycq6WhbFTuaOg4nAPyKQrp0lZdnhOhXvhbYVOr4OY",
     "expire_date": "2023-07-10T05:35:01.827Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k1nzgra0rfl2kkbbw75hzrw1bkudb445",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLVXa:ev6tNAkSAOHKbcU_YkuFdv-IDlbyy-ugFJoql-4aO_U",
+    "expire_date": "2023-07-31T21:13:58.374Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kmz7ca5l2mi6w95wvkrwrb643dl8y12y",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNA78:cyHAdT-y56Gmhn2QEJ_DKWrHsqgP3Rqugmmx33pHulM",
+    "expire_date": "2023-08-05T10:45:30.484Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "koysaof3owbr8ix1g922eqdz9nx0vdgc",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfjy:7FUf0cPZoq8JI0HnXrOQ7SiF4MVaJGimBwCDLgk3Utg",
+    "expire_date": "2023-08-04T02:19:34.618Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ktbse8aj7ba80aigh44tqy5lzyj2f4gl",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKHLW:cYkgTxXNVMa3xOYKsEYnvq-Qfez7KENaLTf0uetX_kc",
+    "expire_date": "2023-07-28T11:52:26.196Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kxo4wnonxzjdoaiwox6jhpaoc15n7m0w",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfPp:YwGY5ZXDVjGHgDL2D-2g8fj4cl7k7ANtqPyK3oN1FXQ",
+    "expire_date": "2023-08-04T01:58:45.295Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l3l82o70lfmztg2br0e2pma560w71lox",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNfkg:GK-jui2dIABQVON2EU3OuoJzSQshMe_Hcvv-7vkDiWI",
+    "expire_date": "2023-08-06T20:32:26.362Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l67p9imax2fj5ndg5xqouzsnbj2u6fcq",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMdoi:2Wzg5h7uwkO_orvlJIX9k-ff3Jt-t71jp0qZRVldBqc",
+    "expire_date": "2023-08-04T00:16:20.610Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lkuksffaftfqm7749w210xw18lus3gf5",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfna:IOz5ChSemrHrK8uJ55DHM7mvpOfz_9aGN-_EbYCaw50",
+    "expire_date": "2023-08-04T02:23:18.409Z"
   }
 },
 {
@@ -123,10 +755,322 @@
 },
 {
   "model": "sessions.session",
+  "pk": "lqxiohymk75z97ppn27486vvynqw1f05",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGW0y:PaisHiIagwkzQDRg-ygCzah-i_gfetHkz-89Mf_HLAg",
+    "expire_date": "2023-07-18T02:43:40.578Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "lurddbk4t8v6x0upjxozv54cplf7s2xw",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGlkbfzCbkp4zWP5siAHZyE4kUJS7Q6Q0ad_Mm4UFVyfWL-uJWTdPo50bVZsi65lgh8278KS8gfhw-V54KHmqyfNN4Ttt_FYiva67ewiMro3_N_iAwmsSqEAMatAQO7hoHOQZjJBOdQZF9AAdGSUQlHQBLtJEjSgJ5RZt1Foq2dLnneqX9bD-AMbrQNU:1qEFNw:FEEu9vAkMyhjS2sJVCW1aMF3EEGaNknMa38-EspCi1s",
     "expire_date": "2023-07-11T20:34:00.682Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lzy0uc75akopynx6e9mmhbte3q7iu26x",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNAt5:S5BXa1caRrUGBJqN7UYB6qcgnvQdCk9msgtrKZljiek",
+    "expire_date": "2023-08-05T11:35:03.191Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mkxw8wj6lgilzv5n7yls2mchsxgyz6an",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJJCW:-A95U-WCRAkQOYb5s3YN_WvJdZNgtajVj6MhVPFDVgk",
+    "expire_date": "2023-07-25T19:39:08.480Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ml94a0bnmcbmwn7cxndh2w3quhtdyse6",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHHBK:IDFo1_x9D9Q3GzhHjtctHxLrpNk06ZBuCJV8NxkvgNU",
+    "expire_date": "2023-07-20T05:05:30.720Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mpb0p3ibpiygxw2exxjcmibgm1ndh97o",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLRnr:00aGuBiCbSqvtwzEz4TGK4Tlw9rT4bwxw-9qrwfVM7E",
+    "expire_date": "2023-07-31T17:14:31.745Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "muqitd9s04wdws25c1jqex245se1rk6w",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJLPx:DRPfjciexbTtidapRapGVsEhF2uZI4w0WqTRLyBlLZY",
+    "expire_date": "2023-07-25T22:01:09.896Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mwf6w0vmdbpqhew8neawbxvrv6vt7dps",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMV00:3mkf7-ujPgFGqI9WcO0kJj-IB3G4FC9ab9UIQdixmEY",
+    "expire_date": "2023-08-03T14:51:24.728Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "my3m7kfp3yoj02qscvn6pyrfgh75n1f1",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg88:zoD_NR-QGt-_tBexMPN4vzM8w_3bHVo-jewFqFwG5C8",
+    "expire_date": "2023-08-04T02:44:32.088Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "myggg51ui9vsmpa0h2yn8l80f4a2dwrp",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgr6:dFDudzbSM5GIOUbZZIczzad2jCOKvsvwyf2A_11Ttoc",
+    "expire_date": "2023-08-04T03:31:00.184Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nxdjii7l0453j5dm09zt48rbccqhu8k2",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMdoi:2Wzg5h7uwkO_orvlJIX9k-ff3Jt-t71jp0qZRVldBqc",
+    "expire_date": "2023-08-04T00:16:20.846Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nzcmdasr7ohjo4pbdmy7vjw5uqw876xf",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFtbr:pxX2hnW_O6jhncg67e44LjTcKgiNF_2T3b9lG92EqvI",
+    "expire_date": "2023-07-16T09:43:11.178Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "o2h99koh44ikh0srx4vrympnjrjqigg2",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg3a:uJmGce-yWuJnoUhBna7BADljinB23M3SP9D3qjN83Pw",
+    "expire_date": "2023-08-04T02:39:50.975Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "odh979g0qax2uanryc9yhod3hxscpjzd",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOO3h:5BJW2KPSAiSx1OgEL6aWuBcNu0OMA9LOSPCoLoZAgEc",
+    "expire_date": "2023-08-08T19:51:01.035Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "om17053gjx8oatph3gorrsfqi8o4dyzw",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGRNk:Wt-QZdnfW2EKKF-xf8IAtRp6GNz3eLhC5W1PmnuGIl4",
+    "expire_date": "2023-07-17T21:46:52.466Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oq93ebpnkuihvg8ppftyjjpafnodhg1i",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLgzR:8FjvEEVAjosrUfN_Vuwub909paVPegMyD_wCcnq8Fzg",
+    "expire_date": "2023-08-01T09:27:29.809Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oupq7241nimtgrlawix6nqqw7ehth8wm",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJPeW:-hN7jXOIxmZ-Zwga9nQo1AjkIhXBM8sFCFTCmp7TQOo",
+    "expire_date": "2023-07-26T02:32:28.365Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oy8kjow0qvqew0awqsi2g1mnjdaa3usl",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXrC:vVQXMqDSXK5IiILY8dK9sNoTFGCdSVji6RuqmcGb-AQ",
+    "expire_date": "2023-07-23T17:05:58.681Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oyvail2llvve69l4ce99ut7hvpn33ajj",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxP0tJzxmsjXeNA8iW4qRC3B0ipYD2zcx7iYjbWuLWeYkzibNQ4vS7TZgeXHdAd6y3JlOr6zJPclfkQbu8NuLn5XD_Dgr28q0RvKIMDg0jKUxBEyBypmCtB4XBgB_CyKMm7bTLU0Byg8lZKQtZg3h_APwwOBE:1qEEiD:CTRMScvPYASZbfzXgNPrGfcgFwYiNZgSFDSlGQFrVNc",
+    "expire_date": "2023-07-11T19:50:53.285Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pce5ytuio9r5eorhrnuv57585djh9l0v",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLwzb:Y9gnTS4nth8yWHRtqLv-nZBcw_aVXlCdON2xMZTigYo",
+    "expire_date": "2023-08-02T02:32:43.875Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pmrq34civxnu33q4cs5wgxtogiqzwioa",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qOLKj:euS-vGjHbmgeYb8WoXRzJdbqgC5RBtbPDbLqiYBOYKo",
+    "expire_date": "2023-08-08T16:56:25.849Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pp0f6b5ksg2r6kjekdvqzjzeenf2xks6",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKUuB:gadLUCUWiphZG5jaK4mt6Fz7diNVzf-0W3N26HmQol4",
+    "expire_date": "2023-07-29T02:21:07.298Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "psvdblkzpkto710v4iv44sb7n25dh7zg",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIV8b:n7V-5QlnWNOiWS7c-aGsyLNop7ZBUP8C-ZABxFcrMQE",
+    "expire_date": "2023-07-23T14:11:45.844Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q3miod5zuskdnh9i2bip8nd50m0p8bdm",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGjsn:vWyCU7SzNPzRlhLaFpVON-eioKnK00zmHfI7TtBi9Qo",
+    "expire_date": "2023-07-18T17:32:09.278Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qbyqhvhyeavnkbjcns4bggqsylfoggvi",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIeIG:6NQyOaU50aFM8XxF3XO2Z3wS1XUMisB1omdgAP3HTwA",
+    "expire_date": "2023-07-23T23:58:20.206Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qoxmuaf9gutgjb26yr51kuk4rlqmppyb",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qEcsO:heB-LUsyEC73kCTD-bsnhKouVQf-BucJmByFRCkWb7A",
+    "expire_date": "2023-07-12T21:39:00.835Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qpqqi37k0g37v5usw3wdn0wjjf7hu1rw",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMV00:3mkf7-ujPgFGqI9WcO0kJj-IB3G4FC9ab9UIQdixmEY",
+    "expire_date": "2023-08-03T14:51:24.891Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qrj67ggjhvifaq7jd58lze6yrivjo67a",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIJfx:8-7ZrZPy8pDqiJGGDvEu8s41mj7RAfGwZMbLoTrJlUc",
+    "expire_date": "2023-07-23T01:57:25.749Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qug2102n345t2jsf3rd02od8oenjgl7m",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFvOi:GFf1Zo9Q7hxzJ9SxOp0DKeSHObb3ZH6IrAwwMpaNq-U",
+    "expire_date": "2023-07-16T11:37:44.621Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rlkaxkhxwacvt3mivayjdksh6cebz8n9",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLYm4:V-jD7pgCFVGCEeSXmsBWQMnLiKJJNUDMUmetvxPIRW8",
+    "expire_date": "2023-08-01T00:41:08.641Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rnl68hajmzqw66fkqz219eextmcsmwb2",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFvOi:GFf1Zo9Q7hxzJ9SxOp0DKeSHObb3ZH6IrAwwMpaNq-U",
+    "expire_date": "2023-07-16T11:37:44.523Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rr5dc7a0msb0dihcvwze47im8s621rg9",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFGPV:sqRRqcCxHVceSl0gzpSfiEs_vRLwqi6MEvHYuYGp0Mw",
+    "expire_date": "2023-07-14T15:51:49.387Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ru4tma7l3ij6tc3gpt4of1w7io3l8gzo",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJoJ4:IKWZURnOs2gkbjEZScuabuXK-uJH-y8FqnAdM-VLKfQ",
+    "expire_date": "2023-07-27T04:51:58.949Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s7ks2xchnjeovhhkpgo53r5kc85ija9b",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qH2UF:WyEQDslmwHxFsLdNyzP4QZJDDTj0sfr7TzBJldkIsrw",
+    "expire_date": "2023-07-19T13:24:03.248Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sbhgadjh10nk4ywmc8gun3vdv204dekb",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qL33p:u5GFPTOR46wkTO1-qgMz2-M-GZlze5XJC3vBYToemDk",
+    "expire_date": "2023-07-30T14:49:21.262Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "shlfiopdn6bcfgdx0mi1cf8tjm5y2evn",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qJoJ4:IKWZURnOs2gkbjEZScuabuXK-uJH-y8FqnAdM-VLKfQ",
+    "expire_date": "2023-07-27T04:51:58.762Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "siaybiwtygis39dl65aoka6r582qxx8p",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNwSy:cUkj8WRsXIB_lNk0cxaDa_DpAV3l5Qz8KPLkKtg5ETI",
+    "expire_date": "2023-08-07T14:23:16.844Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "szjvkqoaiz6x4rfiov00pfvy9radiaeh",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFucZ:8FN6rkxYOagbL9D1w72-2mCHlHMszCtGkAX7Au_QcK8",
+    "expire_date": "2023-07-16T10:47:59.183Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "t4eoqrii6dlhzs33tmkzs89193mc65ss",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMINM:ztzJu5M-MRqHVx6dMVHjoEFkHxWPMRgJmZ0B1611jkU",
+    "expire_date": "2023-08-03T01:22:40.530Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tey1x46pzqhouzugpp0eikn0ims11r51",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNWJv:yRpOykYKhNiRUPYPlM7s--YRfyrHpTl9oQKWj8u2ul0",
+    "expire_date": "2023-08-06T10:28:11.119Z"
   }
 },
 {
@@ -139,10 +1083,250 @@
 },
 {
   "model": "sessions.session",
+  "pk": "tjd339q5yra7rmsdsum7c3o904sl9co2",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLgzR:8FjvEEVAjosrUfN_Vuwub909paVPegMyD_wCcnq8Fzg",
+    "expire_date": "2023-08-01T09:27:29.621Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tkf7d2snmngau4i0bhiujg2v6mfe9olk",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLuqZ:IEys2ypgoAQQzlid_4r7QtCGsq-bwGnDm50Mj1xgmZo",
+    "expire_date": "2023-08-02T00:15:15.608Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "unwxryhqrte3govjcfda1l1fxcbcrscr",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFGPg:sTI4OOqcQIZof74UdDlIrkH5m--MAk0qMJSNWx7tGmA",
+    "expire_date": "2023-07-14T15:52:00.902Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vbtpd0tc4z6vfcidak1vlshanlg9x2it",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNwSy:cUkj8WRsXIB_lNk0cxaDa_DpAV3l5Qz8KPLkKtg5ETI",
+    "expire_date": "2023-08-07T14:23:16.695Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vgbg7dqqq89i3fbzn85hk5wm594xggeo",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKnok:LYUVALHaRX5ywn_XPhgOP3P-7u7naW3SiIKum1DQzMI",
+    "expire_date": "2023-07-29T22:32:46.010Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vjrwhttnwmgn799i3je09uatdd0vhg27",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMgEu:iXVQYy3kam0QJg4J948Buk9w8DhmHvHCX9R_pzMPbwk",
+    "expire_date": "2023-08-04T02:51:32.299Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w37fg9qjz5njdny1ziphl213u2nw11t5",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKI9L:ovFuWcgOaRoBf82ibrSQysHPRccIvNK0FfPesdCm_xY",
+    "expire_date": "2023-07-28T12:43:55.509Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w40iiun9veu52qcrri76uxosmnc3oz2v",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLaiq:b5Jf0EvYspHb2VhcxW--8TYn8zkm_DfJWDTtK5lpX8Q",
+    "expire_date": "2023-08-01T02:45:56.194Z"
+  }
+},
+{
+  "model": "sessions.session",
   "pk": "wc68ts2da0l47zlrcr8rghoops8dvsqh",
   "fields": {
     "session_data": ".eJxVjDsOwjAQBe_iGlnxP0tJzxmsjXeNA8iW4qRC3B0ipYD2zcx7iYjbWuLWeYkzibNQ4vS7TZgeXHdAd6y3JlOr6zJPclfkQbu8NuLn5XD_Dgr28q0RvKIMDg0jKUxBEyBypmCtB4XBgB_CyKMm7bTLU0Byg8lZKQtZg3h_APwwOBE:1qDj6g:tWsW6biaYO43MIUdIIDZnoMlspmkz476hoaZLrblBaU",
     "expire_date": "2023-07-10T10:06:02.879Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wczc9qaxzjfhqb5kpoy7745o6c1vjeri",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qG3tH:WyH_z3nzBT9GX1nDv49pABFvOO14Co-LuDHYoMyYq1g",
+    "expire_date": "2023-07-16T20:41:51.304Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wgiy3dpb7iq0tvni9yzv6okth10m065i",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXr4:hdhG8W3Eug5kdDZeZ8Fj2Zcj_9Q5wZHC3n45DQeqBdo",
+    "expire_date": "2023-07-23T17:05:50.054Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wgxzx407qzgwpyzjkvov4lvcnp039447",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNHJ6:HL5Hym_wmcLsVUiSFNnyGnN32zMtFzgQJBgVGH0I--U",
+    "expire_date": "2023-08-05T18:26:20.286Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wmgydpw8cfnnyumw8o7ealeghbja8djo",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qKnzT:M_KaQggy6yW2CqUIOzF08WSSG6fIs8TyE9taJzPhWiw",
+    "expire_date": "2023-07-29T22:43:51.147Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wqgjrlg0ezoq9s5gtonlrjuf8s3y8ic6",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qO0a2:sNPtc0rm05YXysi0SvuUJbtJKLcOsfOr_1091cWGdiQ",
+    "expire_date": "2023-08-07T18:46:50.358Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x4wool1ss92yq58bjms9skantch308cl",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGjsn:vWyCU7SzNPzRlhLaFpVON-eioKnK00zmHfI7TtBi9Qo",
+    "expire_date": "2023-07-18T17:32:09.111Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x4z6l2iw3senxo9osjlduxhloj2b8wki",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qO4JZ:vHQmJ2Fa2ZOoj5b46nBPZ3YUinHH0yxTyqrInnx3710",
+    "expire_date": "2023-08-07T22:46:05.154Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x6ldgjn1292tluk7b6r633rjn68p2vr1",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLwzc:X-VXDOVgtQyQ8ijeMUg6isLD987vlqcc-8nJYBH_-Jo",
+    "expire_date": "2023-08-02T02:32:44.462Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xfj85nja7aba6hmrsj8cizq68twq8i55",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMINM:ztzJu5M-MRqHVx6dMVHjoEFkHxWPMRgJmZ0B1611jkU",
+    "expire_date": "2023-08-03T01:22:40.355Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xkc7bpto9a34sbvw09wowwbh6dwgbm94",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qHaxo:kuGsfxl6a4IJfFtRpuQLtf4BsySqxf9u3N3UyQxAGvw",
+    "expire_date": "2023-07-21T02:12:52.522Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xs529xlnwrkjpgbvp8tkyzz8m6huj9hc",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLYm4:V-jD7pgCFVGCEeSXmsBWQMnLiKJJNUDMUmetvxPIRW8",
+    "expire_date": "2023-08-01T00:41:08.799Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y5s3cvb0p0atfaoapaxjogqiijyck58i",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qFvND:e7X4U8L2kxRLAW7sxn14XLxhSigbjV1fuZCwJ4yAMiE",
+    "expire_date": "2023-07-16T11:36:11.062Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ybm0f0seymkpjr3i7qheajabyi0rt73c",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMg4K:Cpjk29M0MI92taj19zB0spDl6QSxJibVjqBlO7_t6B8",
+    "expire_date": "2023-08-04T02:40:36.325Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ylr4hj501v3alcfx5ti030lej9cdy7ih",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfna:IOz5ChSemrHrK8uJ55DHM7mvpOfz_9aGN-_EbYCaw50",
+    "expire_date": "2023-08-04T02:23:18.682Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yw70dquiywmco6un87yk7hrqx35go5eq",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qIXrB:6TV7pl7fZA6zXr01MTMKDtspnlviGoyeEk7jq-RV-V8",
+    "expire_date": "2023-07-23T17:05:57.263Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z59eebqjhzc050tebr6eigz0ktuid69l",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMfNq:j6nnlaEoHMpxcsCPh7MWLYXBsopiektWJzT_5I3xZzE",
+    "expire_date": "2023-08-04T01:56:42.155Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z5w2l528osmrtfzyh83b7qun17o7v4s5",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qGSs0:UuJRqnskL9zghLKJk_t7sfSPjtVupWO1vuS5F8fSFsg",
+    "expire_date": "2023-07-17T23:22:12.564Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zf7mi861a0l3x3hivel0328xh8khohqk",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qMdpV:1JLd2TTXciKfKtTrBLk49wC302ep4fwG_nDxsSnSat8",
+    "expire_date": "2023-08-04T00:17:09.634Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zhp1sj6gjpxk3wmwmwfg5wm7s4evhwfe",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLVXa:ev6tNAkSAOHKbcU_YkuFdv-IDlbyy-ugFJoql-4aO_U",
+    "expire_date": "2023-07-31T21:13:58.182Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zrr954t9y35zr5thuq7f5m5xwp7d9i37",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qNAt5:S5BXa1caRrUGBJqN7UYB6qcgnvQdCk9msgtrKZljiek",
+    "expire_date": "2023-08-05T11:35:03.348Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ztrrs5hlvdunt1cmuqwi5q37jxucvnt3",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qN0rS:I0GBBo2hd5GDv19bJMvTZ6qSyURhhJo0wXN5ZmnyWGI",
+    "expire_date": "2023-08-05T00:52:42.588Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zwrv5k8g1klvsvemvgavf79gaqzmxbjj",
+  "fields": {
+    "session_data": "eyJjYXJ0Ijp7fX0:1qLDos:vk1PzYCBqmnA0_CLyzvZy45umBm5dnaPpTphLVHF-AU",
+    "expire_date": "2023-07-31T02:18:38.576Z"
   }
 },
 {
@@ -202,12 +1386,8 @@
     "actual_price": "13.50",
     "publish": true,
     "created": "2023-06-12T19:41:34.548Z",
-    "updated": "2023-06-26T09:41:09.803Z",
-    "students": [
-      [
-        "admin"
-      ]
-    ]
+    "updated": "2023-07-02T08:26:54.758Z",
+    "students": []
   }
 },
 {
@@ -278,6 +1458,27 @@
     "publish": true,
     "created": "2023-06-12T20:54:48.852Z",
     "updated": "2023-06-25T20:56:16.683Z",
+    "students": []
+  }
+},
+{
+  "model": "courses.course",
+  "pk": 5,
+  "fields": {
+    "owner": [
+      "testuser"
+    ],
+    "name": "The Ultimate Guide to Game Development with Unity",
+    "headline": "Created in partnership with Unity Technologies: learn C# by developing 2D & 3D games with this comprehensive guide",
+    "description": "<h4>What you&#39;ll learn</h4>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Master beginner C# concepts, like variables, &quot;if&quot; statements, and arrays</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Detect collisions, receive user input, and create player movements</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Create power-ups including triple shots, laser beams, speed boosts, and shields</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Apply shaders that transform your game backgrounds</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Create enemies with basic AI behavior</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Collect and destroy game objects</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Implement sound effects, background music, and particle effects</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Activate and use Unity&rsquo;s Team Collaboration service</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Navigate the Unity Engine and discover unique features like the Asset Store</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Deploy your game to over 20 web or mobile platforms</p>\r\n\t</li>\r\n</ul>",
+    "thumbnail": "ecourses/media/courses_thumbnail/2023-06-27/game_xqmoaz",
+    "category": 5,
+    "price": "14.00",
+    "discount": "20.00",
+    "actual_price": "11.20",
+    "publish": true,
+    "created": "2023-06-27T21:14:25.686Z",
+    "updated": "2023-07-02T08:28:15.619Z",
     "students": []
   }
 },
@@ -423,6 +1624,33 @@
     "course": 4,
     "name": "Expressions, Statements and More",
     "order": 4
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 17,
+  "fields": {
+    "course": 5,
+    "name": "Project Setup",
+    "order": 1
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 18,
+  "fields": {
+    "course": 5,
+    "name": "Create The Player",
+    "order": 2
+  }
+},
+{
+  "model": "courses.module",
+  "pk": 19,
+  "fields": {
+    "course": 5,
+    "name": "Shooting",
+    "order": 3
   }
 },
 {
@@ -954,6 +2182,121 @@
   }
 },
 {
+  "model": "courses.lecture",
+  "pk": 49,
+  "fields": {
+    "module": 17,
+    "topic": "Create a New Unity Project with Unity 2019.x",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_fulkuk",
+    "content": "",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 50,
+  "fields": {
+    "module": 17,
+    "topic": "Editor Overview",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_qrvqiy",
+    "content": "",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 51,
+  "fields": {
+    "module": 17,
+    "topic": "Navigating the Scene View",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_wrlqer",
+    "content": "",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 52,
+  "fields": {
+    "module": 18,
+    "topic": "Create the Player Introduction",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_fexbkz",
+    "content": "",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 53,
+  "fields": {
+    "module": 18,
+    "topic": "Player Setup",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_ie2jr6",
+    "content": "",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 54,
+  "fields": {
+    "module": 18,
+    "topic": "16:9 Aspect Ratio",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_umhjrr",
+    "content": "<p><img alt=\"\" src=\"https://res.cloudinary.com/dxtugxga0/image/upload/v1/ecourses/media/ckeditor-media/admin/2023/06/28/game_ms6gcu\" style=\"height:168px; width:299px\" /></p>",
+    "order": 3
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 55,
+  "fields": {
+    "module": 19,
+    "topic": "Shooting Introduction",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_g3f8yv",
+    "content": "",
+    "order": 1
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 56,
+  "fields": {
+    "module": 19,
+    "topic": "Laser Setup Prefab",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_vubjxb",
+    "content": "",
+    "order": 2
+  }
+},
+{
+  "model": "courses.lecture",
+  "pk": 57,
+  "fields": {
+    "module": 19,
+    "topic": "Fixing Visual Studio Behavior When Opening Scripts",
+    "video": "ecourses/media/lecture_video/2023-06-27/movie_fjctjk",
+    "content": "",
+    "order": 3
+  }
+},
+{
+  "model": "courses.additionalfile",
+  "pk": 1,
+  "fields": {
+    "lecture": 50,
+    "file": "ecourses/media/additional_files/2023-06-27/channels-readthedocs-io-en-stable_hc3uwr.pdf"
+  }
+},
+{
+  "model": "courses.additionalfile",
+  "pk": 2,
+  "fields": {
+    "lecture": 49,
+    "file": "ecourses/media/additional_files/2023-06-27/channels-readthedocs-io-en-stable_yhnmrr.pdf"
+  }
+},
+{
   "model": "users.userprofile",
   "pk": 1,
   "fields": {
@@ -972,9 +2315,9 @@
     "user": [
       "testuser"
     ],
-    "image": "profile_image/placeholder.jpg",
+    "image": "ecourses/media/profile_image/2023-07-02/about_v3mavn",
     "headline": null,
-    "overview": null
+    "overview": ""
   }
 },
 {
@@ -1013,6 +2356,20 @@
     "time": "2023-06-25T21:01:06.068Z",
     "courses": [
       3
+    ]
+  }
+},
+{
+  "model": "purchase.payment",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "admin"
+    ],
+    "amount": "14.00",
+    "time": "2023-06-28T18:46:35.927Z",
+    "courses": [
+      5
     ]
   }
 },
@@ -1059,6 +2416,21 @@
     ],
     "read": false,
     "timestamp": "2023-06-25T21:01:07.061Z"
+  }
+},
+{
+  "model": "purchase.notification",
+  "pk": 4,
+  "fields": {
+    "actor": [
+      "admin"
+    ],
+    "course": 5,
+    "recipient": [
+      "testuser"
+    ],
+    "read": false,
+    "timestamp": "2023-06-28T18:46:35.941Z"
   }
 },
 {
@@ -2001,6 +3373,60 @@
     "object_repr": "AdditionalFile object (4)",
     "action_flag": 3,
     "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2023-06-28T18:44:57.667Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "5",
+    "object_repr": "The Ultimate Guide to Game Development with Unity",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Owner\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2023-07-02T08:26:54.765Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "1",
+    "object_repr": "Modern React with Redux",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2023-07-02T08:28:15.625Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "courses",
+      "course"
+    ],
+    "object_id": "5",
+    "object_repr": "The Ultimate Guide to Game Development with Unity",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Students\"]}}]"
   }
 }
 ]
