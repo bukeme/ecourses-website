@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://web-production-1893.up.railway.app', 'http://localhost:8000', 'http://127.0.0.1:8000',]
+CSRF_TRUSTED_ORIGINS = ['https://ecourses-website.vercel.app', 'http://localhost:8000', 'http://127.0.0.1:8000',]
 
 
 # Application definition
@@ -169,7 +169,7 @@ STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
 if DEBUG:
     BACKEND_HOST = 'http://127.0.0.1:8000'
 else:
-    BACKEND_HOST = 'https://web-production-1893.up.railway.app'
+    BACKEND_HOST = 'https://ecourses-website.vercel.app'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
