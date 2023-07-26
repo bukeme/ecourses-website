@@ -2,7 +2,7 @@
 ![](/readme-imgs/ecourses1.png)
 
 ## Project Description
-This project is an eCourses Website where users can purchase courses, learn online and create courses. I built this project to improve my web development skills. Here is the link to the live website. [Click](https://web-production-1893.up.railway.app/).
+This project is an eCourses Website where users can purchase courses, learn online and create courses. I built this project to improve my web development skills. Here is the link to the live website. [Click](https://ecourses-website.vercel.app/).
 
 The technologies I used in developing this project are:
 - Python
