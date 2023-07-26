@@ -23,7 +23,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               {% for category in objects %}
-              <a class="dropdown-item" href="{% url 'course_list_category' category.category %}">{{ category.category }}</a>
+              <a class="dropdown-item" href="{% url 'course_list_category' category.pk %}">{{ category.category }}</a>
               {% endfor %}
             </div>
         </li>

@@ -77,7 +77,7 @@
 		                            <h4 class="text-white text-center">{{ category.category }}</h4>
 		                            <p>{{ category.course_set.all.count }} Courses</p>
 		                        </div>
-		                        <a href="{% url 'course_list_category' category.category %}" class="stretched-link"></a>
+		                        <a href="{% url 'course_list_category' category.pk %}" class="stretched-link"></a>
 		                    </div>
 
 	                    {% endfor %}
