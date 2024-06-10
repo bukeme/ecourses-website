@@ -15,7 +15,7 @@
 	                {% if request.GET.search_course %}
 	                	<h2 class="text_dark">Results for "{{ request.GET.search_course }}"</h2>
 	                {% elif category %}
-	                	<h2 class="text_dark">Courses In Category "{{ category }}"</h2>
+	                	<h2 class="text_dark">Courses In Category "{{ category.category }}"</h2>
 	                {% else %}
 	                	<h2 class="text_dark">All Courses</h2>
 	                {% endif %}
