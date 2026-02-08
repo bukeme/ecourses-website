@@ -4,3 +4,6 @@ db.sqlite3
 media/*
 static/ckeditor
 !media/profile_image/placeholder.jpg
+__pycache__/
+*.py[cod]
+*$py.class
